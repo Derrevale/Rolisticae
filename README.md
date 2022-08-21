@@ -1,7 +1,7 @@
 # Rolisticae
 
 Rolisticae est un site de gestion de table de JDR.
-test 1
+
 
 ## Installation
 
