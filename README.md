@@ -2,14 +2,27 @@
 
 Rolisticae est un site de gestion de table de JDR.
 
+## Environnement de Développement 
 
-## Installation
+### Pré-requis
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+* PHP 7.4
+* Composer
+* Symfony CLI
+* Docker
+* Docker-compose
+
+Pour vérifier les pré-requis à l'exception de Docker et Docker-compose 
+```bash
+symfony check:requirements
+```
+## Lancer l'environnement de développement 
 
 ```bash
-pip install foobar
+docker-compose up -d
+symfony serve -d
 ```
+
 
 ## Usage
 
