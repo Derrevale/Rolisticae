@@ -54,7 +54,10 @@ class CampagneUnitTest extends TestCase
         $datetime = new DateTime();
         $categorie1 = new Categorie();
         $categorie2 = new Categorie();
+
         $user = new User();
+        $user2 = new User();
+
 
         $campagne->setNom("CampagneDeTest")
             ->setDuree("6 sessions")
@@ -75,7 +78,7 @@ class CampagneUnitTest extends TestCase
         $this->assertFalse($campagne->getNombreJoueur() === "False");
         $this->assertFalse($campagne->isStatus() === False);
         $this->assertFalse($campagne->getDateLancement() === "False");
-        $this->assertFalse($campagne->getMaster() === "False");
+        $this->assertFalse($campagne->getMaster() === $user2);
         $this->assertFalse($campagne->getDescription() === "False");
         $this->assertFalse($campagne->isPortfolio() === False);
         $this->assertFalse($campagne->getFile() === "False");

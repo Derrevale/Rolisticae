@@ -65,6 +65,12 @@ class Personnage
      */
     private $status;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Campagne::class, inversedBy="player")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $campagne;
+
     public function __construct()
     {
         $this->competences = new ArrayCollection();
@@ -191,6 +197,18 @@ class Personnage
     public function setStatus(bool $status): self
     {
         $this->status = $status;
+
+        return $this;
+    }
+
+    public function getCampagne(): ?Campagne
+    {
+        return $this->campagne;
+    }
+
+    public function setCampagne(?Campagne $campagne): self
+    {
+        $this->campagne = $campagne;
 
         return $this;
     }

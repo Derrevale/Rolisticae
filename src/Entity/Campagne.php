@@ -80,9 +80,27 @@ class Campagne
      */
     private $categorie;
 
+    /**
+     * @ORM\OneToMany(targetEntity=Scenario::class, mappedBy="campagne", orphanRemoval=true)
+     */
+    private $objectifActuel;
+
+    /**
+     * @ORM\OneToMany(targetEntity=Personnage::class, mappedBy="campagne", orphanRemoval=true)
+     */
+    private $player;
+
+    /**
+     * @ORM\OneToMany(targetEntity=Commentaire::class, mappedBy="campagne", orphanRemoval=true)
+     */
+    private $commentaires;
+
     public function __construct()
     {
         $this->categorie = new ArrayCollection();
+        $this->objectifActuel = new ArrayCollection();
+        $this->player = new ArrayCollection();
+        $this->commentaires = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -242,6 +260,96 @@ class Campagne
     public function removeCategorie(Categorie $categorie): self
     {
         $this->categorie->removeElement($categorie);
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Scenario>
+     */
+    public function getObjectifActuel(): Collection
+    {
+        return $this->objectifActuel;
+    }
+
+    public function addObjectifActuel(Scenario $objectifActuel): self
+    {
+        if (!$this->objectifActuel->contains($objectifActuel)) {
+            $this->objectifActuel[] = $objectifActuel;
+            $objectifActuel->setCampagne($this);
+        }
+
+        return $this;
+    }
+
+    public function removeObjectifActuel(Scenario $objectifActuel): self
+    {
+        if ($this->objectifActuel->removeElement($objectifActuel)) {
+            // set the owning side to null (unless already changed)
+            if ($objectifActuel->getCampagne() === $this) {
+                $objectifActuel->setCampagne(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Personnage>
+     */
+    public function getPlayer(): Collection
+    {
+        return $this->player;
+    }
+
+    public function addPlayer(Personnage $player): self
+    {
+        if (!$this->player->contains($player)) {
+            $this->player[] = $player;
+            $player->setCampagne($this);
+        }
+
+        return $this;
+    }
+
+    public function removePlayer(Personnage $player): self
+    {
+        if ($this->player->removeElement($player)) {
+            // set the owning side to null (unless already changed)
+            if ($player->getCampagne() === $this) {
+                $player->setCampagne(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Commentaire>
+     */
+    public function getCommentaires(): Collection
+    {
+        return $this->commentaires;
+    }
+
+    public function addCommentaire(Commentaire $commentaire): self
+    {
+        if (!$this->commentaires->contains($commentaire)) {
+            $this->commentaires[] = $commentaire;
+            $commentaire->setCampagne($this);
+        }
+
+        return $this;
+    }
+
+    public function removeCommentaire(Commentaire $commentaire): self
+    {
+        if ($this->commentaires->removeElement($commentaire)) {
+            // set the owning side to null (unless already changed)
+            if ($commentaire->getCampagne() === $this) {
+                $commentaire->setCampagne(null);
+            }
+        }
 
         return $this;
     }

@@ -32,7 +32,10 @@ class ActualityUnitTest extends TestCase
 
         $actuality = new Actuality();
         $datetime = new DateTime();
+
         $auteur = new User();
+        $auteur2 = new User();
+
 
         $actuality->setTitre("actualité de test")
             ->setContenu("contenu de test")
@@ -42,7 +45,7 @@ class ActualityUnitTest extends TestCase
         $this->assertFalse($actuality->getTitre() === "False");
         $this->assertFalse($actuality->getContenu() === "False");
         $this->assertFalse($actuality->getDatePubli() === "False");
-        $this->assertFalse($actuality->getAuteur() === "False");
+        $this->assertFalse($actuality->getAuteur() === $auteur2);
     }
 
     public function testIsEmpty()

@@ -49,9 +49,15 @@ class Skill
      */
     private $personnages;
 
+    /**
+     * @ORM\ManyToMany(targetEntity=Monster::class, mappedBy="competence")
+     */
+    private $monsters;
+
     public function __construct()
     {
         $this->personnages = new ArrayCollection();
+        $this->monsters = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -141,6 +147,33 @@ class Skill
     {
         if ($this->personnages->removeElement($personnage)) {
             $personnage->removeCompetence($this);
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Monster>
+     */
+    public function getMonsters(): Collection
+    {
+        return $this->monsters;
+    }
+
+    public function addMonster(Monster $monster): self
+    {
+        if (!$this->monsters->contains($monster)) {
+            $this->monsters[] = $monster;
+            $monster->addCompetence($this);
+        }
+
+        return $this;
+    }
+
+    public function removeMonster(Monster $monster): self
+    {
+        if ($this->monsters->removeElement($monster)) {
+            $monster->removeCompetence($this);
         }
 
         return $this;

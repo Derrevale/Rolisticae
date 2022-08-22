@@ -43,7 +43,9 @@ class PersonnageUnitTest extends TestCase
     {
         $personnage = new Personnage();
         $competence = new Skill();
+
         $user = new User();
+        $user2 = new User();
 
         $personnage->setPrenom("veldaryn")
             ->setNom("koda")
@@ -51,7 +53,9 @@ class PersonnageUnitTest extends TestCase
             ->setInventaire(["3 corde", "2 dagues"])
             ->setPV(10)
             ->setMP(5)
-            ->setStatus(true);
+            ->setStatus(true)
+            ->setUser($user);
+
 
         $this->assertFalse($personnage->getNom() === "False");
         $this->assertFalse($personnage->getPrenom() === "False");
@@ -61,7 +65,7 @@ class PersonnageUnitTest extends TestCase
         $this->assertFalse($personnage->getMP() === "False");
         $this->assertNotContains($competence, $personnage->getCompetences());
         $this->assertFalse($personnage->isStatus() === False);
-        $this->assertFalse($personnage->getUser() === $user);
+        $this->assertFalse($personnage->getUser() === $user2);
     }
 
     public function testIsEmpty()
