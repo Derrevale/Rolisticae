@@ -40,3 +40,5 @@ jobs:
       env:
         DATABASE_URL: sqlite:///%kernel.project_dir%/data/database.sqlite
       run: vendor/bin/phpunit
+    - name: Execute UnitTest
+      run: php bin/phpunit --testdox  
