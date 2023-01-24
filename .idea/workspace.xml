@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="67ca2271-bc7e-47d6-b2d5-c7285cb20d63" name="Changes" comment="modification des dossier de base et ajout du frontend">
-      <change beforePath="$PROJECT_DIR$/Rolisticae_client/test.txt" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/Rolisticae Project.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rolisticae_api/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_api/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +46,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
@@ -86,7 +92,8 @@
       <updated>1674201043282</updated>
       <workItem from="1674201046422" duration="13837000" />
       <workItem from="1674553836374" duration="1584000" />
-      <workItem from="1674556501208" duration="6014000" />
+      <workItem from="1674556501208" duration="6280000" />
+      <workItem from="1674564602218" duration="2890000" />
     </task>
     <task id="LOCAL-00001" summary="update README.md">
       <created>1674211406086</created>
@@ -123,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674556072007</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="modification des dossier de base et ajout du frontend">
+      <created>1674564375625</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1674564375625</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
