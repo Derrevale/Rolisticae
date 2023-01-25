@@ -1,6 +1,36 @@
 # Rolisticae
 Projet TFE : Rolisticae l'outils en ligne du MJ
 
+# Commande Fréquement utilisé
+
+_activation du venv_
+
+    venv\Scripts\activate.bat
+
+_lancement serveur django_
+
+    py manage.py runserver
+
+_lancement serveur react_
+    
+    npm start
+
+_freeze des requirements django_
+
+    pip freeze > requirements.txt
+
+_Préparation a la migration vers DB django_
+    
+    py manage.py makemigrations
+
+_Migration des données vers DB django_
+
+    py manage.py migrate 
+
+
+<br>
+<br>
+---------------------------------------------------------------------------------------------------------------------------------------
 
 ### ETAPE 1 Création du Virtual environnement
 
@@ -11,7 +41,7 @@ _Activation du Venv_
     venv\Scripts\activate.bat
 
 
-### ETAPE 2 Installation de Django et des dépendance
+### ETAPE 2 Installation de Django et des dépendances
 
 _Installation de django_
 
@@ -147,4 +177,13 @@ _Voir le fichier index.js dans le dossier src_
 
 _Création du fichier main.css_
 
-### 
+### ETAPE 27 Installation django corsheader
+
+    pip install django-cors-headers
+
+### ETAPE 28 ajout de Cors-header dans les app installer
+
+_Suivre les instructions donner sur le site web_
+
+### Etape 29 Creéaton du dossiers components dans react
+__

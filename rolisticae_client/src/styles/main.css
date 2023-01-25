@@ -107,3 +107,11 @@ label{
     cursor: pointer;
     border: none;
 }
+
+@media (max-width: 700px) {
+    .form{
+        width: 80%;
+    }
+    
+}
+

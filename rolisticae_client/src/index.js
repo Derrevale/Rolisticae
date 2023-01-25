@@ -1,16 +1,49 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import ReactDOM from 'react-dom';
 import './styles/main.css';
+import {Article} from "./components/post";
+
+
+const baseUrl = 'http://127.0.0.1:8000/'
 
 const App = () => {
     const [modalVisible, setModalVisible] = useState(false);
     const [title, setTitle] = useState('')
     const [content, setContent] = useState('')
+    const [posts, setPosts] = useState([]);
+
     const createNote = (event) => {
 
         event.preventDefault();
         console.log(title)
         console.log(content)
+        setTitle('')
+        setContent('')
+
+        setModalVisible(false)
+    }
+
+    const getAllPosts = async () => {
+        const response = await fetch(`${baseUrl}/api/article/`)
+
+        const data = await response.json()
+
+        if (response.ok) {
+            console.log(data)
+            setPosts(data)
+        } else {
+            console.log("Failed Network Request")
+        }
+    }
+
+    useEffect(
+        () => {
+            getAllPosts()
+        }, []
+    )
+
+    const deleteItem = (articleId) => {
+        console.log(articleId)
     }
 
     return (
@@ -25,7 +58,20 @@ const App = () => {
                 </div>
             </div>
             <div className="posts">
-                <p className="centerText">No Posts</p>
+                {/*<p className="centerText">No Posts</p>*/}
+                {
+                    posts.map(
+                        (item) => (
+
+                            <Article title={item.title}
+                                     content={item.content}
+                                     onclick={deleteItem(item.id)}
+                                     key={item.id}
+                            />
+                        )
+                    )
+
+                }
             </div>
             <div className={modalVisible ? 'modal' : 'modal-not-visible'}>
                 <div className="form">
