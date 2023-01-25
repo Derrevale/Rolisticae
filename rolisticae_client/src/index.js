@@ -24,13 +24,15 @@ const App = () => {
     }
 
     const getAllPosts = async () => {
-        const response = await fetch(`${baseUrl}/api/article/`)
+        const response = await fetch(`${baseUrl}api/article/`)
 
         const data = await response.json()
 
         if (response.ok) {
             console.log(data)
             setPosts(data)
+            console.log(data[1].header_image)
+            console.log('done')
         } else {
             console.log("Failed Network Request")
         }
@@ -65,6 +67,7 @@ const App = () => {
 
                             <Article title={item.title}
                                      content={item.content}
+                                     header_image={item.header_image}
                                      onclick={deleteItem(item.id)}
                                      key={item.id}
                             />
