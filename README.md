@@ -185,5 +185,14 @@ _Création du fichier main.css_
 
 _Suivre les instructions donner sur le site web_
 
-### Etape 29 Creéaton du dossiers components dans react
-__
+### Etape 29 Création du dossiers components dans react
+_
+
+### ETAPE 30 Ajout de react-html-parser
+
+_Pour nettoyer et afficher du code avec des baslises_
+    npm install react-html-parser
+
+### ETAPE 31 
+    
+voir fichier 
