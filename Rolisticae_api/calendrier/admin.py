@@ -2,7 +2,7 @@
 from django.contrib import admin
 
 # Importation de vos modèles de calendrier
-from .models import Calendar, Event
+from calendrier.models import Calendar, Event
 
 
 # Enregistrement de la classe CalendarAdmin pour l'interface d'administration de Django

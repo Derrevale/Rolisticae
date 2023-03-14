@@ -36,12 +36,20 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'rest_framework',
+    # Rolisticae
+    'blog',
+    'galerie',
+    'documents',
+    'calendrier',
+
+    'colorfield',
+
+    # 3rd party
     'ckeditor',
+
+    'rest_framework',
     'drf_yasg',
     'corsheaders',
-
-    'blog.apps.BlogConfig',
 ]
 
 MIDDLEWARE = [
