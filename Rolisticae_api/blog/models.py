@@ -1,12 +1,5 @@
-from django.db import models
 from ckeditor.fields import RichTextField
-
-
-"""
-Class Category
-    name str
-    slug slug
-"""
+from django.db import models
 # Classe qui représente une catégorie d'articles de blog dans la base de données
 class Category(models.Model):
     # Nom de la catégorie
@@ -24,16 +17,6 @@ class Category(models.Model):
         # Nom humain du pluriel de la classe pour l'interface d'administration de Django
         verbose_name_plural = 'Categories'
 
-
-"""
-Class Article
-    title str
-    header_image imageField
-    category Category
-    intro  str
-    content str
-    publication_time datetime
-"""
 # Classe qui représente un article de blog dans la base de données
 class Article(models.Model):
     # Titre de l'article

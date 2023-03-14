@@ -36,12 +36,20 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'rest_framework',
+    # Rolisticae
+    'blog',
+    'galerie',
+    'documents',
+    'calendrier',
+
+    'colorfield',
+
+    # 3rd party
     'ckeditor',
+
+    'rest_framework',
     'drf_yasg',
     'corsheaders',
-
-    'blog.apps.BlogConfig',
 ]
 
 MIDDLEWARE = [
@@ -57,8 +65,8 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-    "http://127.0.0.1:3000",
+    "http://localhost:3001",
+    "http://127.0.0.1:3001",
 ]
 
 ROOT_URLCONF = 'Rolisticae_core.urls'
