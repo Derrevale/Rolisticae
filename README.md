@@ -27,6 +27,17 @@ _Migration des données vers DB django_
 
     py manage.py migrate 
 
+_Création d'un super User_
+
+    py manage.py createsuperuser
+
+_Installation des requirements Django_
+
+    pip install -r requirements.txt
+
+_Installation des requirements React_
+
+    npm install 
 
 <br>
 <br>
@@ -186,13 +197,17 @@ _Création du fichier main.css_
 _Suivre les instructions donner sur le site web_
 
 ### Etape 29 Création du dossiers components dans react
-_
+_0_
 
-### ETAPE 30 Ajout de react-html-parser
+### ETAPE 30 Ajout de html-react-parser
 
 _Pour nettoyer et afficher du code avec des baslises_
-    npm install react-html-parser
+    npm install html-react-parser
 
-### ETAPE 31 
+### ETAPE 31 ajouter une fonction de nettoyage dans post.js
     
-voir fichier 
+_voir fichier post.js -> cleanedContent_
+
+### ETAPE 32 Ajout de react-router-dom
+
+    npm install react-router-dom

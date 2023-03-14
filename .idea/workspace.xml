@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67ca2271-bc7e-47d6-b2d5-c7285cb20d63" name="Changes" comment="update frontend gestion Image">
-      <change afterPath="$PROJECT_DIR$/rolisticae_client/src/components/post.js" afterDir="false" />
+    <list default="true" id="67ca2271-bc7e-47d6-b2d5-c7285cb20d63" name="Changes" comment="update frontend gestion Image + html-react-parse">
+      <change beforePath="$PROJECT_DIR$/.idea/Rolisticae Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Rolisticae Project.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rolisticae_api/Rolisticae_core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/Rolisticae_core/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rolisticae_client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rolisticae_client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/package.json" afterDir="false" />
     </list>
@@ -18,16 +20,16 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="add-frontend" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -98,6 +100,14 @@
       <workItem from="1674556501208" duration="6280000" />
       <workItem from="1674564602218" duration="10510000" />
       <workItem from="1674639749411" duration="3824000" />
+      <workItem from="1674811667757" duration="10155000" />
+      <workItem from="1675845727015" duration="624000" />
+      <workItem from="1676013913519" duration="452000" />
+      <workItem from="1676014540582" duration="591000" />
+      <workItem from="1676455133607" duration="3057000" />
+      <workItem from="1677063726377" duration="858000" />
+      <workItem from="1677232859705" duration="1152000" />
+      <workItem from="1678778160972" duration="759000" />
     </task>
     <task id="LOCAL-00001" summary="update README.md">
       <created>1674211406086</created>
@@ -148,7 +158,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674658073964</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="update frontend gestion Image + html-react-parse">
+      <created>1674811723625</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1674811723625</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,6 +177,7 @@
     <MESSAGE value="modification des dossier de base et ajout du frontend" />
     <MESSAGE value="readme update" />
     <MESSAGE value="update frontend" />
-    <option name="LAST_COMMIT_MESSAGE" value="update frontend" />
+    <MESSAGE value="update frontend gestion Image + html-react-parse" />
+    <option name="LAST_COMMIT_MESSAGE" value="update frontend gestion Image + html-react-parse" />
   </component>
 </project>
