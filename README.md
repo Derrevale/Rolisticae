@@ -1,93 +1,123 @@
 # Rolisticae
 Projet TFE : Rolisticae l'outils en ligne du MJ
 
+# Commande Fréquement utilisé
 
-#### ETAPE 1 Création du Virtual environnement
+_activation du venv_
+
+    venv\Scripts\activate.bat
+
+_lancement serveur django_
+
+    py manage.py runserver
+
+_lancement serveur react_
+    
+    npm start
+
+_freeze des requirements django_
+
+    pip freeze > requirements.txt
+
+_Préparation a la migration vers DB django_
+    
+    py manage.py makemigrations
+
+_Migration des données vers DB django_
+
+    py manage.py migrate 
+
+
+<br>
+<br>
+---------------------------------------------------------------------------------------------------------------------------------------
+
+### ETAPE 1 Création du Virtual environnement
 
     py -m venv venv
 
-Activation du Venv
+_Activation du Venv_
 
     venv\Scripts\activate.bat
 
 
-#### ETAPE 2 Installation de Django et des dépendance
+### ETAPE 2 Installation de Django et des dépendances
 
-**Installation de django**
+_Installation de django_
 
     pip install django 
 
-**Pour les textfields améliorer**
+_Pour les textfields améliorer_
 
     pip install django-ckeditor 
 
-**Pour les Images**
+_Pour les Images_
 
     python -m pip install Pillow
 
-#### ETAPE 3 Création du projet
-**Création du projet Rolisticae_core Django**
+### ETAPE 3 Création du projet
+_Création du projet Rolisticae_core Django_
 
     django-admin startproject Rolisticae_core 
 
-**Mise en place du Manage.py dans le dossier direct**
+_Mise en place du Manage.py dans le dossier direct_
 
     django-admin startproject Rolisticae_core . 
 
-#### ETAPE 4 Vérification de l'installation et de la création
-**Lance le serveur sur le port par défaut (127.0.0.1:8000)**
+### ETAPE 4 Vérification de l'installation et de la création
+_Lance le serveur sur le port par défaut (127.0.0.1:8000)_
 
     py manage.py runserver 
 
-#### ETAPE 5 Création de l'app "Blog"
+### ETAPE 5 Création de l'app "Blog"
 
-**Création de l'app "blog"**
+_Création de l'app "blog"_
 
     django-admin startapp blog 
 
-#### ETAPE 6 Ajout de l'apps dans les settings
+### ETAPE 6 Ajout de l'apps dans les settings
 
-dans le dossier Rolisticae_core dans le fichier settings.py dans la catégorie INSTALED_APPS ajouter 
+_Dans le dossier Rolisticae_core dans le fichier settings.py dans la catégorie INSTALED_APPS ajouter_
     
     'blog.apps.BlogConfig',
 
-#### ETAPE 7 Création de la classe Category et Article
+### ETAPE 7 Création de la classe Category et Article
 
-voir fichier models.py dans le dossier blog
+_Voir fichier models.py dans le dossier blog_
 
-#### ETAPE 8 Préparer la migration du modèle vers la database
+### ETAPE 8 Préparer la migration du modèle vers la database
 
     py manage.py makemigrations
 
-#### ETAPE 9 Migrer les données
+### ETAPE 9 Migrer les données
 
     py manage.py migrate
 
-#### ETAPE 10 Installation de djangorestframework
+### ETAPE 10 Installation de djangorestframework
 
     pip install djangorestframework
 
-#### ETAPE 11 Ajout de djangorestframework dans les Apps
+### ETAPE 11 Ajout de djangorestframework dans les Apps
 
-Dans le dossier Rolisticae_core dans le fichier settings.py dans la catégorie INSTALED_APPS ajouter 
+_Dans le dossier Rolisticae_core dans le fichier settings.py dans la catégorie INSTALED_APPS ajouter_
 
     'rest_framework',
 
-#### ETAPE 12 création du serializers
+### ETAPE 12 création du serializers
 
-Dans le dossier blog créer le fichier serializers.py
+_Dans le dossier blog créer le fichier serializers.py_
 
-#### ETAPE 13 édition du fichier serializers
+### ETAPE 13 édition du fichier serializers
 
-voir le fichier serializers dans le dossier "blog"
+_Voir le fichier serializers dans le dossier "blog"_
 
-#### ETAPE 14 Création de la vue
+### ETAPE 14 Création de la vue
 
-voir le fichier views.py dans le dossier blog
+_Voir le fichier views.py dans le dossier blog_
 
-#### ETAPE 15 ajout de le vue dans les URLS
+### ETAPE 15 ajout de le vue dans les URLS
 
-ajout du code suivant:
+_Ajout du code suivant:_
 
         from blog.views import CategorysViewset
         from rest_framework.routers import DefaultRouter
@@ -98,35 +128,71 @@ ajout du code suivant:
 
         path('',include(router.urls))
 
-#### ETAPE 16 création du superadmin
+### ETAPE 16 création du superadmin
 
     py manage.py createsuperuser
 
-#### ETAPE 17 Ajout de category dans l'admin django
+### ETAPE 17 Ajout de category dans l'admin django
 
-voir le fichier admin.py dans le dossier blog
+_Voir le fichier admin.py dans le dossier blog_
 
-#### ETAPE 18 ajout de DRF YAGS
+### ETAPE 18 ajout de DRF YAGS
 
-allez sur le site 
+_Allez sur le site_
 
     https://drf-yasg.readthedocs.io/en/stable/readme.html et mettre Urls.py a jour avec les ajout
 
 
-#### ETAPE 19 installation de drf_yasg
+### ETAPE 19 installation de drf_yasg
 
     pip install drf_yasg
 
-#### ETAPE 20 ajout de drf_yasg dans les applications
+### ETAPE 20 ajout de drf_yasg dans les applications
 
-Dans le fichier settings.py, dans les INSTALLED_APP ajouter 
+_Dans le fichier settings.py, dans les INSTALLED_APP ajouter_
     
     'drf_yasg',
 
-#### ETAPE 21 verification
+### ETAPE 21 verification
 
-Aller sur l'adresse 127.0.0.1:8000/swagger. Si ça s'affiche correctement alors tout est OK
+_Aller sur l'adresse 127.0.0.1:8000/swagger. Si ça s'affiche correctement alors tout est OK_
 
-#### ETAPE 22
+### ETAPE 22 Installation react
 
-#### ETAPE 23
+    npx create-react-app rolisticae_client
+
+### ETAPE 23 lancement react
+
+    npm start
+
+### ETAPE 24 suppression src
+
+_Supprimer les fichiers contenu dans src_
+
+### ETAPE 25 création de index.js
+
+_Voir le fichier index.js dans le dossier src_
+
+### ETAPE 26 création du fichier CSS
+
+_Création du fichier main.css_
+
+### ETAPE 27 Installation django corsheader
+
+    pip install django-cors-headers
+
+### ETAPE 28 ajout de Cors-header dans les app installer
+
+_Suivre les instructions donner sur le site web_
+
+### Etape 29 Création du dossiers components dans react
+_
+
+### ETAPE 30 Ajout de react-html-parser
+
+_Pour nettoyer et afficher du code avec des baslises_
+    npm install react-html-parser
+
+### ETAPE 31 
+    
+voir fichier 
