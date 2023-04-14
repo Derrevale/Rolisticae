@@ -15,7 +15,7 @@ function Navbar() {
 
     useEffect(() => {
         axios
-            .get("http://localhost:8000/api/calendrier/")
+            .get("http://localhost:8010/api/calendrier/")
             .then((response) => setCategories(response.data))
             .catch((error) => console.log(error));
     }, []);

@@ -4,38 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67ca2271-bc7e-47d6-b2d5-c7285cb20d63" name="Changes" comment="update backend ajour calendrier">
-      <change afterPath="$PROJECT_DIR$/rolisticae_client/src/components/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Blog/Article.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Blog/ArticleList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Calendar/CalendarEvent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Calendar/EventList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Calendar/Popup.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Formulaire/EventForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Navbar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Topbar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rolisticae_client/src/reportWebVitals.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rolisticae_client/src/styles/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rolisticae_client/src/styles/Calendar/Calendar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rolisticae_client/src/styles/Calendar/Popup.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rolisticae_client/src/styles/Formulaire/EventForm.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rolisticae_client/src/styles/Navbar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rolisticae_client/src/styles/Topbar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rolisticae_client/src/styles/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rolisticae_client/src/styles/index.css" afterDir="false" />
+    <list default="true" id="67ca2271-bc7e-47d6-b2d5-c7285cb20d63" name="Changes" comment="Correction react 17 to 18">
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Documents/Documents.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Rolisticae Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Rolisticae Project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/Rolisticae_core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/Rolisticae_core/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/calendrier/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/calendrier/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rolisticae_client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rolisticae_api/requirements.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/rolisticae_client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/post.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rolisticae_client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rolisticae_client/src/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/styles/ArticleList.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/Blog/Article.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Blog/Article.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/Blog/ArticleList.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Blog/ArticleList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/Calendar/EventList.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Calendar/EventList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Navbar.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -49,10 +37,11 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="add-frontend" />
+        <entry key="$PROJECT_DIR$" value="Gestion_Fchier" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -71,52 +60,68 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/vaderr/Documents/TFE/Rolisticae Project/rolisticae_client/src",
+    "last_opened_file_path": "C:/Users/vaderr/Documents/TFE/Rolisticae Project/rolisticae_client/src/components/Documents",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.idesettings.emmet.jsx",
+    "settings.editor.selected.configurable": "com.jetbrains.django.DjangoModulesConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\vaderr\Documents\TFE\Rolisticae Project\rolisticae_client\src\components\Documents" />
       <recent name="C:\Users\vaderr\Documents\TFE\Rolisticae Project\rolisticae_client\src" />
       <recent name="C:\Users\vaderr\Documents\TFE\Rolisticae Project\rolisticae_client\src\styles\Formulaire" />
       <recent name="C:\Users\vaderr\Documents\TFE\Rolisticae Project\rolisticae_client\src\components\Formulaire" />
       <recent name="C:\Users\vaderr\Documents\TFE\Rolisticae Project\rolisticae_client\src\components\Calendar" />
-      <recent name="C:\Users\vaderr\Documents\TFE\Rolisticae Project\rolisticae_client\src\components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\vaderr\Documents\TFE\Rolisticae Project" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+  <component name="RunManager" selected="Django Server.Rolisticae API">
+    <configuration name="Rolisticae API" type="Python.DjangoServer" factoryName="Django server">
       <module name="Rolisticae Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="Rolisticae_core.settings" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8010" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="http://127.0.0.1:8010/" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Rolisticae Client" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/rolisticae_client/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Django Server.Rolisticae API" />
+      <item itemvalue="npm.Rolisticae Client" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -138,7 +143,8 @@
       <workItem from="1676455133607" duration="3057000" />
       <workItem from="1677063726377" duration="858000" />
       <workItem from="1677232859705" duration="1152000" />
-      <workItem from="1678778160972" duration="4379000" />
+      <workItem from="1678778160972" duration="9378000" />
+      <workItem from="1681453798881" duration="2223000" />
     </task>
     <task id="LOCAL-00001" summary="update README.md">
       <created>1674211406086</created>
@@ -203,11 +209,57 @@
       <option name="project" value="LOCAL" />
       <updated>1678779050054</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Update Frontend">
+      <created>1678787977275</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1678787977275</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Add Frontend Blog">
+      <created>1678788014563</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1678788014563</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Stuffing + Gestion Calendrier">
+      <created>1678788037556</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1678788037556</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Backend Ajout module Galerie , Documents">
+      <created>1678788111374</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1678788111374</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Correction react 17 to 18">
+      <created>1678801920880</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1678801920880</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update README.md" />
@@ -217,6 +269,11 @@
     <MESSAGE value="update frontend" />
     <MESSAGE value="update frontend gestion Image + html-react-parse" />
     <MESSAGE value="update backend ajour calendrier" />
-    <option name="LAST_COMMIT_MESSAGE" value="update backend ajour calendrier" />
+    <MESSAGE value="Update Frontend" />
+    <MESSAGE value="Add Frontend Blog" />
+    <MESSAGE value="Stuffing + Gestion Calendrier" />
+    <MESSAGE value="Backend Ajout module Galerie , Documents" />
+    <MESSAGE value="Correction react 17 to 18" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correction react 17 to 18" />
   </component>
 </project>

@@ -1,6 +1,6 @@
 import { RRule } from 'rrule';
 
-const API_URL = "http://localhost:8000/api/event/";
+const API_URL = "http://localhost:8010/api/event/";
 
 const getEvents = async (category) => {
   try {

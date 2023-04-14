@@ -65,8 +65,8 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3001",
-    "http://127.0.0.1:3001",
+    "http://localhost:3010",
+    "http://127.0.0.1:3010",
 ]
 
 ROOT_URLCONF = 'Rolisticae_core.urls'
