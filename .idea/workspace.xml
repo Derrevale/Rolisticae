@@ -5,55 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cfb99459-6fdd-4a71-bcdb-9c402aa66c7f" name="Changes" comment="Gestion de fichier terminée&#10;&#10;Filemanager Backend fonctionnel">
-      <change afterPath="$PROJECT_DIR$/Rolisticae_api/documents/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rolisticae_api/documents/services.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Rolisticae Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Rolisticae Project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/.idea/Rolisticae Project.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/Rolisticae_core/Rolisticae_core/asgi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/Rolisticae_core/asgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/Rolisticae_core/asgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/Rolisticae_core/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/Rolisticae_core/manage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/Rolisticae_core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/Rolisticae_core/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/Rolisticae_core/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/Rolisticae_core/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/Rolisticae_core/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/Rolisticae_core/wsgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/blog/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/blog/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/blog/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/blog/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/blog/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/blog/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/blog/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/blog/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/calendrier/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/calendrier/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/calendrier/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/calendrier/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/documents/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/documents/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/documents/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/documents/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/documents/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/documents/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/documents/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/documents/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/galerie/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/galerie/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/galerie/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/galerie/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/galerie/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/galerie/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/manage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rolisticae_client/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rolisticae_client/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rolisticae_client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rolisticae_client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/Blog/Article.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Blog/Article.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/Blog/ArticleList.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Blog/ArticleList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/Calendar/CalendarEvent.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Calendar/CalendarEvent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/Calendar/EventList.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Calendar/EventList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/Formulaire/EventForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Formulaire/EventForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Navbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/Topbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Topbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rolisticae_client/src/styles/Navbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/styles/Navbar.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -243,7 +196,7 @@
       <workItem from="1680250145877" duration="36483000" />
       <workItem from="1681453438119" duration="4987000" />
       <workItem from="1681715125834" duration="1935000" />
-      <workItem from="1681718875276" duration="5410000" />
+      <workItem from="1681718875276" duration="5752000" />
     </task>
     <task id="LOCAL-00001" summary="add requirements.txt">
       <created>1677233667651</created>
@@ -329,7 +282,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680876877783</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Gestion de fichier terminée&#10;&#10;Filemanager Backend fonctionnel">
+      <created>1681724534866</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1681724534867</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

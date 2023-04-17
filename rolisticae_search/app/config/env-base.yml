@@ -1,0 +1,3 @@
+mongo:
+  database: Rolisticae_SearchBase
+  collection: file_content

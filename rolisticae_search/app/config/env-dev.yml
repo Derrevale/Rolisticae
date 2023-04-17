@@ -1,0 +1,8 @@
+mongo:
+  host: Rolisticae_SearchBase-mongo
+  port: 27017
+  user: Rolisticae_Admin
+  password: l0R€m!psum
+
+tesseract:
+  path: /usr/bin/tesseract
