@@ -1,5 +1,5 @@
 """
-WSGI config for Rolisticae_core project.
+WSGI config for rolisticae_core project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Rolisticae_core.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'rolisticae_core.settings')
 
 application = get_wsgi_application()

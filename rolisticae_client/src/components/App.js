@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from "react";
 import Navbar from "./Navbar";
 import Topbar from "./Topbar";
-import CalendarEvent from "./Calendar/CalendarEvent";
 
 
 import {
@@ -16,6 +15,11 @@ import {
 import ArticleList from "./Blog/ArticleList";
 import Article from "./Blog/Article";
 import AddEventForm from "./Formulaire/EventForm";
+import Documents from "./Documents/Documents";
+import Gallery from "./Galery/Galery";
+import FileImports from "./Documents/FileImports";
+import SearchResult from "./Search/SearchResult";
+import CalendarEvent from "./Calendar/CalendarEvent";
 
 function App() {
 
@@ -24,9 +28,15 @@ function App() {
             <Route path="/" element={<Root/>}>
                 <Route index element={<ArticleList/>}/>
                 <Route path="/calendrier/:id" element={<CalendarEvent/>}/>
+
                 <Route path="/eventform" element={<AddEventForm/>}/>
+                <Route path="/fileimport" element={<FileImports/>}/>
+                <Route path="/search" element={<SearchResult/>}/>
+
                 <Route path="/articlelist" element={<ArticleList/>}/>
                 <Route path="/articles/:id" element={<Article/>}/>
+                <Route path="/documents" element={<Documents/>}/>
+                <Route path="/Galerie" element={<Gallery/>}/>
                 <Route element={<Navbar/>}/>
             </Route>
         )

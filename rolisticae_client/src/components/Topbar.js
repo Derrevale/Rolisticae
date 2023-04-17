@@ -22,8 +22,8 @@ function Topbar() {
                                 <li className="">
                                     <a target="_blank" rel="noopener noreferrer"
                                        href="https://www.instagram.com/les.rois.fous/"
-                                       aria-label="Instagram">
-                                        <FontAwesomeIcon icon={faInstagram} className="fa fa-facebook"></FontAwesomeIcon>
+                                       aria-label="Youtube">
+                                        <FontAwesomeIcon icon={faInstagram} className="fa fa-instagram"></FontAwesomeIcon>
                                     </a>
                                 </li>
                                 <li className="">
@@ -31,8 +31,8 @@ function Topbar() {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         href="https://discord.gg/juZh5czy"
-                                        aria-label="Discord">
-                                        <FontAwesomeIcon icon={faDiscord} className="fa fa-facebook"></FontAwesomeIcon>
+                                        aria-label="Linkedin">
+                                        <FontAwesomeIcon icon={faDiscord} className="fa fa-discord"></FontAwesomeIcon>
                                     </a>
                                 </li>
                             </ul>
