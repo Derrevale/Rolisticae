@@ -46,15 +46,13 @@ function Navbar() {
                             <div className="header_column">
                                 <div className="logo">
                                     <a href="/">
-                                        <img
-                                            className="logo-image  ls-is-cached lazyloaded"
-                                            data-srcset="https://intra.silva-medical.be/images/silva-rolisticae.png 1x"
-                                            data-src="https://intra.silva-medical.be/images/silva-rolisticae.png"
-                                            alt="rolisticae"
-                                            data-size="auto"
-                                            srcSet="https://intra.silva-medical.be/images/silva-rolisticae.png 1x"
-                                            src="src/components/Blog/ArticleList"
-                                        ></img>
+                                        <img className="logo-image  ls-is-cached lazyloaded"
+                                             data-srcset="https://i.ibb.co/sKSbDBT/Rolisticae-2-removebg-preview.png 1x"
+                                             data-src="https://i.ibb.co/sKSbDBT/Rolisticae-2-removebg-preview.png"
+                                             alt="Intranet"
+                                             data-size="auto"
+                                             srcSet="https://i.ibb.co/sKSbDBT/Rolisticae-2-removebg-preview.png 1x"
+                                             src="src/components/Blog/ArticleList"></img>
                                     </a>
                                 </div>
                             </div>
@@ -74,7 +72,7 @@ function Navbar() {
                                             <a onClick={toggleDropdown}>
                                                 <FontAwesomeIcon icon={faCalendar}
                                                                  className="fa-facebook"></FontAwesomeIcon>{' '}
-                                                Garde
+                                                Campagnes
                                             </a>
                                             {showDropdown && (
                                                 <div className="dropdown">
@@ -95,21 +93,21 @@ function Navbar() {
                                             </a>
                                         </li>
                                         <li className="sp-menu-item">
-                                            <a href="https://silvamedic.lms.sapsf.eu/learning/user/personal/viewPersonalHome.do?OWASP_CSRFTOKEN=TYES-8K4D-BBIC-5MJF-NGI7-HOD8-DQYQ-Z6U0">
+                                            <a href="/">
                                                 <FontAwesomeIcon icon={faBook}
-                                                                 className="fa-facebook"></FontAwesomeIcon> Formation
+                                                                 className="fa-facebook"></FontAwesomeIcon> Règles
                                             </a>
                                         </li>
                                         <li className="sp-menu-item">
-                                            <a href="https://hcm55.sapsf.eu/sf/careers/jobsearch?bplte_company=silvamedic">
+                                            <a href="">
                                                 <FontAwesomeIcon icon={faIdBadge}
-                                                                 className="fa-facebook"></FontAwesomeIcon> Carrière
+                                                                 className="fa-facebook"></FontAwesomeIcon> Personnage
                                             </a>
                                         </li>
                                         <li className="sp-menu-item">
                                             <a href="/Galerie">
                                                 <FontAwesomeIcon icon={faImages}
-                                                                 className="fa-facebook"></FontAwesomeIcon> Galerie
+                                                                 className="fa-facebook"></FontAwesomeIcon> Illustration
                                             </a>
                                         </li>
                                         <li className="sp-menu-item">
