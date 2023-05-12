@@ -1,5 +1,5 @@
 mongo:
-  host: Rolisticae_SearchBase-mongo
+  host: loki-mongo
   port: 27017
   user: root
   password: example

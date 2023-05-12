@@ -151,5 +151,5 @@ else:
     logger.setLevel(logging.INFO)
 
 # OCR Search configuration
-ROLISTICAE_SEARCH_PROCESS_URL = "http://localhost:8011/process"
-ROLISTICAE_SEARCH_URL = "http://localhost:8011/search"
+ROLISTICAE_SEARCH_PROCESS_URL = "http://localhost:8001/process"
+ROLISTICAE_SEARCH_URL = "http://localhost:8001/search"

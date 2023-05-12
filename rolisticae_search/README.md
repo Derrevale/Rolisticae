@@ -3,7 +3,7 @@
 ## Usage
 Use the `Dockerfile` to build the image for your environment by typing:
 ```shell
-docker build -t . silva/loki
+docker build -t . rolisticae/loki
 ```
 
 Use the `docker/docker-compose.yml` file to start the services:

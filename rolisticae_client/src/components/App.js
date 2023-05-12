@@ -16,7 +16,9 @@ import ArticleList from "./Blog/ArticleList";
 import Article from "./Blog/Article";
 import AddEventForm from "./Formulaire/EventForm";
 import Documents from "./Documents/Documents";
-import Gallery from "./Galery/Galery";
+import CategoryList from "./Galery/CategoryList";
+import CategoryDetail from "./Galery/CategoryDetail";
+
 import FileImports from "./Documents/FileImports";
 import SearchResult from "./Search/SearchResult";
 import CalendarEvent from "./Calendar/CalendarEvent";
@@ -35,8 +37,12 @@ function App() {
 
                 <Route path="/articlelist" element={<ArticleList/>}/>
                 <Route path="/articles/:id" element={<Article/>}/>
+
                 <Route path="/documents" element={<Documents/>}/>
-                <Route path="/Galerie" element={<Gallery/>}/>
+
+                <Route path="/Galerie" element={<CategoryList/>}/>
+                <Route path="/Galerie/:categoryId" element={<CategoryDetail/>}/>
+
                 <Route element={<Navbar/>}/>
             </Route>
         )

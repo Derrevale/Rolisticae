@@ -5,7 +5,7 @@ services:
   mongo:
     image: mongo
     restart: unless-stopped
-    hostname: Rolisticae_SearchBase-mongo
+    hostname: loki-mongo
     ports:
       - "27017:27017"
     environment:
