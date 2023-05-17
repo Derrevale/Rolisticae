@@ -4,22 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfb99459-6fdd-4a71-bcdb-9c402aa66c7f" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/Rolisticae_api/galerie/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Galery/CategoryDetail.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Galery/CategoryList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rolisticae_client/src/styles/Galerie/CategoryList.css" afterDir="false" />
+    <list default="true" id="cfb99459-6fdd-4a71-bcdb-9c402aa66c7f" name="Changes" comment="update ajout galerie correcte ( CSS a retravailler pour les details)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Rolisticae_api/Rolisticae_core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/Rolisticae_core/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/galerie/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/galerie/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/galerie/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/galerie/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rolisticae_search/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_search/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rolisticae_search/app/config/env-base.yml" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_search/app/config/env-base.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rolisticae_search/app/config/env-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_search/app/config/env-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rolisticae_search/app/config/env-docker.yml" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_search/app/config/env-docker.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rolisticae_search/app/config/env-prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_search/app/config/env-prod.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rolisticae_search/docker/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_search/docker/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rolisticae_api/documents/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/documents/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rolisticae_api/documents/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/documents/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rolisticae_api/documents/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/documents/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rolisticae_api/documents/services.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/documents/services.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rolisticae_api/documents/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/documents/tests.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,24 +52,25 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/vaderr/Documents/TFE/Rolisticae Project/rolisticae_api/galerie",
+    "last_opened_file_path": "C:/Users/vaderr/Documents/TFE/Rolisticae Project",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "com.jetbrains.django.DjangoModulesConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\vaderr\Documents\TFE\Rolisticae Project\rolisticae_api\documents" />
       <recent name="C:\Users\vaderr\Documents\TFE\Rolisticae Project\rolisticae_api\galerie" />
       <recent name="C:\Users\vaderr\Documents\TFE\Rolisticae Project\rolisticae_client\src\styles" />
       <recent name="C:\Users\vaderr\Documents\TFE\Rolisticae Project\rolisticae_client\src\components\Galery" />
       <recent name="C:\Users\vaderr\Documents\TFE\Rolisticae Project\rolisticae_search" />
-      <recent name="C:\Users\vaderr\Documents\TFE\TFE Projet\React-Django-intra\inranet_search\docker\local" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\vaderr\Documents\TFE\TFE Projet\React-Django-intra\intranet_client\src\components\Calendar" />
@@ -87,7 +80,7 @@
       <recent name="C:\Users\vaderr\Documents\TFE\TFE Projet\React-Django-intra\intranet_client" />
     </key>
   </component>
-  <component name="RunManager" selected="Django Server.Rolisticae API">
+  <component name="RunManager" selected="Docker.docker: Compose Deployment">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="React-Django-intra" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -141,7 +134,7 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+    <configuration name="docker: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" server-name="Rolisticae">
       <deployment type="docker-compose.yml">
         <settings>
           <option name="envFilePath" value="" />
@@ -178,7 +171,6 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.docker: Compose Deployment" />
         <item itemvalue="Python.main" />
         <item itemvalue="Docker.local: Compose Deployment" />
       </list>
@@ -210,7 +202,8 @@
       <workItem from="1681453438119" duration="4987000" />
       <workItem from="1681715125834" duration="1935000" />
       <workItem from="1681718875276" duration="9360000" />
-      <workItem from="1683872448695" duration="814000" />
+      <workItem from="1683872448695" duration="8154000" />
+      <workItem from="1684137491370" duration="2472000" />
     </task>
     <task id="LOCAL-00001" summary="add requirements.txt">
       <created>1677233667651</created>
@@ -317,7 +310,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681724869741</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="update ajout galerie correcte ( CSS a retravailler pour les details)">
+      <created>1683873407803</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1683873407803</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -343,7 +343,8 @@
     <MESSAGE value="V2 ajout de la Galerie&#10;+ correction affichage des catégories de fichier" />
     <MESSAGE value="Gestion de fichier terminée&#10;&#10;Filemanager Backend fonctionnel" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="update ajout galerie correcte ( CSS a retravailler pour les details)" />
+    <option name="LAST_COMMIT_MESSAGE" value="update ajout galerie correcte ( CSS a retravailler pour les details)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

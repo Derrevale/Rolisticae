@@ -12,10 +12,10 @@ class RolisticaeSearchService:
 
     def __init__(self):
         """
-        Initializes the RolisticaeSearchService based on the loaded configuration.
+        Initializes the Rolisticae_SearchService based on the loaded configuration.
         """
 
-        # Fetch Rolisticae settings
+        # Fetch silva settings
         from rolisticae_core import settings
         self.process_url = settings.ROLISTICAE_SEARCH_PROCESS_URL
         self.search_url = settings.ROLISTICAE_SEARCH_URL
@@ -69,7 +69,7 @@ class RolisticaeSearchService:
         # Check if the request was successful
         if request.status_code != 200:
             # If not, raise an exception
-            raise Exception(f'Failed to check document: {request.text}')
+            raise Exception(f'Failed too check document: {request.text}')
 
         try:
             # Return the result
