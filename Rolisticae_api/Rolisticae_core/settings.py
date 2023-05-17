@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'galerie',
     'documents',
     'calendrier',
+    'users',
 
     'colorfield',
 
@@ -124,7 +125,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'fr-fr'
 
-TIME_ZONE = 'Europe/london'
+TIME_ZONE = 'Europe/Paris'
 
 USE_I18N = True
 
@@ -153,3 +154,6 @@ else:
 # OCR Search configuration
 ROLISTICAE_SEARCH_PROCESS_URL = "http://localhost:8001/process"
 ROLISTICAE_SEARCH_URL = "http://localhost:8001/search"
+
+#Model User
+AUTH_USER_MODEL = 'users.CustomUser'
