@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfb99459-6fdd-4a71-bcdb-9c402aa66c7f" name="Changes" comment="update ajout galerie correcte ( CSS a retravailler pour les details)">
+    <list default="true" id="cfb99459-6fdd-4a71-bcdb-9c402aa66c7f" name="Changes" comment="Ajout de la fonction de vote par jour coté Backend">
+      <change afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Appointments/AppointmentList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rolisticae_client/src/styles/AppointmentList.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/Rolisticae_core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/Rolisticae_core/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/documents/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/documents/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/documents/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/documents/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/documents/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/documents/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/documents/services.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/documents/services.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/documents/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/documents/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rolisticae_api/Rolisticae_core/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/Rolisticae_core/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/App.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,9 +23,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="Python Script" />
         <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -80,7 +78,7 @@
       <recent name="C:\Users\vaderr\Documents\TFE\TFE Projet\React-Django-intra\intranet_client" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.docker: Compose Deployment">
+  <component name="RunManager" selected="Django Server.Rolisticae API">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="React-Django-intra" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -203,7 +201,7 @@
       <workItem from="1681715125834" duration="1935000" />
       <workItem from="1681718875276" duration="9360000" />
       <workItem from="1683872448695" duration="8154000" />
-      <workItem from="1684137491370" duration="2472000" />
+      <workItem from="1684137491370" duration="23616000" />
     </task>
     <task id="LOCAL-00001" summary="add requirements.txt">
       <created>1677233667651</created>
@@ -317,7 +315,35 @@
       <option name="project" value="LOCAL" />
       <updated>1683873407803</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="OCR Fonctionnel">
+      <created>1684307397545</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1684307397545</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Correction fuseau horaire">
+      <created>1684332117566</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1684332117566</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Correction fuseau horaire">
+      <created>1684333096305</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1684333096305</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Ajout de la fonction de vote par jour coté Backend">
+      <created>1684823096319</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1684823096319</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,7 +370,10 @@
     <MESSAGE value="Gestion de fichier terminée&#10;&#10;Filemanager Backend fonctionnel" />
     <MESSAGE value="update" />
     <MESSAGE value="update ajout galerie correcte ( CSS a retravailler pour les details)" />
-    <option name="LAST_COMMIT_MESSAGE" value="update ajout galerie correcte ( CSS a retravailler pour les details)" />
+    <MESSAGE value="OCR Fonctionnel" />
+    <MESSAGE value="Correction fuseau horaire" />
+    <MESSAGE value="Ajout de la fonction de vote par jour coté Backend" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout de la fonction de vote par jour coté Backend" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

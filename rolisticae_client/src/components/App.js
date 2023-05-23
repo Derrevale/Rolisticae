@@ -14,14 +14,20 @@ import {
 } from "react-router-dom";
 import ArticleList from "./Blog/ArticleList";
 import Article from "./Blog/Article";
-import AddEventForm from "./Formulaire/EventForm";
+
 import Documents from "./Documents/Documents";
+import FileImports from "./Documents/FileImports";
+
 import CategoryList from "./Galery/CategoryList";
 import CategoryDetail from "./Galery/CategoryDetail";
 
-import FileImports from "./Documents/FileImports";
+
 import SearchResult from "./Search/SearchResult";
+
 import CalendarEvent from "./Calendar/CalendarEvent";
+import AddEventForm from "./Formulaire/EventForm";
+
+import AppointmentList  from "./Appointments/AppointmentList";
 
 function App() {
 
@@ -37,6 +43,8 @@ function App() {
 
                 <Route path="/articlelist" element={<ArticleList/>}/>
                 <Route path="/articles/:id" element={<Article/>}/>
+
+                <Route path="/appointment" element={<AppointmentList/>}/>
 
                 <Route path="/documents" element={<Documents/>}/>
 

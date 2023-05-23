@@ -13,12 +13,11 @@ from blog.views import ArticlesViewset
 from blog.views import CategorysViewset
 from calendrier.views import CalendarysViewset
 from calendrier.views import EventViewset
-
 from documents.views import CategoryDocumentViewSet
 from documents.views import DocumentViewSet
-
 from galerie.views import Category_Galerie_ListView, Category_Galerie_DetailView, Image_Galerie_ListView, Image_Galerie_DetailView, Category_Galerie_ViewSet, \
     Image_Galerie_ViewSet
+from appointment.views import AppointmentViewSet, VoteViewSet
 
 schema_view = get_schema_view(
     openapi.Info(
@@ -55,6 +54,10 @@ router.register('FileManager File', DocumentViewSet)
 
 router.register('Galerie Categorie', Category_Galerie_ViewSet)
 router.register('Galerie Image', Image_Galerie_ViewSet)
+
+# Les nouvelles routes pour l'API des rendez-vous et des votes
+router.register('Appointment Date', AppointmentViewSet)
+router.register('Appointment Vote', VoteViewSet)
 
 urlpatterns = [
                   path('admin/', admin.site.urls),

@@ -1,0 +1,40 @@
+.appointment-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.appointment-item {
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    padding: 10px;
+    width: calc(33.3333% - 20px);
+}
+
+.appointment-item img {
+    width: 100%;
+    height: auto;
+}
+
+.appointment-header {
+    padding: 10px 0;
+}
+
+.appointment-header h2 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.appointment-content {
+    padding: 10px 0;
+}
+
+.appointment-content a {
+    color: blue;
+    text-decoration: none;
+}
+
+.appointment-content a:hover {
+    text-decoration: underline;
+}
