@@ -18,6 +18,7 @@ from documents.views import DocumentViewSet
 from galerie.views import Category_Galerie_ListView, Category_Galerie_DetailView, Image_Galerie_ListView, Image_Galerie_DetailView, Category_Galerie_ViewSet, \
     Image_Galerie_ViewSet
 from appointment.views import AppointmentViewSet, VoteViewSet
+from users.views import RegisterView  # Assurez-vous de remplacer 'users' par le nom correct de votre application
 
 schema_view = get_schema_view(
     openapi.Info(
@@ -60,10 +61,11 @@ router.register('Appointment Date', AppointmentViewSet)
 router.register('Appointment Vote', VoteViewSet)
 
 urlpatterns = [
-                  path('admin/', admin.site.urls),
-                  path('api/', include(router.urls)),
-                  path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
-                  path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
-                  path('images/<str:path>', serve, {'document_root': settings.MEDIA_ROOT}),
-                  path('api/search/', documents.views.SearchView.as_view(), name='search'),
-              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('admin/', admin.site.urls),
+    path('api/', include(router.urls)),
+    path('api/register/', RegisterView.as_view(), name='register'),  # nouvelle ligne ajoutée ici
+    path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
+    path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
+    path('images/<str:path>', serve, {'document_root': settings.MEDIA_ROOT}),
+    path('api/search/', documents.views.SearchView.as_view(), name='search'),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

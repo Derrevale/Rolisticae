@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import Navbar from "./Navbar";
 import Topbar from "./Topbar";
-
+import SignupForm from "./User/SignupForm";  // Import the SignupForm
 
 import {
     createBrowserRouter,
@@ -20,7 +20,6 @@ import FileImports from "./Documents/FileImports";
 
 import CategoryList from "./Galery/CategoryList";
 import CategoryDetail from "./Galery/CategoryDetail";
-
 
 import SearchResult from "./Search/SearchResult";
 
@@ -50,6 +49,8 @@ function App() {
 
                 <Route path="/Galerie" element={<CategoryList/>}/>
                 <Route path="/Galerie/:categoryId" element={<CategoryDetail/>}/>
+
+                <Route path="/signup" element={<SignupForm/>}/>  // New route for SignupForm
 
                 <Route element={<Navbar/>}/>
             </Route>
