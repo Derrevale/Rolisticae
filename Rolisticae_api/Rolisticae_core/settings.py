@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'calendrier',
     'users',
     'appointment',
+    'campaigns',
 
     'colorfield',
 
@@ -157,4 +158,4 @@ ROLISTICAE_SEARCH_PROCESS_URL = "http://localhost:8001/process"
 ROLISTICAE_SEARCH_URL = "http://localhost:8001/search"
 
 #Model User
-AUTH_USER_MODEL = 'users.CustomUser'
+AUTH_USER_MODEL = 'users.User'
