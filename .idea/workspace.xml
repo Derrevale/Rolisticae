@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cfb99459-6fdd-4a71-bcdb-9c402aa66c7f" name="Changes" comment="Ajout gestion user coté Backend">
-      <change afterPath="$PROJECT_DIR$/rolisticae_client/src/components/User/SignupForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rolisticae_client/src/components/User/SignupPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Rolisticae Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Rolisticae Project.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rolisticae_api/users/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_api/users/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rolisticae_client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rolisticae_api/calendrier/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/calendrier/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/Calendar/EventList.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Calendar/EventList.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +49,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/vaderr/Documents/TFE/Rolisticae Project",
+    "git-widget-placeholder": "Version__2.0",
+    "last_opened_file_path": "C:/Users/vaderr/Documents/TFE/Rolisticae Project/rolisticae_api/rolisticae_core/settings.py",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -79,9 +78,9 @@
       <recent name="C:\Users\vaderr\Documents\TFE\TFE Projet\React-Django-intra\intranet_client" />
     </key>
   </component>
-  <component name="RunManager" selected="Django Server.Rolisticae API">
+  <component name="RunManager" selected="Python.main">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="React-Django-intra" />
+      <module name="Rolisticae Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -110,17 +109,17 @@
         <env name="PYTHONUNBUFFERED" value="1" />
         <env name="DJANGO_SETTINGS_MODULE" value="rolisticae_core.settings" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\vaderr\Documents\TFE\TFE Projet\React-Django-intra\venv\Scripts\python.exe" />
-      <option name="SDK_NAME" value="Python 3.11 (React-Django-intra)" />
+      <option name="SDK_HOME" value="C:\Users\vaderr\Documents\TFE\Rolisticae Project\venv\Scripts\python.exe" />
+      <option name="SDK_NAME" value="Python 3.11 (Rolisticae Project)" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="launchJavascriptDebuger" value="false" />
       <option name="port" value="8010" />
-      <option name="host" value="" />
+      <option name="host" value="127.0.0.1" />
       <option name="additionalOptions" value="" />
-      <option name="browserUrl" value="" />
+      <option name="browserUrl" value="http://127.0.0.1:8010/admin/" />
       <option name="runTestServer" value="false" />
       <option name="runNoReload" value="false" />
       <option name="useCustomRunCommand" value="false" />
@@ -202,7 +201,10 @@
       <workItem from="1681715125834" duration="1935000" />
       <workItem from="1681718875276" duration="9360000" />
       <workItem from="1683872448695" duration="8154000" />
-      <workItem from="1684137491370" duration="29999000" />
+      <workItem from="1684137491370" duration="30998000" />
+      <workItem from="1685687380759" duration="2514000" />
+      <workItem from="1686726697381" duration="44000" />
+      <workItem from="1687769167132" duration="268000" />
     </task>
     <task id="LOCAL-00001" summary="add requirements.txt">
       <created>1677233667651</created>
@@ -351,7 +353,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684827386145</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Ajout gestion user coté Backend">
+      <created>1685014980942</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1685014980942</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

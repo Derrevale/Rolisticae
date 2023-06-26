@@ -1,7 +1,6 @@
 import {RRule, rrulestr} from 'rrule';
 import moment from "moment";
 import 'moment-timezone';
-
 const API_URL = "http://localhost:8010/api/EventManager Event/";
 
 const getEvents = async (category) => {
@@ -25,10 +24,9 @@ const getEvents = async (category) => {
                     });
                 } else {
                     const rule = event.rrule.replace(/DTSTART=\d{8}T\d{6}/, match => `DTSTART=${moment.utc(match.slice(8), "YYYYMMDDTHHmmss").format("YYYYMMDDTHHmmss")}Z`);
-                    console.log(rule);
+                    console.log(rule)
                     const ruleObj = rrulestr(rule);
-                    console.log("Règle :", ruleObj);
-                    console.log("Date de début :", moment.utc(ruleObj.options.dtstart).format('YYYY-MM-DD HH:mm:ss'));
+                    console.log(ruleObj);
                     const allOccurrences = ruleObj.all((date, i) => i < event.count);
                     allOccurrences.forEach((occurrence) => {
                         events.push({
@@ -46,7 +44,6 @@ const getEvents = async (category) => {
                 }
             }
         });
-        console.log(events);
         return events;
     } catch (error) {
         console.error(error);

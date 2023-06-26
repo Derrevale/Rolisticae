@@ -19,9 +19,9 @@ class CalendarAdmin(admin.ModelAdmin):
 
 @admin.register(Event)
 class EventAdmin(admin.ModelAdmin):
-    list_display = ('title', 'Debut', 'Fin', 'location')
+    list_display = ('title', 'Debut', 'Fin', 'location', 'category', 'created_at', 'updated_at')
     list_filter = ('category', 'recurrency')
-    search_fields = ('title', 'location')
+    search_fields = ('title', 'location', 'category__name')
     exclude = ('rrule',)
 
     fieldsets = (
