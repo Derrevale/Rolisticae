@@ -72,7 +72,7 @@ function Navbar() {
                                             <a onClick={toggleDropdown}>
                                                 <FontAwesomeIcon icon={faCalendar}
                                                                  className="fa-facebook"></FontAwesomeIcon>{' '}
-                                                Campagnes
+                                                Planning
                                             </a>
                                             {showDropdown && (
                                                 <div className="dropdown">
