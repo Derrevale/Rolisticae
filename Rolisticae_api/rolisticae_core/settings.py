@@ -47,7 +47,6 @@ INSTALLED_APPS = [
     'users',
     'appointment',
     'campaigns',
-
     'colorfield',
 
     # 3rd party
