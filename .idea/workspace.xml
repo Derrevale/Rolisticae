@@ -4,10 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfb99459-6fdd-4a71-bcdb-9c402aa66c7f" name="Changes" comment="update">
-      <change beforePath="$PROJECT_DIR$/.idea/Rolisticae Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Rolisticae Project.iml" afterDir="false" />
+    <list default="true" id="67ca2271-bc7e-47d6-b2d5-c7285cb20d63" name="Changes" comment="update backend ajour calendrier">
+      <change afterPath="$PROJECT_DIR$/Rolisticae_api/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Documents/FileImports.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Search/SearchResult.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rolisticae_client/src/styles/Documents/Document.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rolisticae_api/Rolisticae_core/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/rolisticae_core/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rolisticae_api/Rolisticae_core/asgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/rolisticae_core/asgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rolisticae_api/Rolisticae_core/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/rolisticae_core/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rolisticae_api/Rolisticae_core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/rolisticae_core/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rolisticae_api/Rolisticae_core/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/rolisticae_core/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rolisticae_api/Rolisticae_core/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/rolisticae_core/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rolisticae_api/appointment/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rolisticae_api/blog/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rolisticae_api/campaigns/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rolisticae_api/campaigns/migrations/0002_campaign_blog_category_campaign_calendar_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rolisticae_api/users/migrations/0001_initial.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +34,6 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="JavaScript File" />
         <option value="CSS File" />
         <option value="Python Script" />
@@ -30,7 +43,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Version_2.0" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -38,7 +51,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2Ku7qZ3o5fxtOsPzkXE9RrhlS51" />
+  <component name="ProjectId" id="2Ka7s2FVZPYemUdO6xBQofFu9A4" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -46,75 +59,46 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Version__3.0&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/vaderr/Documents/TFE/Rolisticae Project/rolisticae_api/manage.py&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.django.DjangoModulesConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/vaderr/PycharmProjects/Rolisticae/rolisticae_search/docker/docker-compose.yml",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "configurable.group.language",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\vaderr\Documents\TFE\Rolisticae Project\rolisticae_api\documents" />
-      <recent name="C:\Users\vaderr\Documents\TFE\Rolisticae Project\rolisticae_api\galerie" />
-      <recent name="C:\Users\vaderr\Documents\TFE\Rolisticae Project\rolisticae_client\src\styles" />
-      <recent name="C:\Users\vaderr\Documents\TFE\Rolisticae Project\rolisticae_client\src\components\Galery" />
-      <recent name="C:\Users\vaderr\Documents\TFE\Rolisticae Project\rolisticae_search" />
+      <recent name="C:\Users\vaderr\PycharmProjects\Rolisticae\Rolisticae_api" />
+      <recent name="C:\Users\vaderr\PycharmProjects\Rolisticae\rolisticae_client\src\styles" />
+      <recent name="C:\Users\vaderr\PycharmProjects\Rolisticae\rolisticae_client\src\components\Documents" />
+      <recent name="C:\Users\vaderr\PycharmProjects\Rolisticae\rolisticae_client\src\components" />
+      <recent name="C:\Users\vaderr\Documents\TFE\Rolisticae Project\rolisticae_client\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\vaderr\Documents\TFE\TFE Projet\React-Django-intra\intranet_client\src\components\Calendar" />
-      <recent name="C:\Users\vaderr\Documents\TFE\TFE Projet\React-Django-intra\intranet_client\src\components\Calendar\CBP" />
-      <recent name="C:\Users\vaderr\Documents\TFE\TFE Projet\React-Django-intra\intranet_client\src\styles\Calendar" />
-      <recent name="C:\Users\vaderr\Documents\TFE\TFE Projet\React-Django-intra\intranet_client\src\components\Blog" />
-      <recent name="C:\Users\vaderr\Documents\TFE\TFE Projet\React-Django-intra\intranet_client" />
+      <recent name="C:\Users\vaderr\Documents\TFE\Rolisticae Project" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start">
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Rolisticae Project" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/inranet_search/app" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/inranet_search/app/main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Django Server.Rolisticae API">
     <configuration name="Rolisticae API" type="Python.DjangoServer" factoryName="Django server">
-      <module name="Rolisticae Project" />
+      <module name="Rolisticae" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
         <env name="DJANGO_SETTINGS_MODULE" value="rolisticae_core.settings" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\vaderr\Documents\TFE\Rolisticae Project\venv\Scripts\python.exe" />
-      <option name="SDK_NAME" value="Python 3.11 (Rolisticae Project)" />
+      <option name="SDK_HOME" value="C:\Users\vaderr\Documents\TFE\TFE Projet\React-Django-intra\venv\Scripts\python.exe" />
+      <option name="SDK_NAME" value="Python 3.11 (React-Django-intra)" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -130,13 +114,7 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
-    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
-      <deployment type="docker-compose.yml">
-        <settings />
-      </deployment>
-      <method v="2" />
-    </configuration>
-    <configuration name="docker: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" server-name="Rolisticae">
+    <configuration name="Rolisticae Search" type="docker-deploy" factoryName="docker-compose.yml" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
           <option name="envFilePath" value="" />
@@ -145,16 +123,7 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="local: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="envFilePath" value="" />
-          <option name="sourceFilePath" value="inranet_search/docker/local/docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
-    <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
+    <configuration name="Rolisticae_Client" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/rolisticae_client/package.json" />
       <command value="run" />
       <scripts>
@@ -166,266 +135,112 @@
     </configuration>
     <list>
       <item itemvalue="Django Server.Rolisticae API" />
-      <item itemvalue="Docker.docker: Compose Deployment" />
-      <item itemvalue="Docker.local: Compose Deployment" />
-      <item itemvalue="npm.start" />
-      <item itemvalue="Python.main" />
+      <item itemvalue="Docker.Rolisticae Search" />
+      <item itemvalue="npm.Rolisticae_Client" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python.main" />
-        <item itemvalue="Docker.local: Compose Deployment" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="cfb99459-6fdd-4a71-bcdb-9c402aa66c7f" name="Changes" comment="" />
-      <created>1674812805266</created>
+      <changelist id="67ca2271-bc7e-47d6-b2d5-c7285cb20d63" name="Changes" comment="" />
+      <created>1674201043282</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1674812805266</updated>
-      <workItem from="1674812806419" duration="14921000" />
-      <workItem from="1675075763095" duration="9221000" />
-      <workItem from="1675151272439" duration="39180000" />
-      <workItem from="1675842677329" duration="11607000" />
-      <workItem from="1676013911646" duration="454000" />
-      <workItem from="1676014539234" duration="4657000" />
-      <workItem from="1676024189813" duration="727000" />
-      <workItem from="1676276283906" duration="31742000" />
-      <workItem from="1677232520842" duration="13244000" />
-      <workItem from="1677486853133" duration="13725000" />
-      <workItem from="1677663222242" duration="27740000" />
-      <workItem from="1678433895260" duration="59438000" />
-      <workItem from="1679643062196" duration="1203000" />
-      <workItem from="1679645472441" duration="30151000" />
-      <workItem from="1680250145877" duration="36483000" />
-      <workItem from="1681453438119" duration="4987000" />
-      <workItem from="1681715125834" duration="1935000" />
-      <workItem from="1681718875276" duration="9360000" />
-      <workItem from="1683872448695" duration="8154000" />
-      <workItem from="1684137491370" duration="30998000" />
-      <workItem from="1685687380759" duration="2514000" />
-      <workItem from="1686726697381" duration="44000" />
-      <workItem from="1687769167132" duration="8557000" />
-      <workItem from="1687860799193" duration="1945000" />
+      <updated>1674201043282</updated>
+      <workItem from="1674201046422" duration="13837000" />
+      <workItem from="1674553836374" duration="1584000" />
+      <workItem from="1674556501208" duration="6280000" />
+      <workItem from="1674564602218" duration="10510000" />
+      <workItem from="1674639749411" duration="3824000" />
+      <workItem from="1674811667757" duration="10155000" />
+      <workItem from="1675845727015" duration="624000" />
+      <workItem from="1676013913519" duration="452000" />
+      <workItem from="1676014540582" duration="591000" />
+      <workItem from="1676455133607" duration="3057000" />
+      <workItem from="1677063726377" duration="858000" />
+      <workItem from="1677232859705" duration="1152000" />
+      <workItem from="1678778160972" duration="4379000" />
+      <workItem from="1689168354827" duration="324000" />
+      <workItem from="1689168703819" duration="2254000" />
+      <workItem from="1689228245956" duration="5428000" />
     </task>
-    <task id="LOCAL-00001" summary="add requirements.txt">
-      <created>1677233667651</created>
+    <task id="LOCAL-00001" summary="update README.md">
+      <created>1674211406086</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1677233667651</updated>
+      <updated>1674211406086</updated>
     </task>
-    <task id="LOCAL-00002" summary="add requirements.txt">
-      <created>1679063468979</created>
+    <task id="LOCAL-00002" summary="update README.md">
+      <created>1674211649636</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1679063468979</updated>
+      <updated>1674211649636</updated>
     </task>
-    <task id="LOCAL-00003" summary="test push 2">
-      <created>1679064404604</created>
+    <task id="LOCAL-00003" summary="update urls.py">
+      <created>1674222105032</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1679064404604</updated>
+      <updated>1674222105032</updated>
     </task>
-    <task id="LOCAL-00004" summary="Update">
-      <created>1680256417154</created>
+    <task id="LOCAL-00004" summary="modification des dossier de base et ajout du frontend">
+      <created>1674555871539</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1680256417154</updated>
+      <updated>1674555871539</updated>
     </task>
-    <task id="LOCAL-00005" summary="Update">
-      <created>1680268287884</created>
+    <task id="LOCAL-00005" summary="modification des dossier de base et ajout du frontend">
+      <created>1674556072007</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1680268287884</updated>
+      <updated>1674556072007</updated>
     </task>
-    <task id="LOCAL-00006" summary="Update">
-      <created>1680858917519</created>
+    <task id="LOCAL-00006" summary="modification des dossier de base et ajout du frontend">
+      <created>1674564375625</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1680858917519</updated>
+      <updated>1674564375625</updated>
     </task>
-    <task id="LOCAL-00007" summary="V1 ajout de la Galerie&#10;+ Modification des serializers pour +de claireté dans l'API">
-      <created>1680866423281</created>
+    <task id="LOCAL-00007" summary="update frontend">
+      <created>1674658073964</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1680866423281</updated>
+      <updated>1674658073964</updated>
     </task>
-    <task id="LOCAL-00008" summary="V1 ajout de la Galerie&#10;+ Modification des appel API">
-      <created>1680866878096</created>
+    <task id="LOCAL-00008" summary="update frontend gestion Image + html-react-parse">
+      <created>1674811723625</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1680866878096</updated>
+      <updated>1674811723625</updated>
     </task>
-    <task id="LOCAL-00009" summary="V2 ajout de la Galerie&#10;+ correction affichage des catégories de fichier">
-      <created>1680872333185</created>
+    <task id="LOCAL-00009" summary="update backend ajour calendrier">
+      <created>1678779050054</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1680872333185</updated>
+      <updated>1678779050054</updated>
     </task>
-    <task id="LOCAL-00010" summary="V2 ajout de la Galerie&#10;+ correction affichage des catégories de fichier">
-      <created>1680873378540</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1680873378540</updated>
-    </task>
-    <task id="LOCAL-00011" summary="V2 ajout de la Galerie&#10;+ correction affichage des catégories de fichier">
-      <created>1680873446064</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1680873446064</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Gestion de fichier terminée&#10;&#10;Filemanager Backend fonctionnel">
-      <created>1680876877783</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1680876877783</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Gestion de fichier terminée&#10;&#10;Filemanager Backend fonctionnel">
-      <created>1681724534866</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1681724534867</updated>
-    </task>
-    <task id="LOCAL-00014" summary="update">
-      <created>1681724835068</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1681724835068</updated>
-    </task>
-    <task id="LOCAL-00015" summary="update">
-      <created>1681724869741</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1681724869741</updated>
-    </task>
-    <task id="LOCAL-00016" summary="update ajout galerie correcte ( CSS a retravailler pour les details)">
-      <created>1683873407803</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1683873407803</updated>
-    </task>
-    <task id="LOCAL-00017" summary="OCR Fonctionnel">
-      <created>1684307397545</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1684307397545</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Correction fuseau horaire">
-      <created>1684332117566</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1684332117566</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Correction fuseau horaire">
-      <created>1684333096305</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1684333096305</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Ajout de la fonction de vote par jour coté Backend">
-      <created>1684823096319</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1684823096319</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Ajout gestion user coté Backend">
-      <created>1684827386145</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1684827386145</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Ajout gestion user coté Backend">
-      <created>1685014980942</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1685014980942</updated>
-    </task>
-    <task id="LOCAL-00023" summary="update">
-      <option name="closed" value="true" />
-      <created>1687769768092</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1687769768092</updated>
-    </task>
-    <task id="LOCAL-00024" summary="update">
-      <option name="closed" value="true" />
-      <created>1687777194105</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1687777194105</updated>
-    </task>
-    <option name="localTasksCounter" value="25" />
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add requirements.txt" />
-    <MESSAGE value="test push 2" />
-    <MESSAGE value="Update" />
-    <MESSAGE value="V1 ajout de la Galerie&#10;+ Modification des serializers pour +de claireté dans l'API" />
-    <MESSAGE value="V1 ajout de la Galerie&#10;+ Modification des appel API" />
-    <MESSAGE value="V2 ajout de la Galerie&#10;+ correction affichage des catégories de fichier" />
-    <MESSAGE value="Gestion de fichier terminée&#10;&#10;Filemanager Backend fonctionnel" />
-    <MESSAGE value="update ajout galerie correcte ( CSS a retravailler pour les details)" />
-    <MESSAGE value="OCR Fonctionnel" />
-    <MESSAGE value="Correction fuseau horaire" />
-    <MESSAGE value="Ajout de la fonction de vote par jour coté Backend" />
-    <MESSAGE value="Ajout gestion user coté Backend" />
-    <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/intranet_client/src/components/Calendar/CalendarEvent.js</url>
-          <line>4</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/React_Django_intra$main.coverage" NAME="main Coverage Results" MODIFIED="1680263109403" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inranet_search/app" />
+    <MESSAGE value="update README.md" />
+    <MESSAGE value="update urls.py" />
+    <MESSAGE value="modification des dossier de base et ajout du frontend" />
+    <MESSAGE value="readme update" />
+    <MESSAGE value="update frontend" />
+    <MESSAGE value="update frontend gestion Image + html-react-parse" />
+    <MESSAGE value="update backend ajour calendrier" />
+    <option name="LAST_COMMIT_MESSAGE" value="update backend ajour calendrier" />
   </component>
 </project>
