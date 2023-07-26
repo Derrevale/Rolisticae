@@ -7,3 +7,6 @@ class User(AbstractUser):
     last_name = models.CharField(max_length=100)
     campaigns = models.TextField(blank=True)  # Vous pouvez modifier ce champ en fonction de la structure de vos campagnes
     character_sheets = models.TextField(blank=True)  # Vous pouvez modifier ce champ en fonction de la structure de vos fiches de personnage
+
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = ['username', 'first_name', 'last_name']

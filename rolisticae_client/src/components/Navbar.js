@@ -1,6 +1,7 @@
 import '../styles/Navbar.css';
 import '../styles/bootstrap.min.css';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faUser, faUserCircle} from '@fortawesome/free-solid-svg-icons';
 import {
     faHome,
     faCalendar,
@@ -18,6 +19,8 @@ function Navbar() {
     const [showDropdown, setShowDropdown] = useState(false);
     const [categories, setCategories] = useState([]);
     const [searchQuery, setSearchQuery] = useState('');
+    const isLoggedIn = localStorage.getItem('access') !== null;
+
     const handleChange = (event) => {
         setSearchQuery(event.target.value);
     };
@@ -133,6 +136,11 @@ function Navbar() {
                                                 <FontAwesomeIcon icon={faBars} className="fa-bars" size="xl"/>
                                             </button>
                                         </li>
+                                        <li className="sp-menu-item">
+                                            <FontAwesomeIcon icon={isLoggedIn ? faUserCircle : faUser}
+                                                             className="fa-facebook"/>
+                                        </li>
+
                                     </ul>
                                 </nav>
                             </div>

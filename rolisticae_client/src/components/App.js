@@ -28,6 +28,8 @@ import AddEventForm from "./Formulaire/EventForm";
 
 import AppointmentList  from "./Appointments/AppointmentList";
 
+import LoginForm from "./User/LoginForm";  // Import the LoginForm
+
 function App() {
 
     const router = createBrowserRouter(
@@ -51,6 +53,7 @@ function App() {
                 <Route path="/Galerie/:categoryId" element={<CategoryDetail/>}/>
 
                 <Route path="/signup" element={<SignupForm/>}/>  // New route for SignupForm
+                <Route path="/login" element={<LoginForm/>}/>
 
                 <Route element={<Navbar/>}/>
             </Route>
