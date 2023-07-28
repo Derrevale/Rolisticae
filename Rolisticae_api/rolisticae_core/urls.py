@@ -20,7 +20,7 @@ from galerie.views import Category_Galerie_ListView, Category_Galerie_DetailView
     Image_Galerie_DetailView, Category_Galerie_ViewSet, \
     Image_Galerie_ViewSet
 from appointment.views import AppointmentViewSet, VoteViewSet
-from users.views import RegisterView  # Assurez-vous de remplacer 'users' par le nom correct de votre application
+from users.views import UserViewSet, RegisterView, LoginView
 
 schema_view = get_schema_view(
     openapi.Info(
@@ -62,6 +62,8 @@ router.register('Galerie Image', Image_Galerie_ViewSet)
 router.register('Appointment Date', AppointmentViewSet)
 router.register('Appointment Vote', VoteViewSet)
 
+router.register('User', UserViewSet, basename='user')
+
 urlpatterns = [
                   path('admin/', admin.site.urls),
                   path('api/', include(router.urls)),
@@ -72,4 +74,6 @@ urlpatterns = [
                   path('api/search/', documents.views.SearchView.as_view(), name='search'),
                   path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
                   path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+                  path('register/', RegisterView.as_view()),
+                  path('login/', LoginView.as_view()),
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

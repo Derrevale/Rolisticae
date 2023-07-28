@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { TextField, Button, Container, Typography } from '@mui/material';
+import { TextField, Button, Container, Typography, Snackbar, Alert } from '@mui/material';
 import { styled } from '@mui/system';
+import { useNavigate } from 'react-router-dom';
 
 const PaperContainer = styled(Container)(({ theme }) => ({
     marginTop: theme.spacing(8),
@@ -21,6 +22,10 @@ const SubmitButton = styled(Button)(({ theme }) => ({
 function LoginForm() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [open, setOpen] = useState(false);
+    const [message, setMessage] = useState("");
+    const [severity, setSeverity] = useState("success");
+    const navigate = useNavigate();
 
     const handleSubmit = async event => {
         event.preventDefault();
@@ -43,9 +48,24 @@ function LoginForm() {
             localStorage.setItem('access', data.access);
             localStorage.setItem('refresh', data.refresh);
             console.log("User logged in: ", data);
+            setMessage(`Bienvenue ${email}`);
+            setSeverity("success");
+            setOpen(true);
+            navigate('/');
         } else {
             console.log("Error logging in: ", data);
+            setMessage("Email ou mot de passe incorrect");
+            setSeverity("error");
+            setOpen(true);
         }
+    };
+
+    const handleClose = (event, reason) => {
+        if (reason === 'clickaway') {
+            return;
+        }
+
+        setOpen(false);
     };
 
     return (
@@ -88,6 +108,11 @@ function LoginForm() {
                     Log In
                 </SubmitButton>
             </Form>
+            <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+                <Alert onClose={handleClose} severity={severity} sx={{ width: '100%' }}>
+                    {message}
+                </Alert>
+            </Snackbar>
         </PaperContainer>
     );
 }

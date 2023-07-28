@@ -14,12 +14,15 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import {useState, useEffect} from 'react';
 import axios from 'axios';
+import {useNavigate} from 'react-router-dom';
 
 function Navbar() {
     const [showDropdown, setShowDropdown] = useState(false);
+    const [showUserDropdown, setShowUserDropdown] = useState(false);
     const [categories, setCategories] = useState([]);
     const [searchQuery, setSearchQuery] = useState('');
     const isLoggedIn = localStorage.getItem('access') !== null;
+    const navigate = useNavigate();
 
     const handleChange = (event) => {
         setSearchQuery(event.target.value);
@@ -31,6 +34,25 @@ function Navbar() {
     };
     const toggleDropdown = () => {
         setShowDropdown(!showDropdown);
+    };
+
+    const handleUserIconClick = () => {
+        if (isLoggedIn) {
+            setShowUserDropdown(!showUserDropdown);
+        } else {
+            navigate('/login');
+        }
+    };
+
+    const handleProfileClick = () => {
+        navigate('/userprofile');
+        setShowUserDropdown(false);
+    };
+
+    const handleLogoutClick = () => {
+        localStorage.removeItem('access');
+        navigate('/login');
+        setShowUserDropdown(false);
     };
 
     useEffect(() => {
@@ -137,10 +159,23 @@ function Navbar() {
                                             </button>
                                         </li>
                                         <li className="sp-menu-item">
-                                            <FontAwesomeIcon icon={isLoggedIn ? faUserCircle : faUser}
-                                                             className="fa-facebook"/>
+                                            <a onClick={handleUserIconClick}>
+                                                <FontAwesomeIcon icon={isLoggedIn ? faUserCircle : faUser}
+                                                                 className="fa-facebook"/>
+                                            </a>
+                                            {showUserDropdown && (
+                                                <div className="dropdown">
+                                                    <ul>
+                                                        <li>
+                                                            <a onClick={handleProfileClick}>Mon profil utilisateur</a>
+                                                        </li>
+                                                        <li>
+                                                            <a onClick={handleLogoutClick}>Déconnexion</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            )}
                                         </li>
-
                                     </ul>
                                 </nav>
                             </div>
