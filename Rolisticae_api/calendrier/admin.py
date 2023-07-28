@@ -1,25 +1,37 @@
-# Importation de l'interface d'administration de Django
-from django.contrib import admin
+# Importation des modules nécessaires
+from django.contrib import admin  # Pour l'administration de Django
+from .models import Calendar, Event  # Importation des modèles
 
-# Importation de vos modèles de calendrier
-from calendrier.models import Calendar, Event
+# Classe pour l'administration du modèle Event en tant qu'inline
+class EventInline(admin.TabularInline):
+    model = Event  # Utilisation du modèle Event
+    extra = 0  # Nombre d'extra forms à afficher
+    fields = ('title', 'Debut', 'Fin', 'description')  # Champs à afficher
+    show_change_link = True  # Afficher le lien de modification
+    verbose_name_plural = 'Events'  # Nom pluriel pour Event
 
-
-# Enregistrement de la classe CalendarAdmin pour l'interface d'administration de Django
+# Classe pour l'administration du modèle Calendar
 @admin.register(Calendar)
 class CalendarAdmin(admin.ModelAdmin):
-    # Définition des champs qui seront affichés dans la liste des calendriers dans l'interface d'administration de Django
-    list_display = ('name',)
-    # Définition des champs qui seront préremplis à partir de champs existants lors de la création d'un nouveau calendrier dans l'interface d'administration de Django
-    prepopulated_fields = {'slug': ('name',)}
+    list_display = ('name',)  # Champs à afficher dans la liste
+    prepopulated_fields = {'slug': ('name',)}  # Pré-remplir le slug à partir du nom
+    inlines = [EventInline]  # Utilisation de EventInline
 
-
-# Enregistrement de la classe EventTypeAdmin pour l'interface d'administration de Django
+# Classe pour l'administration du modèle Event
 @admin.register(Event)
-class EventTypeAdmin(admin.ModelAdmin):
-    # Définition des champs qui seront affichés dans la liste des types d'événements dans l'interface d'administration de Django
-    list_display = ('title',)
-    # Définition des champs qui seront préremplis à partir de champs existants lors de la création d'un nouveau type d'événement dans l'interface d'administration de Django
-    exclude = ('rrule',)
+class EventAdmin(admin.ModelAdmin):
+    list_display = ('title', 'Debut', 'Fin', 'location', 'category', 'created_at', 'updated_at')  # Champs à afficher dans la liste
+    list_filter = ('category', 'recurrency')  # Filtres à utiliser
+    search_fields = ('title', 'location', 'category__name')  # Champs à utiliser pour la recherche
+    exclude = ('rrule',)  # Champs à exclure
 
-
+    # Organisation des champs en sections
+    fieldsets = (
+        (None, {
+            'fields': ('title','category', 'Debut', 'Fin', 'location','description')  # Section sans titre
+        }),
+        ('Optional', {
+            'fields': ('recurrency','frequency', 'count', 'interval'),  # Section "Optional"
+            'classes': ('collapse',)  # Classe pour rendre la section repliable
+        }),
+    )

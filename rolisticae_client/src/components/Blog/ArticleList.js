@@ -5,14 +5,14 @@ function ArticleList() {
     const [articles, setArticles] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:8000/api/article/")
+        fetch("http://localhost:8010/api/Blog Article/")
             .then((response) => response.json())
             .then((data) => setArticles(data))
             .catch((error) => console.log(error));
     }, []);
 
     return (
-        <div className="row row-1 cols-3">
+        <section className="row row-1 cols-3">
             {articles.map((article) => (
                 <div className="col-lg-4" key={article.id}>
                     <div className="articleList-item">
@@ -33,7 +33,7 @@ function ArticleList() {
                     </div>
                 </div>
             ))}
-        </div>
+        </section>
     );
 }
 
