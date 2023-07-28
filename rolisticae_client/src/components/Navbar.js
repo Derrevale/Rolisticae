@@ -104,7 +104,8 @@ function Navbar() {
                                                     <ul>
                                                         {categories.map((category, index) => (
                                                             <li key={index}>
-                                                                <Link to={`/calendrier/${category.id}`}>{category.name}</Link>
+                                                                <Link
+                                                                    to={`/calendrier/${category.id}`}>{category.name}</Link>
                                                             </li>
                                                         ))}
                                                     </ul>
@@ -159,18 +160,21 @@ function Navbar() {
                                             </button>
                                         </li>
                                         <li className="sp-menu-item">
-                                            <Link to='#' onClick={handleUserIconClick}>
+                                            <Link to={isLoggedIn ? "#" : "/login"}
+                                                  onClick={isLoggedIn ? handleUserIconClick : undefined}>
                                                 <FontAwesomeIcon icon={isLoggedIn ? faUserCircle : faUser}
                                                                  className="fa-facebook"/>
                                             </Link>
+
                                             {showUserDropdown && (
                                                 <div className="dropdown">
                                                     <ul>
                                                         <li>
-                                                            <Link to='#' onClick={handleProfileClick} >Mon profil utilisateur</Link>
+                                                            <Link to='#' onClick={handleProfileClick}>Mon profil
+                                                                utilisateur</Link>
                                                         </li>
                                                         <li>
-                                                            <Link to='#' onClick={handleLogoutClick} >Déconnexion</Link>
+                                                            <Link to='#' onClick={handleLogoutClick}>Déconnexion</Link>
                                                         </li>
                                                     </ul>
                                                 </div>
