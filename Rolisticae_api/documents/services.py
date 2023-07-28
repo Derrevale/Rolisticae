@@ -1,105 +1,100 @@
+# Importation des modules nécessaires
 import mimetypes
-
 import requests
-
 from documents.models import Document
 
-
+# Définition de la classe RolisticaeSearchService
 class RolisticaeSearchService:
     """
-    Service to process documents and search in Rolisticae.
+    Service pour traiter les documents et effectuer des recherches dans Rolisticae.
     """
 
     def __init__(self):
         """
-        Initializes the Rolisticae_SearchService based on the loaded configuration.
+        Initialise le service RolisticaeSearchService en fonction de la configuration chargée.
         """
-
-        # Fetch silva settings
+        # Récupération des paramètres de Silva
         from rolisticae_core import settings
         self.process_url = settings.ROLISTICAE_SEARCH_PROCESS_URL
         self.search_url = settings.ROLISTICAE_SEARCH_URL
 
     def process(self, _document: Document) -> None:
         """
-        Processes the provided content and returns the result.
+        Traite le contenu fourni et renvoie le résultat.
 
-        :param _document: the document to process.
-        :return: Nothing.
+        :param _document: le document à traiter.
+        :return: Rien.
         """
-
-        # Check if content was provided
+        # Vérifie si un contenu a été fourni
         assert _document is not None
 
         if self.check_processed(_document):
             return
 
-        # Determine the MIME type of the file
+        # Détermine le type MIME du fichier
         content_type, encoding = mimetypes.guess_type(_document.fileUrl.path)
 
-        # Prepare the file for the POST request to the FastAPI endpoint
+        # Prépare le fichier pour la requête POST vers le point de terminaison FastAPI
         file_data = {'file': (_document.get_filename(), _document.fileUrl.file, content_type)}
 
-        # Create the request
+        # Crée la requête
         request = requests.post(f'{self.process_url}/{_document.id}', files=file_data)
 
-        # Check if the request was successful
+        # Vérifie si la requête a réussi
         if request.status_code != 201:
-            # If not, raise an exception
-            raise Exception(f'Failed to process document: {request.text}')
+            # Si ce n'est pas le cas, lève une exception
+            raise Exception(f'Échec du traitement du document : {request.text}')
 
-        # Get out of here
+        # Sortie de la fonction
         return
 
     def check_processed(self, _document: Document) -> bool:
         """
-        Checks if the provided document has been processed.
-        :param _document: the document to check.
-        :return: True if the document has been processed, False otherwise.
+        Vérifie si le document fourni a été traité.
+        :param _document: le document à vérifier.
+        :return: True si le document a été traité, False sinon.
         """
-
-        # Check if content was provided
+        # Vérifie si un contenu a été fourni
         assert _document is not None
 
-        # Create the request
+        # Crée la requête
         request = requests.get(self.process_url, params={
             'external_id': _document.id,
         })
 
-        # Check if the request was successful
+        # Vérifie si la requête a réussi
         if request.status_code != 200:
-            # If not, raise an exception
-            raise Exception(f'Failed too check document: {request.text}')
+            # Si ce n'est pas le cas, lève une exception
+            raise Exception(f'Échec de la vérification du document : {request.text}')
 
         try:
-            # Return the result
+            # Renvoie le résultat
             return request.json() == _document.get_filename()
         except Exception as e:
             from rolisticae_core.settings import logger
-            logger.error(f'Error: {e}')
+            logger.error(f'Erreur : {e}')
             return False
 
     def search(self, _q: str) -> list[Document]:
         """
-        Searches for a given query in the database.
-        :param _q: the query to search for.
-        :return: the list of documents that match the query.
+        Effectue une recherche pour une requête donnée dans la base de données.
+        :param _q: la requête à rechercher.
+        :return: la liste des documents qui correspondent à la requête.
         """
-
-        # Create the request
+        # Crée la requête
         request = requests.get(self.search_url, params={
             'q': _q,
         })
 
-        # Check if the request was successful
+        # Vérifie si la requête a réussi
         if request.status_code != 200:
-            # If not, raise an exception
-            raise Exception(f'Failed to search for documents: {request.text}')
+            # Si ce n'est pas le cas, lève une exception
+            raise Exception(f'Échec de la recherche de documents : {request.text}')
 
-        # Process the results
+        # Traite les résultats
         document_ids = request.json()
-        # Return the list of documents
+        # Renvoie la liste des documents
         return list(Document.objects.filter(id__in=document_ids).all())
 
-
+# Crée une instance du service RolisticaeSearchService
 rolisticae_search_service = RolisticaeSearchService()
