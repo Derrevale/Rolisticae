@@ -1,10 +1,13 @@
+// Importation des modules nécessaires
 import React, {useState} from 'react';
 import axios from 'axios';
 import '../../styles/Formulaire/EventForm.css';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 
+// Définition du composant EventForm
 const EventForm = () => {
+    // Définition des états
     const [title, setTitle] = useState('');
     const [debut, setDebut] = useState('');
     const [fin, setFin] = useState('');
@@ -17,6 +20,7 @@ const EventForm = () => {
     const [count, setCount] = useState('1');
     const [interval, setInterval] = useState('1');
 
+    // Gestion de la soumission du formulaire
     const handleSubmit = (event) => {
         event.preventDefault();
 
@@ -41,6 +45,7 @@ const EventForm = () => {
             });
     };
 
+    // Gestion du changement des champs du formulaire
     const handleInputChange = (e) => {
         setTitle(e.target.title);
         setDebut(e.target.debut);
@@ -59,10 +64,12 @@ const EventForm = () => {
         setFormCompleted(completed);
     };
 
+    // Gestion du changement de la récurrence
     const handleRecurrenceChange = (e) => {
         setRecurrence(e.target.checked);
     };
 
+    // Rendu du composant
     return (
         <form className="event-form" onSubmit={handleSubmit}>
             <div className="form-row">

@@ -1,13 +1,17 @@
+// Importation des modules nécessaires
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 
+// Définition du composant FileImports
 const FileImports = () => {
+    // Définition des états
     const [files, setFiles] = useState([]);
     const [description, setDescription] = useState('');
     const [categories, setCategories] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState('');
     const [isLoading, setIsLoading] = useState(true);
 
+    // Utilisation de l'effet pour récupérer les catégories
     useEffect(() => {
         const fetchCategories = async () => {
             try {
@@ -21,12 +25,14 @@ const FileImports = () => {
         fetchCategories();
     }, []);
 
+    // Gestion du dépôt de fichiers
     const handleFileDrop = (e) => {
         e.preventDefault();
         const fileList = Array.from(e.dataTransfer.files);
         setFiles(fileList);
     };
 
+    // Gestion de l'envoi de fichiers
     const handleFileUpload = () => {
         const formData = new FormData();
         files.forEach((file) => {
@@ -47,10 +53,12 @@ const FileImports = () => {
             });
     };
 
+    // Gestion du changement de catégorie
     const handleCategoryChange = (event) => {
         setSelectedCategory(event.target.value);
     };
 
+    // Rendu du composant
     return (
         <div
             style={{
@@ -100,4 +108,5 @@ const FileImports = () => {
     );
 };
 
+// Exportation du composant FileImports
 export default FileImports;

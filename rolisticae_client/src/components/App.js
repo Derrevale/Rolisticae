@@ -21,6 +21,7 @@ import AddEventForm from "./Formulaire/EventForm";
 import AppointmentList  from "./Appointments/AppointmentList";
 import UserProfile from "./User/UserProfile";
 
+// Définition du composant App
 function App() {
   return (
     <div className="App">
@@ -61,4 +62,5 @@ const Root = () => {
   )
 }
 
+// Exportation du composant App
 export default App;

@@ -14,7 +14,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import {useState, useEffect} from 'react';
 import axios from 'axios';
-import {useNavigate} from 'react-router-dom';
+import {useNavigate, Link} from 'react-router-dom';
 
 function Navbar() {
     const [showDropdown, setShowDropdown] = useState(false);
@@ -30,7 +30,7 @@ function Navbar() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        window.location.href = `/search?q=${searchQuery}`;
+        navigate(`/search?q=${searchQuery}`);
     };
     const toggleDropdown = () => {
         setShowDropdown(!showDropdown);
@@ -70,7 +70,7 @@ function Navbar() {
                         <div className="header_logo col-auto">
                             <div className="header_column">
                                 <div className="logo">
-                                    <a href="/">
+                                    <Link to="/">
                                         <img className="logo-image  ls-is-cached lazyloaded"
                                              data-srcset="https://i.ibb.co/sKSbDBT/Rolisticae-2-removebg-preview.png 1x"
                                              data-src="https://i.ibb.co/sKSbDBT/Rolisticae-2-removebg-preview.png"
@@ -78,7 +78,7 @@ function Navbar() {
                                              data-size="auto"
                                              srcSet="https://i.ibb.co/sKSbDBT/Rolisticae-2-removebg-preview.png 1x"
                                              src="src/components/Blog/ArticleList"></img>
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -88,23 +88,23 @@ function Navbar() {
                                 <nav className="sp-megamenu-wrapper d-flex" role="navigation">
                                     <ul className="sp-megamenu-parent menu-animation-fade-up d-none d-lg-block">
                                         <li className="sp-menu-item">
-                                            <a href="/">
+                                            <Link to="/">
                                                 <FontAwesomeIcon icon={faHome}
                                                                  className="fa-facebook"></FontAwesomeIcon> Home
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li className="sp-menu-item">
-                                            <a onClick={toggleDropdown}>
+                                            <Link to='#' onClick={toggleDropdown}>
                                                 <FontAwesomeIcon icon={faCalendar}
                                                                  className="fa-facebook"></FontAwesomeIcon>{' '}
                                                 Planning
-                                            </a>
+                                            </Link>
                                             {showDropdown && (
                                                 <div className="dropdown">
                                                     <ul>
                                                         {categories.map((category, index) => (
                                                             <li key={index}>
-                                                                <a href={`/calendrier/${category.id}`}>{category.name}</a>
+                                                                <Link to={`/calendrier/${category.id}`}>{category.name}</Link>
                                                             </li>
                                                         ))}
                                                     </ul>
@@ -112,28 +112,28 @@ function Navbar() {
                                             )}
                                         </li>
                                         <li className="sp-menu-item">
-                                            <a href="/Documents">
+                                            <Link to="/Documents">
                                                 <FontAwesomeIcon icon={faFile}
                                                                  className="fa-facebook"></FontAwesomeIcon> Documents
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li className="sp-menu-item">
-                                            <a href="/">
+                                            <Link to="/">
                                                 <FontAwesomeIcon icon={faBook}
                                                                  className="fa-facebook"></FontAwesomeIcon> Règles
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li className="sp-menu-item">
-                                            <a href="">
+                                            <Link to="">
                                                 <FontAwesomeIcon icon={faIdBadge}
                                                                  className="fa-facebook"></FontAwesomeIcon> Personnage
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li className="sp-menu-item">
-                                            <a href="/Galerie">
+                                            <Link to="/Galerie">
                                                 <FontAwesomeIcon icon={faImages}
                                                                  className="fa-facebook"></FontAwesomeIcon> Illustration
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li className="sp-menu-item">
                                             <form className="center-align" onSubmit={handleSubmit}>
@@ -159,18 +159,18 @@ function Navbar() {
                                             </button>
                                         </li>
                                         <li className="sp-menu-item">
-                                            <a onClick={handleUserIconClick}>
+                                            <Link to='#' onClick={handleUserIconClick}>
                                                 <FontAwesomeIcon icon={isLoggedIn ? faUserCircle : faUser}
                                                                  className="fa-facebook"/>
-                                            </a>
+                                            </Link>
                                             {showUserDropdown && (
                                                 <div className="dropdown">
                                                     <ul>
                                                         <li>
-                                                            <a onClick={handleProfileClick}>Mon profil utilisateur</a>
+                                                            <Link to='#' onClick={handleProfileClick} >Mon profil utilisateur</Link>
                                                         </li>
                                                         <li>
-                                                            <a onClick={handleLogoutClick}>Déconnexion</a>
+                                                            <Link to='#' onClick={handleLogoutClick} >Déconnexion</Link>
                                                         </li>
                                                     </ul>
                                                 </div>
