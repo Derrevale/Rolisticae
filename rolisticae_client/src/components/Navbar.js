@@ -124,12 +124,14 @@ function Navbar() {
                                                                  className="fa-facebook"></FontAwesomeIcon> Règles
                                             </Link>
                                         </li>
-                                        <li className="sp-menu-item">
-                                            <Link to="">
-                                                <FontAwesomeIcon icon={faIdBadge}
-                                                                 className="fa-facebook"></FontAwesomeIcon> Personnage
-                                            </Link>
-                                        </li>
+                                        {isLoggedIn && (
+                                            <li className="sp-menu-item">
+                                                <Link to="/personnage">
+                                                    <FontAwesomeIcon icon={faIdBadge}
+                                                                     className="fa-facebook"></FontAwesomeIcon> Personnage
+                                                </Link>
+                                            </li>
+                                        )}
                                         <li className="sp-menu-item">
                                             <Link to="/Galerie">
                                                 <FontAwesomeIcon icon={faImages}
@@ -160,21 +162,20 @@ function Navbar() {
                                             </button>
                                         </li>
                                         <li className="sp-menu-item">
-                                            <Link to={isLoggedIn ? "#" : "/login"}
-                                                  onClick={isLoggedIn ? handleUserIconClick : undefined}>
+                                            <a onClick={isLoggedIn ? handleUserIconClick : undefined}>
                                                 <FontAwesomeIcon icon={isLoggedIn ? faUserCircle : faUser}
                                                                  className="fa-facebook"/>
-                                            </Link>
+                                            </a>
 
                                             {showUserDropdown && (
                                                 <div className="dropdown">
                                                     <ul>
                                                         <li>
-                                                            <Link to='#' onClick={handleProfileClick}>Mon profil
-                                                                utilisateur</Link>
+                                                            <a onClick={handleProfileClick}>Mon profil
+                                                                utilisateur</a>
                                                         </li>
                                                         <li>
-                                                            <Link to='#' onClick={handleLogoutClick}>Déconnexion</Link>
+                                                            <a onClick={handleLogoutClick}>Déconnexion</a>
                                                         </li>
                                                     </ul>
                                                 </div>
