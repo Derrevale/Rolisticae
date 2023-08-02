@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .models import Character, Equipment, MagicItem, MiscellaneousItem, FoodDrink, HealingPotion, Wealth, Knowledge, \
-    History, Note, Statistics
+    History, Note, Statistics, Race  # N'oubliez pas d'importer Race
 
 
 class EquipmentInline(admin.StackedInline):
@@ -37,7 +37,7 @@ class WealthInline(admin.StackedInline):
 
 class KnowledgeInline(admin.StackedInline):
     model = Knowledge
-    extra = 1
+    extra = 0
 
 
 class HistoryInline(admin.StackedInline):
@@ -64,4 +64,12 @@ class CharacterAdmin(admin.ModelAdmin):
                HealingPotionInline, WealthInline, KnowledgeInline, HistoryInline, NoteInline]
 
 
+class RaceAdmin(admin.ModelAdmin):  # Nouvelle classe RaceAdmin
+    list_display = ['name', 'strength_bonus', 'strength_malus', 'dexterity_bonus', 'dexterity_malus',
+                    'constitution_bonus', 'constitution_malus', 'perception_bonus', 'perception_malus',
+                    'charisma_bonus', 'charisma_malus', 'intelligence_bonus', 'intelligence_malus']
+    # Vous pouvez personnaliser cette classe comme vous le souhaitez
+
+
 admin.site.register(Character, CharacterAdmin)
+admin.site.register(Race, RaceAdmin)  # Enregistrement du modèle Race

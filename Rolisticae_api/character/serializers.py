@@ -1,10 +1,5 @@
 from rest_framework import serializers
-from .models import Character, Equipment, MagicItem, MiscellaneousItem, FoodDrink, HealingPotion, Wealth, Knowledge, History, Note
-
-class CharacterSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Character
-        fields = '__all__'
+from .models import Character, Equipment, MagicItem, MiscellaneousItem, FoodDrink, HealingPotion, History, Statistics, Race
 
 class EquipmentSerializer(serializers.ModelSerializer):
     class Meta:
@@ -31,22 +26,31 @@ class HealingPotionSerializer(serializers.ModelSerializer):
         model = HealingPotion
         fields = '__all__'
 
-class WealthSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Wealth
-        fields = '__all__'
-
-class KnowledgeSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Knowledge
-        fields = '__all__'
-
 class HistorySerializer(serializers.ModelSerializer):
     class Meta:
         model = History
         fields = '__all__'
 
-class NoteSerializer(serializers.ModelSerializer):
+class StatisticsSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Note
+        model = Statistics
+        fields = '__all__'
+
+class RaceSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Race
+        fields = '__all__'
+
+class CharacterSerializer(serializers.ModelSerializer):
+    equipment = EquipmentSerializer(many=True, read_only=True)
+    magic_items = MagicItemSerializer(many=True, read_only=True)
+    miscellaneous_items = MiscellaneousItemSerializer(many=True, read_only=True)
+    food_drinks = FoodDrinkSerializer(many=True, read_only=True)
+    healing_potions = HealingPotionSerializer(many=True, read_only=True)
+    history = HistorySerializer(many=True, read_only=True)
+    statistics = StatisticsSerializer(many=True, read_only=True)
+    race = RaceSerializer(read_only=True)
+
+    class Meta:
+        model = Character
         fields = '__all__'
