@@ -39,8 +39,12 @@ function Navbar() {
     const handleUserIconClick = () => {
         if (isLoggedIn) {
             setShowUserDropdown(!showUserDropdown);
+            console.log(isLoggedIn)
+            console.log('User icon clicked')
         } else {
             navigate('/login');
+            console.log(isLoggedIn)
+            console.log('User icon clicked')
         }
     };
 
@@ -162,7 +166,7 @@ function Navbar() {
                                             </button>
                                         </li>
                                         <li className="sp-menu-item">
-                                            <a onClick={isLoggedIn ? handleUserIconClick : undefined}>
+                                            <a onClick={handleUserIconClick}>
                                                 <FontAwesomeIcon icon={isLoggedIn ? faUserCircle : faUser}
                                                                  className="fa-facebook"/>
                                             </a>
