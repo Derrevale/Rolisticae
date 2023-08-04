@@ -20,3 +20,7 @@
 .fa-facebook {
   margin-right: 5px;
 }
+.offcanvas-logo {
+  width: 100%; /* Ajustez la largeur comme vous le souhaitez */
+  height: auto; /* Pour maintenir les proportions de l'image */
+}

@@ -119,7 +119,7 @@ function Navbar({handleShow}) {
                                             </Link>
                                         </li>
                                         <li className="sp-menu-item">
-                                            <Link to="/">
+                                            <Link to="/rule">
                                                 <FontAwesomeIcon icon={faBook}
                                                                  className="fa-facebook"></FontAwesomeIcon> Règles
                                             </Link>
