@@ -16,7 +16,7 @@ import {useState, useEffect} from 'react';
 import axios from 'axios';
 import {useNavigate, Link} from 'react-router-dom';
 
-function Navbar() {
+function Navbar({handleShow}) {
     const [showDropdown, setShowDropdown] = useState(false);
     const [showUserDropdown, setShowUserDropdown] = useState(false);
     const [categories, setCategories] = useState([]);
@@ -39,12 +39,8 @@ function Navbar() {
     const handleUserIconClick = () => {
         if (isLoggedIn) {
             setShowUserDropdown(!showUserDropdown);
-            console.log(isLoggedIn)
-            console.log('User icon clicked')
         } else {
             navigate('/login');
-            console.log(isLoggedIn)
-            console.log('User icon clicked')
         }
     };
 
@@ -154,17 +150,7 @@ function Navbar() {
                                                 />
                                             </form>
                                         </li>
-                                        <li className="sp-menu-item d-lg-none">
-                                            <button
-                                                className="btn btn-link text-white"
-                                                type="button"
-                                                data-bs-toggle="offcanvas"
-                                                data-bs-target="#offcanvasExample"
-                                                aria-controls="offcanvasExample"
-                                            >
-                                                <FontAwesomeIcon icon={faBars} className="fa-bars" size="xl"/>
-                                            </button>
-                                        </li>
+
                                         <li className="sp-menu-item">
                                             <a onClick={handleUserIconClick}>
                                                 <FontAwesomeIcon icon={isLoggedIn ? faUserCircle : faUser}
@@ -185,34 +171,22 @@ function Navbar() {
                                                 </div>
                                             )}
                                         </li>
+                                        <li className="sp-menu-item burger-icon">
+                                            <button
+                                                className="btn btn-link text-white  btn-burger"
+                                                type="button"
+                                                data-bs-toggle="offcanvas"
+                                                data-bs-target="#offcanvasExample"
+                                                aria-controls="offcanvasExample"
+                                                onClick={handleShow}
+                                            >
+                                                <FontAwesomeIcon icon={faBars} className="fa-bars" size="xl" />
+                                            </button>
+                                        </li>
                                     </ul>
                                 </nav>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div
-                className="offcanvas offcanvas-start"
-                tabIndex="-1"
-                id="offcanvasExample"
-                aria-labelledby="offcanvasExampleLabel"
-            >
-                <div className="offcanvas-header">
-                    <h5 className="offcanvas-title" id="offcanvasExampleLabel">
-                        Off-canvas
-                    </h5>
-                    <button
-                        type="button"
-                        className="btn-close text-reset"
-                        data-bs-dismiss="offcanvas"
-                        aria-label="Close"
-                    ></button>
-                </div>
-                <div className="offcanvas-body">
-                    <div>
-                        <p>Contenu off-canvas...</p>
-                        {/* Vous pouvez ajouter ici le contenu de votre off-canvas */}
                     </div>
                 </div>
             </div>

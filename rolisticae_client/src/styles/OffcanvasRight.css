@@ -1,0 +1,22 @@
+.sp-menu-item {
+  margin-bottom: 10px;
+}
+
+.sp-menu-item a {
+  color: #333;
+  text-decoration: none;
+}
+
+.sp-menu-item a:hover {
+  color: #007bff;
+}
+
+.center-align {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa-facebook {
+  margin-right: 5px;
+}
