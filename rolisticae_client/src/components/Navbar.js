@@ -171,6 +171,8 @@ function Navbar({handleShow}) {
                                                 </div>
                                             )}
                                         </li>
+                                    </ul>
+                                    <ul className="sp-megamenu-parent menu-animation-fade-up">
                                         <li className="sp-menu-item burger-icon">
                                             <button
                                                 className="btn btn-link text-white  btn-burger"
@@ -180,7 +182,7 @@ function Navbar({handleShow}) {
                                                 aria-controls="offcanvasExample"
                                                 onClick={handleShow}
                                             >
-                                                <FontAwesomeIcon icon={faBars} className="fa-bars" size="xl" />
+                                                <FontAwesomeIcon icon={faBars} className="fa-bars" size="xl"/>
                                             </button>
                                         </li>
                                     </ul>
