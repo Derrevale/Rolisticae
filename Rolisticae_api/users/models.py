@@ -10,12 +10,7 @@ class User(AbstractUser):
     first_name = models.CharField(max_length=100)
     # Champ last_name pour le nom de l'utilisateur
     last_name = models.CharField(max_length=100)
-    # Champ campaigns pour stocker les campagnes de l'utilisateur
-    # Vous pouvez modifier ce champ en fonction de la structure de vos campagnes
-    campaigns = models.TextField(blank=True)
-    # Champ character_sheets pour stocker les fiches de personnage de l'utilisateur
-    # Vous pouvez modifier ce champ en fonction de la structure de vos fiches de personnage
-    character_sheets = models.TextField(blank=True)
+
 
     # Définition du champ utilisé comme identifiant pour l'authentification
     USERNAME_FIELD = 'email'

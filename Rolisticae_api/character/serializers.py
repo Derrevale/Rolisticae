@@ -5,41 +5,55 @@ class EquipmentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Equipment
         fields = '__all__'
+        ref_name = 'EquipmentSerializerCharacter'
 
 class MagicItemSerializer(serializers.ModelSerializer):
     class Meta:
         model = MagicItem
         fields = '__all__'
+        ref_name = 'MagicItemSerializerCharacter'
+
 
 class MiscellaneousItemSerializer(serializers.ModelSerializer):
     class Meta:
         model = MiscellaneousItem
         fields = '__all__'
+        ref_name = 'MiscellaneousItemSerializerCharacter'
 
 class FoodDrinkSerializer(serializers.ModelSerializer):
     class Meta:
         model = FoodDrink
         fields = '__all__'
+        ref_name = 'FoodDrinkSerializerCharacter'
+
 
 class HealingPotionSerializer(serializers.ModelSerializer):
     class Meta:
         model = HealingPotion
         fields = '__all__'
+        ref_name = 'HealingPotionSerializerCharacter'
+
 
 class HistorySerializer(serializers.ModelSerializer):
     class Meta:
         model = History
         fields = '__all__'
+        ref_name = 'HistorySerializerCharacter'
+
 
 class StatisticsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Statistics
         fields = '__all__'
+        ref_name = 'StatisticsSerializerCharacter'
+
 
 class RaceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Race
         fields = '__all__'
+        ref_name = 'RaceSerializerCharacter'  # Ajoutez cette ligne
+
 
 class CharacterSerializer(serializers.ModelSerializer):
     equipment = EquipmentSerializer(many=True, read_only=True)
@@ -54,3 +68,5 @@ class CharacterSerializer(serializers.ModelSerializer):
     class Meta:
         model = Character
         fields = '__all__'
+        ref_name = 'CharacterSerializerCharacter'  # Ajoutez cette ligne
+

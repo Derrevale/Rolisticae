@@ -26,13 +26,17 @@ class Race(models.Model):
         return self.name
 
 class Character(models.Model):
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='characters')
     campaign = models.ForeignKey(Campaign, on_delete=models.CASCADE, related_name='characters')
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     level = models.IntegerField()
     health_points = models.IntegerField()
+    health_points_max = models.IntegerField()
+
     mana_points = models.IntegerField()
+    mana_points_max = models.IntegerField()
+
     destiny_points = models.IntegerField()
     experience = models.IntegerField()
     race = models.ForeignKey(Race, on_delete=models.SET_NULL, null=True)
@@ -43,7 +47,7 @@ class Character(models.Model):
         return f"[{self.user.username}] {self.first_name} {self.last_name} "
 
 class Equipment(models.Model):
-    character = models.ForeignKey(Character, on_delete=models.CASCADE, related_name='equipment')
+    character = models.ForeignKey(Character, on_delete=models.CASCADE, related_name='equipment_set')
     name = models.CharField(max_length=100)
     roll = models.CharField(max_length=100)
     description = RichTextField()
@@ -75,8 +79,8 @@ class HealingPotion(models.Model):
 class Wealth(models.Model):
     character = models.ForeignKey(Character, on_delete=models.CASCADE, related_name='wealth')
     gold_pieces = models.IntegerField(default=0)
-    silver_pieces = models.IntegerField(default=1)
-    copper_pieces = models.IntegerField(default=10)
+    silver_pieces = models.IntegerField(default=0)
+    copper_pieces = models.IntegerField(default=0)
     bank = models.IntegerField(default=0)
 
 class Knowledge(models.Model):

@@ -29,6 +29,8 @@ import CalendarEvent from "./Calendar/CalendarEvent";
 import AddEventForm from "./Formulaire/EventForm";
 import AppointmentList from "./Appointments/AppointmentList";
 import UserProfile from "./User/UserProfile";
+import Character from "./Characters/Personnage";
+import CharacterForm from "./Characters/CharacterForm";
 
 // Définition du composant App
 function App() {
@@ -61,6 +63,9 @@ function App() {
                 <Route path="/logout" element={<Logout/> /* Route pour la déconnexion */}/>
                 <Route path="/userform" element={<UserForm/> /* Route pour le formulaire utilisateur */}/>
                 <Route path="/userprofile" element={<UserProfile/> /* Route pour le profil utilisateur */}/>
+                <Route path="/personnage" element={<Character/> /* Route pour le profil utilisateur */}/>
+                <Route path="/characterform" element={<CharacterForm/> /* Route pour le profil utilisateur */}/>
+
             </Route>
         )
     );

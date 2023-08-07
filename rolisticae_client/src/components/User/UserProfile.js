@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, {useEffect, useState} from 'react';
+import {Link} from 'react-router-dom';
 
 async function refreshToken() {
     const refresh = localStorage.getItem('refresh');
@@ -56,14 +56,36 @@ function UserProfile() {
     }
 
     return (
-        <div>
-            <h1>User Profile</h1>
-            <p>Name: {userInfo[0].first_name} {userInfo[0].last_name}</p>
-            <p>Email: {userInfo[0].email}</p>
-            {/* Display other user info as needed */}
-            <Link to="/UserForm">Modifier mes informations</Link>
-        </div>
+        console.log(userInfo),
+            <div>
+                <h1>User Profile</h1>
+                <p>Name: {userInfo[0].first_name} {userInfo[0].last_name}</p>
+                <p>Email: {userInfo[0].email}</p>
+                {/* Display the characters */}
+                <h2>Characters:</h2>
+                {userInfo[0].characters.map((character, index) => (
+
+                    <div key={index}>
+                        <p>Name: {character.first_name} {character.last_name}</p>
+                        <p>Level: {character.level}</p>
+                        <p>Race: {character.race.name}</p>
+                        <p>Equipment:</p>
+
+                            {character.equipment_set.map((item, index) => (
+                                <div className="stuff" key={index}>{item.name}>
+                                    <div>roll: {item.roll}</div>
+                                    <div>description: {item.description}</div>
+
+                                </div>
+                            ))}
+
+                    </div>
+                ))}
+                {/* Display other user info as needed */}
+                <Link to="/UserForm">Modifier mes informations</Link>
+            </div>
     );
 }
+
 
 export default UserProfile;
