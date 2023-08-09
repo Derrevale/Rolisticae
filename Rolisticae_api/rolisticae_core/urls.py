@@ -23,7 +23,7 @@ from galerie.views import Category_Galerie_ListView, Category_Galerie_DetailView
     Image_Galerie_ViewSet
 from appointment.views import AppointmentViewSet, VoteViewSet
 from users.views import UserViewSet, RegisterView, LoginView
-from character.views import CharacterViewSet
+from character.views import CharacterViewSet, RaceViewSet
 from campaigns.views import CampaignViewSet
 # Configuration de la vue de la documentation de l'API
 schema_view = get_schema_view(
@@ -67,6 +67,8 @@ router.register('Appointment Vote', VoteViewSet)
 router.register('User', UserViewSet, basename='user')
 router.register('Character', CharacterViewSet)
 router.register('Campaign', CampaignViewSet)
+router.register('Race', RaceViewSet)
+
 
 # Configuration des URL
 urlpatterns = [

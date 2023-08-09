@@ -57,7 +57,7 @@ function Character() {
 
     return (
         <div>
-            <h1>Personnages:</h1>
+            <h1>Fiche de Joueur:</h1>
             {userInfo[0].characters && userInfo[0].characters.map((character, index) => (
                 <div className="card" key={index}>
                     <h2 className="card-header">{character.first_name} {character.last_name}</h2>
@@ -124,7 +124,7 @@ function Character() {
                         <div className="row">
                             {character.equipment_set && character.equipment_set.map((item, index) => (
                                 <div className="col-sm-4" key={index}>
-                                    <div className="card">
+                                    <div className="card" >
                                         <div className="card-header">
                                             {item.name}
                                         </div>

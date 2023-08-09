@@ -1,162 +1,76 @@
-import React, { useState } from 'react';
+import React, {useState, useEffect} from 'react';
 
-async function refreshToken() {
-    console.log('Refreshing token...');
-    const refresh = localStorage.getItem('refresh');
+function CreateCharacter() {
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
+    const [level, setLevel] = useState('');
+    // Ajoutez d'autres états pour les autres champs
 
-    const response = await fetch("http://localhost:8010/api/token/refresh/", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ refresh: refresh })
-    });
+    const [races, setRaces] = useState([]);
+    const [campaigns, setCampaigns] = useState([]);
+    const [race, setRace] = useState('');
+    const [campaign, setCampaign] = useState('');
 
-    const data = await response.json();
-    console.log('New access token:', data.access);
-    return data.access;
-}
+    useEffect(() => {
+        // Remplacez ces URLs par les URLs de vos points de terminaison API
+        const racesApiUrl = 'http://localhost:8010/api/Race/';
+        const campaignsApiUrl = 'http://localhost:8010/api/Campaign/';
 
-async function createCharacter(character) {
-    console.log('Creating character with data:', character);
-    let token = localStorage.getItem('access');
-    console.log('Current access token:', token);
+        // Récupérez les races
+        fetch(racesApiUrl)
+            .then(response => response.json())
+            .then(data => setRaces(data))
+            .catch(error => console.error('Erreur lors de la récupération des races:', error));
 
-    let response = await fetch("http://localhost:8010/api/Character/", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-            "Authorization": `Bearer ${token}`
-        },
-        body: JSON.stringify(character)
-    });
+        // Récupérez les campagnes
+        fetch(campaignsApiUrl)
+            .then(response => response.json())
+            .then(data => setCampaigns(data))
+            .catch(error => console.error('Erreur lors de la récupération des campagnes:', error));
+    }, []);
 
-    console.log('Response status:', response.status);
-    if (response.status === 401) {
-        console.log('Unauthorized, refreshing token...');
-        const newToken = await refreshToken();
-        localStorage.setItem('access', newToken);
-        token = newToken;
-        response = await fetch("http://localhost:8010/api/Character/", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                "Authorization": `Bearer ${token}`
-            },
-            body: JSON.stringify(character)
-        });
-    }
 
-    if (!response.ok) {
-        console.error('Failed to create character, response:', response);
-        throw new Error("Failed to create character");
-    }
-
-    const data = await response.json();
-    console.log('Character created, data:', data);
-    return data;
-}
-
-function CharacterForm() {
-    console.log('Initializing character form...');
-    const [character, setCharacter] = useState({
-        first_name: '',
-        last_name: '',
-        level: '',
-        health_points: '',
-        health_points_max: '',
-        mana_points: '',
-        mana_points_max: '',
-        destiny_points: '',
-        experience: '',
-        sex: '',
-        size: '',
-        user: '',
-        campaign: '',
-        race: ''
-        // Add all the other character attributes here...
-    });
-
-    const handleChange = (event) => {
-        console.log(`Updating form field ${event.target.name} with value ${event.target.value}`);
-        setCharacter({
-            ...character,
-            [event.target.name]: event.target.value,
-        });
-    };
-
-    const handleSubmit = (event) => {
+    function handleSubmit(event) {
         event.preventDefault();
-        console.log('Submitting form...');
-        createCharacter(character).then(data => {
-            console.log('Form submitted, response data:', data);
-            // Handle the response here. For example, you might want to redirect the user to the character page...
-        }).catch(error => console.error('Error while submitting form:', error));
-    };
+        // Appellez votre point de terminaison API pour créer un personnage ici
+        // Vous devrez créer un objet qui regroupe tous les champs du formulaire
+        // Vous devrez également gérer les champs complexes comme 'equipment', 'magic_items', etc.
+    }
 
-    console.log('Rendering form...');
     return (
         <form onSubmit={handleSubmit}>
-            <label>
-                First Name:
-                <input type="text" name="first_name" value={character.first_name} onChange={handleChange} />
-            </label>
-            <label>
-                Last Name:
-                <input type="text" name="last_name" value={character.last_name} onChange={handleChange} />
-            </label>
-            <label>
-                Level:
-                <input type="text" name="level" value={character.level} onChange={handleChange} />
-            </label>
-            <label>
-                Health Points:
-                <input type="text" name="health_points" value={character.health_points} onChange={handleChange} />
-            </label>
-            <label>
-                Max Health Points:
-                <input type="text" name="health_points_max" value={character.health_points_max} onChange={handleChange} />
-            </label>
-            <label>
-                Mana Points:
-                <input type="text" name="mana_points" value={character.mana_points} onChange={handleChange} />
-            </label>
-            <label>
-                Max Mana Points:
-                <input type="text" name="mana_points_max" value={character.mana_points_max} onChange={handleChange} />
-            </label>
-            <label>
-                Destiny Points:
-                <input type="text" name="destiny_points" value={character.destiny_points} onChange={handleChange} />
-            </label>
-            <label>
-                Experience:
-                <input type="text" name="experience" value={character.experience} onChange={handleChange} />
-            </label>
-            <label>
-                Sex:
-                <input type="text" name="sex" value={character.sex} onChange={handleChange} />
-            </label>
-            <label>
-                Size:
-                <input type="text" name="size" value={character.size} onChange={handleChange} />
-            </label>
-            <label>
-                User ID:
-                <input type="text" name="user" value={character.user} onChange={handleChange} />
-            </label>
-            <label>
-                Campaign ID:
-                <input type="text" name="campaign" value={character.campaign} onChange={handleChange} />
-            </label>
-            <label>
-                Race ID:
-                <input type="text" name="race" value={character.race} onChange={handleChange} />
-            </label>
-            {/* Add the inputs for the other character attributes here... */}
-            <input type="submit" value="Create Character" />
+            <input
+                type="text"
+                value={firstName}
+                onChange={e => setFirstName(e.target.value)}
+                placeholder="Prénom du personnage"
+            />
+            <input
+                type="text"
+                value={lastName}
+                onChange={e => setLastName(e.target.value)}
+                placeholder="Nom de famille du personnage"
+            />
+            <input
+                type="number"
+                value={level}
+                onChange={e => setLevel(e.target.value)}
+                placeholder="Niveau du personnage"
+            />
+            {/* Ajoutez d'autres champs pour les autres attributs du personnage */}
+            <select value={race} onChange={e => setRace(e.target.value)}>
+                {races.map(race => (
+                    <option key={race.id} value={race.id}>{race.name}</option>
+                ))}
+            </select>
+            <select value={campaign} onChange={e => setCampaign(e.target.value)}>
+                {campaigns.map(campaign => (
+                    <option key={campaign.id} value={campaign.id}>{campaign.name}</option>
+                ))}
+            </select>
+            <button type="submit">Créer un personnage</button>
         </form>
     );
 }
 
-export default CharacterForm;
+export default CreateCharacter;

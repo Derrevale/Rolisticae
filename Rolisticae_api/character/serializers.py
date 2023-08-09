@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Character, Equipment, MagicItem, MiscellaneousItem, FoodDrink, HealingPotion, History, Statistics, Race
+from .models import Character, Equipment, MagicItem, MiscellaneousItem, FoodDrink, HealingPotion, History, Statistics, Race, Knowledge
 
 class EquipmentSerializer(serializers.ModelSerializer):
     class Meta:
@@ -47,6 +47,11 @@ class StatisticsSerializer(serializers.ModelSerializer):
         fields = '__all__'
         ref_name = 'StatisticsSerializerCharacter'
 
+class KnowledgeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Knowledge
+        fields = ['name', 'description', 'strength_bonus', 'strength_malus', 'dexterity_bonus', 'dexterity_malus', 'constitution_bonus', 'constitution_malus', 'perception_bonus', 'perception_malus', 'charisma_bonus', 'charisma_malus', 'intelligence_bonus', 'intelligence_malus']
+        ref_name = 'KnowledgeSerializerCharacter'
 
 class RaceSerializer(serializers.ModelSerializer):
     class Meta:
@@ -56,7 +61,7 @@ class RaceSerializer(serializers.ModelSerializer):
 
 
 class CharacterSerializer(serializers.ModelSerializer):
-    equipment = EquipmentSerializer(many=True, read_only=True)
+    equipment_set = EquipmentSerializer(many=True, read_only=True)
     magic_items = MagicItemSerializer(many=True, read_only=True)
     miscellaneous_items = MiscellaneousItemSerializer(many=True, read_only=True)
     food_drinks = FoodDrinkSerializer(many=True, read_only=True)
@@ -64,6 +69,7 @@ class CharacterSerializer(serializers.ModelSerializer):
     history = HistorySerializer(many=True, read_only=True)
     statistics = StatisticsSerializer(many=True, read_only=True)
     race = RaceSerializer(read_only=True)
+    knowledge = KnowledgeSerializer(many=True, read_only=True)
 
     class Meta:
         model = Character
