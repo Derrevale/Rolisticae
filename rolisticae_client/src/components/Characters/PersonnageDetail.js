@@ -6,7 +6,6 @@ function PersonnageDetail() {
     const {id} = useParams();
 
     useEffect(() => {
-        console.log("Fetching character with id:", id);
 
         // Directly fetch the character details from the API
         fetch(`http://localhost:8010/api/Character/${id}/`)
@@ -18,7 +17,6 @@ function PersonnageDetail() {
             })
             .then(data => {
                 setCharacter(data);
-                console.log("Character fetched:", data);
             })
             .catch(error => {
                 console.error("Error fetching the character:", error);
@@ -42,8 +40,8 @@ function PersonnageDetail() {
                                 style={{color: 'Blue'}}>{character.mana_points} / {character.mana_points_max} </span>
                         </p>
 
-                        {character.statistics && character.statistics.map((stat, index) => (
-                            <div className="card" key={index}>
+                        {character.statistics && character.statistics.map((stat, id) => (
+                            <div className="card" key={id}>
                                 <div className="card-header">
                                     Caractéristiques
                                 </div>
@@ -91,8 +89,8 @@ function PersonnageDetail() {
                         <hr/>
                         <p className="card-text">Equipments:</p>
                         <div className="row">
-                            {character.equipment_set && character.equipment_set.map((item, index) => (
-                                <div className="col-sm-4" key={index}>
+                            {character.equipment_set && character.equipment_set.map((item, id) => (
+                                <div className="col-sm-4" key={id}>
                                     <div className="card">
                                         <div className="card-header">
                                             {item.name}
@@ -110,8 +108,8 @@ function PersonnageDetail() {
                         <hr/>
                         <p className="card-text">Objets Magiques:</p>
                         <div className="row">
-                            {character.magic_items && character.magic_items.map((item, index) => (
-                                <div className="col-sm-4" key={index}>
+                            {character.magic_items && character.magic_items.map((item, id) => (
+                                <div className="col-sm-4" key={id}>
                                     <div className="card">
                                         <div className="card-header">
                                             {item.name}
@@ -129,8 +127,8 @@ function PersonnageDetail() {
                         <hr/>
                         <p className="card-text">Objets divers :</p>
                         <div className="row">
-                            {character.miscellaneous_items && character.miscellaneous_items.map((item, index) => (
-                                <div className="col-sm-4" key={index}>
+                            {character.miscellaneous_items && character.miscellaneous_items.map((item, id) => (
+                                <div className="col-sm-4" key={id}>
                                     <div className="card">
                                         <div className="card-header">
                                             {item.name}
@@ -148,8 +146,8 @@ function PersonnageDetail() {
                         <hr/>
                         <p className="card-text">Nourritures et Boissons:</p>
                         <div className="row">
-                            {character.food_drinks && character.food_drinks.map((item, index) => (
-                                <div className="col-sm-4" key={index}>
+                            {character.food_drinks && character.food_drinks.map((item, id) => (
+                                <div className="col-sm-4" key={id}>
                                     <div className="card">
                                         <div className="card-header">
                                             {item.name}
@@ -167,8 +165,8 @@ function PersonnageDetail() {
                         <hr/>
                         <p className="card-text">Potions et Poisons:</p>
                         <div className="row">
-                            {character.healing_potions && character.healing_potions.map((item, index) => (
-                                <div className="col-sm-4" key={index}>
+                            {character.healing_potions && character.healing_potions.map((item, id) => (
+                                <div className="col-sm-4" key={id}>
                                     <div className="card">
                                         <div className="card-header">
                                             {item.name}
@@ -184,8 +182,8 @@ function PersonnageDetail() {
                         </div>
 
                         <hr/>
-                        {character.wealth && character.wealth.map((wealth, index) => (
-                            <div className="card">
+                        {character.wealth && character.wealth.map((wealth, id) => (
+                            <div className="card" key={id}>
                                 <div className="card-header">
                                     Richesse
                                 </div>
@@ -201,8 +199,8 @@ function PersonnageDetail() {
 
                         <hr/>
                         <p className="card-text">Background:</p>
-                        {character.history && character.history.map((history, index) => (
-                            <div className="card">
+                        {character.history && character.history.map((history, id) => (
+                            <div className="card" key={id}>
 
                                 <div className="card-body">
                                     <p className="card-text"
@@ -214,8 +212,8 @@ function PersonnageDetail() {
                         <hr/>
                         <p className="card-text">Connaissance:</p>
                         <div className="row">
-                            {character.knowledge && character.knowledge.map((knowledge, index) => (
-                                <div className="col-sm-4" key={index}>
+                            {character.knowledge && character.knowledge.map((knowledge, id) => (
+                                <div className="col-sm-4" key={id}>
                                     <div className="card">
                                         <div className="card-header">
                                             {knowledge.name}
