@@ -97,7 +97,7 @@ class CharacterSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Character
-        fields = ['id', 'first_name', 'last_name', 'level', 'health_points', 'mana_points', 'destiny_points', 'health_points_max', 'mana_points_max', 'race', 'equipment_set', 'magic_items', 'miscellaneous_items', 'food_drinks', 'healing_potions', 'wealth', 'knowledge', 'history', 'notes', 'statistics']
+        fields = ['id', 'first_name', 'campaign', 'last_name', 'level', 'health_points', 'mana_points', 'destiny_points', 'health_points_max', 'mana_points_max', 'race', 'equipment_set', 'magic_items', 'miscellaneous_items', 'food_drinks', 'healing_potions', 'wealth', 'knowledge', 'history', 'notes', 'statistics']
         ref_name = 'CharacterSerializerUser'  # Ajoutez cette ligne
 
 class UserSerializer(serializers.ModelSerializer):

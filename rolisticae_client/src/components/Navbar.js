@@ -7,6 +7,7 @@ import {
     faCalendar,
     faFile,
     faBook,
+    faDice,
     faIdBadge,
     faImages,
     faSearch,
@@ -119,9 +120,9 @@ function Navbar({handleShow}) {
                                             </Link>
                                         </li>
                                         <li className="sp-menu-item">
-                                            <Link to="/rule">
-                                                <FontAwesomeIcon icon={faBook}
-                                                                 className="fa-facebook"></FontAwesomeIcon> Règles
+                                            <Link to="/campagne">
+                                                <FontAwesomeIcon icon={faDice}
+                                                                 className="fa-facebook"></FontAwesomeIcon> Campagnes
                                             </Link>
                                         </li>
                                         {isLoggedIn && (
