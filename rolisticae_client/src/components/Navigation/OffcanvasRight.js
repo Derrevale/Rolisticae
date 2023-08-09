@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {Offcanvas} from 'react-bootstrap';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import '../styles/OffcanvasRight.css';
+import '../../styles/Navigation/OffcanvasRight.css';
 import {
     faHome,
     faCalendar,

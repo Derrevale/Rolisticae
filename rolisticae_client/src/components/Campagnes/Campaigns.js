@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
-import { fetchCampaigns } from './api';
+import { fetchCampaigns } from '../api';
 
 function CampaignCard({ campaign }) {
     return (

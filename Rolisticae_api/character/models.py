@@ -6,6 +6,7 @@ from rest_framework.exceptions import ValidationError
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 
+
 class Race(models.Model):
     name = models.CharField(max_length=100)
     description = RichTextField()
@@ -25,6 +26,7 @@ class Race(models.Model):
     def __str__(self):
         return self.name
 
+
 class Character(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='characters')
     campaign = models.ForeignKey(Campaign, on_delete=models.CASCADE, related_name='characters')
@@ -42,9 +44,11 @@ class Character(models.Model):
     race = models.ForeignKey(Race, on_delete=models.SET_NULL, null=True)
     sex = models.CharField(max_length=100)
     size = models.CharField(max_length=100)
+
     # Include other fields as needed
     def __str__(self):
         return f"[{self.user.username}] {self.first_name} {self.last_name} "
+
 
 class Equipment(models.Model):
     character = models.ForeignKey(Character, on_delete=models.CASCADE, related_name='equipment_set')
@@ -52,11 +56,13 @@ class Equipment(models.Model):
     roll = models.CharField(max_length=100)
     description = RichTextField()
 
+
 class MagicItem(models.Model):
     character = models.ForeignKey(Character, on_delete=models.CASCADE, related_name='magic_items')
     name = models.CharField(max_length=100)
     description = RichTextField()
     quantity = models.IntegerField()
+
 
 class MiscellaneousItem(models.Model):
     character = models.ForeignKey(Character, on_delete=models.CASCADE, related_name='miscellaneous_items')
@@ -64,11 +70,13 @@ class MiscellaneousItem(models.Model):
     description = RichTextField()
     quantity = models.IntegerField()
 
+
 class FoodDrink(models.Model):
     character = models.ForeignKey(Character, on_delete=models.CASCADE, related_name='food_drinks')
     name = models.CharField(max_length=100)
     description = RichTextField()
     quantity = models.IntegerField()
+
 
 class HealingPotion(models.Model):
     character = models.ForeignKey(Character, on_delete=models.CASCADE, related_name='healing_potions')
@@ -76,12 +84,14 @@ class HealingPotion(models.Model):
     description = RichTextField()
     quantity = models.IntegerField()
 
+
 class Wealth(models.Model):
     character = models.ForeignKey(Character, on_delete=models.CASCADE, related_name='wealth')
     gold_pieces = models.IntegerField(default=0)
     silver_pieces = models.IntegerField(default=0)
     copper_pieces = models.IntegerField(default=0)
     bank = models.IntegerField(default=0)
+
 
 class Knowledge(models.Model):
     character = models.ForeignKey(Character, on_delete=models.CASCADE, related_name='knowledge')
@@ -105,9 +115,11 @@ class History(models.Model):
     character = models.ForeignKey(Character, on_delete=models.CASCADE, related_name='history')
     text = RichTextField(default="Joueur - ")
 
+
 class Note(models.Model):
     character = models.ForeignKey(Character, on_delete=models.CASCADE, related_name='notes')
     text = RichTextField()
+
 
 class Statistics(models.Model):
     character = models.ForeignKey(Character, on_delete=models.CASCADE, related_name='statistics')
@@ -157,7 +169,6 @@ class Statistics(models.Model):
         self.intelligence_bonus = race.intelligence_bonus + sum(k.intelligence_bonus for k in knowledge)
         self.intelligence_malus = race.intelligence_malus + sum(k.intelligence_malus for k in knowledge)
 
-
     def save(self, *args, **kwargs):
         self.calculate_bonus()
         super().save(*args, **kwargs)
@@ -170,18 +181,5 @@ class Statistics(models.Model):
                 statistics.calculate_bonus()
                 statistics.save()
 
-    @receiver(post_save, sender=Knowledge)
-    def update_statistics_on_knowledge_save(sender, instance, **kwargs):
-        statistics = instance.character.statistics.first()
-        if statistics:
-            statistics.calculate_bonus()
-            statistics.save()
 
-    @receiver(post_save, sender=Character)
-    def update_statistics_on_character_save(sender, instance, created, **kwargs):
-        if created:
-            Statistics.objects.create(character=instance)
-        statistics = instance.statistics.first()
-        if statistics:
-            statistics.calculate_bonus()
-            statistics.save()
+

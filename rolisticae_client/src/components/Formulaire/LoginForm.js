@@ -47,13 +47,11 @@ function LoginForm() {
             // Store the tokens in the local storage
             localStorage.setItem('access', data.access);
             localStorage.setItem('refresh', data.refresh);
-            console.log("User logged in: ", data);
             setMessage(`Bienvenue ${email}`);
             setSeverity("success");
             setOpen(true);
             navigate('/');
         } else {
-            console.log("Error logging in: ", data);
             setMessage("Email ou mot de passe incorrect");
             setSeverity("error");
             setOpen(true);

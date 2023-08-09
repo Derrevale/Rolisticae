@@ -1,5 +1,5 @@
-import '../styles/Navbar.css';
-import '../styles/bootstrap.min.css';
+import '../../styles/Navigation/Navbar.css';
+import '../../styles/bootstrap.min.css';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faUser, faUserCircle} from '@fortawesome/free-solid-svg-icons';
 import {

@@ -1,6 +1,6 @@
 // Importation des modules nécessaires
 import React, {useState, useEffect} from "react";
-import '../../styles/ArticleList.css';
+import '../../styles/Blog/ArticleList.css';
 
 // Définition du composant ArticleList
 function ArticleList() {

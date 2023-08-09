@@ -9,15 +9,16 @@ import {
     RouterProvider,
     useParams
 } from "react-router-dom";
-import OffcanvasRight from './OffcanvasRight';
+import OffcanvasRight from './Navigation/OffcanvasRight';
+import Modal from 'react-modal';
 
 // Importation des composants de l'application
-import Navbar from "./Navbar";
-import Topbar from "./Topbar";
+import Navbar from "./Navigation/Navbar";
+import Topbar from "./Navigation/Topbar";
 import SignupForm from "./User/Signup/SignupForm";
-import LoginForm from "./User/LoginForm";
+import LoginForm from "./Formulaire/LoginForm";
 import Logout from './User/Logout';
-import UserForm from "./User/UserForm";
+import UserForm from "./Formulaire/UserForm";
 import ArticleList from "./Blog/ArticleList";
 import Article from "./Blog/Article";
 import Documents from "./Documents/Documents";
@@ -30,20 +31,23 @@ import AddEventForm from "./Formulaire/EventForm";
 import AppointmentList from "./Appointments/AppointmentList";
 import UserProfile from "./User/UserProfile";
 
-import Character from "./Characters/Personnage";
-import CharacterForm from "./Characters/CharacterForm";
+import CharacterForm from "./Formulaire/CharacterForm";
 import CharacterDetail from "./Characters/PersonnageDetail";
 import PersonnagesList from "./Characters/PersonnagesList";
 
-import Campaigns from "./Campaigns";
+import Campaigns from "./Campagnes/Campaigns";
 import PersonnageDetail from "./Characters/PersonnageDetail";
 
 // Définition du composant App
+
+Modal.setAppElement('#root'); // Configuration pour react-modal
+
 function App() {
 
     const [showOffcanvas, setShowOffcanvas] = useState(false);
     const handleClose = () => setShowOffcanvas(false);
     const handleShow = () => setShowOffcanvas(true);
+
 
     const router = createBrowserRouter(
         createRoutesFromElements(

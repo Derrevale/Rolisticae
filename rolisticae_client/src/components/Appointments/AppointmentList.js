@@ -1,7 +1,7 @@
 // Importation des modules nécessaires
 import React, {useState, useEffect} from "react";
 import axios from 'axios';
-import '../../styles/AppointmentList.css';
+import '../../styles/Appointment/AppointmentList.css';
 
 // Définition du composant AppointmentList
 function AppointmentList() {
