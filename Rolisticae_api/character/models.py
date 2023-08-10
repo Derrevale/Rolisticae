@@ -183,3 +183,20 @@ class Statistics(models.Model):
 
 
 
+
+# Signal to update bonus/malus when a Character object is saved
+@receiver(post_save, sender=Character)
+def update_statistics_on_character_save(sender, instance, **kwargs):
+    statistics = instance.statistics.first()  # Assuming each character has a related 'statistics' object
+    if statistics:
+        statistics.calculate_bonus()
+        statistics.save()
+
+# Signal to update bonus/malus when a Knowledge object is saved or modified
+@receiver(post_save, sender=Knowledge)
+def update_statistics_on_knowledge_save(sender, instance, **kwargs):
+    character = instance.character
+    statistics = character.statistics.first()
+    if statistics:
+        statistics.calculate_bonus()
+        statistics.save()

@@ -31,13 +31,15 @@ function StatisticsModal({ isOpen, onRequestClose, statistics, onSave }) {
     };
 
     try {
-      const response = await fetch(`http://localhost:8010/api/Character/${id}/`, {
+      // Utilisation de l'ID des statistiques pour l'endpoint de l'API
+      console.log(statistics[0].id);
+      const response = await fetch(`http://localhost:8010/api/Statistics/${statistics[0].id}/`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
           // Ajoutez d'autres en-têtes si nécessaire, par exemple des tokens d'authentification
         },
-        body: JSON.stringify({ statistics: updatedStatistics })
+        body: JSON.stringify(updatedStatistics)
       });
 
       const data = await response.json();
@@ -52,7 +54,8 @@ function StatisticsModal({ isOpen, onRequestClose, statistics, onSave }) {
       console.error("Erreur lors de l'appel API:", error);
       // Gérez les erreurs réseau ici, peut-être afficher un message à l'utilisateur
     }
-  };
+};
+
 
   return (
     <Modal
