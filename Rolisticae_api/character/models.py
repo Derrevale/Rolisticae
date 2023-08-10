@@ -3,7 +3,7 @@ from django.conf import settings
 from campaigns.models import Campaign
 from ckeditor.fields import RichTextField  # Pour les champs de texte enrichi
 from rest_framework.exceptions import ValidationError
-from django.db.models.signals import post_save
+from django.db.models.signals import post_save, post_delete
 from django.dispatch import receiver
 
 
@@ -195,6 +195,14 @@ def update_statistics_on_character_save(sender, instance, **kwargs):
 # Signal to update bonus/malus when a Knowledge object is saved or modified
 @receiver(post_save, sender=Knowledge)
 def update_statistics_on_knowledge_save(sender, instance, **kwargs):
+    character = instance.character
+    statistics = character.statistics.first()
+    if statistics:
+        statistics.calculate_bonus()
+        statistics.save()
+
+@receiver(post_delete, sender=Knowledge)
+def update_statistics_on_knowledge_delete(sender, instance, **kwargs):
     character = instance.character
     statistics = character.statistics.first()
     if statistics:

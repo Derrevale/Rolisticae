@@ -1,15 +1,159 @@
-import '../../styles/Modals/StatisticsModal.css';
+import '../../styles/Characters/PersonnageDetails.css';
 import React, {useState, useEffect} from 'react';
 import {Link, useParams} from 'react-router-dom';
 import StatisticsModal from '../Modals/StatisticsModal';
+import EquipmentModal from '../Modals/EquipmentsModal';
+import MagicItemModal from '../Modals/MagicItemModal';
+import MiscellaneousItemModal from '../Modals/MiscellaneousItemModal';
+import HealingPotionModal from "../Modals/HealingPotionModal";
+import FoodDrinkModal from "../Modals/FoodDrinkModal";
+import KnowledgeModal from "../Modals/KnowledgeModal";
 
 function PersonnageDetail() {
-  console.log("Rendering PersonnageDetail");
+    console.log("Rendering PersonnageDetail");
     const [character, setCharacter] = useState({});
     const {id} = useParams();
 
     const [isModalOpen, setIsModalOpen] = useState(false);
-  console.log("isModalOpen value:", isModalOpen);
+    const [isEquipmentModalOpen, setIsEquipmentModalOpen] = useState(false);
+    const [isMagicItemModalOpen, setIsMagicItemModalOpen] = useState(false);
+    const [isMiscellaneousItemModalOpen, setIsMiscellaneousItemModalOpen] = useState(false);
+    const [isHealingPotionModalOpen, setIsHealingPotionModalOpen] = useState(false);
+    const [isFoodDrinkModalOpen, setIsFoodDrinkModalOpen] = useState(false);
+    const [isKnowledgeModalOpen, setIsKnowledgeModalOpen] = useState(false);
+
+
+    const deleteEquipment = (equipmentId) => {
+        fetch(`http://localhost:8010/api/Equipment/${equipmentId}/`, {
+            method: 'DELETE',
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Network response was not ok");
+                }
+                // Refresh the character data after deleting the equipment.
+                // This can be optimized by only removing the equipment from the state
+                // but for simplicity, we are fetching the character details again.
+                return fetch(`http://localhost:8010/api/Character/${id}/`);
+            })
+            .then(response => response.json())
+            .then(data => {
+                setCharacter(data);
+            })
+            .catch(error => {
+                console.error("Error deleting the equipment:", error);
+            });
+    }
+
+    const deleteMagicItem = (magicItemId) => {
+        fetch(`http://localhost:8010/api/MagicItem/${magicItemId}/`, {
+            method: 'DELETE',
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Network response was not ok");
+                }
+                // Refresh the character data after deleting the magic item.
+                // This can be optimized by only removing the equipment from the state
+                // but for simplicity, we are fetching the character details again.
+                return fetch(`http://localhost:8010/api/Character/${id}/`);
+            })
+            .then(response => response.json())
+            .then(data => {
+                setCharacter(data);
+            })
+            .catch(error => {
+                console.error("Error deleting the Magic Item:", error);
+            });
+    }
+
+    const deleteMiscellaneousItem = (miscellaneousItemId) => {
+        fetch(`http://localhost:8010/api/MiscellaneousItem/${miscellaneousItemId}/`, {
+            method: 'DELETE',
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Network response was not ok");
+                }
+                // Refresh the character data after deleting the magic item.
+                // This can be optimized by only removing the equipment from the state
+                // but for simplicity, we are fetching the character details again.
+                return fetch(`http://localhost:8010/api/Character/${id}/`);
+            })
+            .then(response => response.json())
+            .then(data => {
+                setCharacter(data);
+            })
+            .catch(error => {
+                console.error("Error deleting the Magic Item:", error);
+            });
+    }
+
+    const deleteFoodDrink = (foodDrinkId) => {
+        fetch(`http://localhost:8010/api/FoodDrink/${foodDrinkId}/`, {
+            method: 'DELETE',
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Network response was not ok");
+                }
+                // Refresh the character data after deleting the magic item.
+                // This can be optimized by only removing the equipment from the state
+                // but for simplicity, we are fetching the character details again.
+                return fetch(`http://localhost:8010/api/Character/${id}/`);
+            })
+            .then(response => response.json())
+            .then(data => {
+                setCharacter(data);
+            })
+            .catch(error => {
+                console.error("Error deleting the Food or drink :", error);
+            });
+    }
+
+    const deleteHealingPotion = (healingPotionId) => {
+        fetch(`http://localhost:8010/api/HealingPotion/${healingPotionId}/`, {
+            method: 'DELETE',
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Network response was not ok");
+                }
+                // Refresh the character data after deleting the magic item.
+                // This can be optimized by only removing the equipment from the state
+                // but for simplicity, we are fetching the character details again.
+                return fetch(`http://localhost:8010/api/Character/${id}/`);
+            })
+            .then(response => response.json())
+            .then(data => {
+                setCharacter(data);
+            })
+            .catch(error => {
+                console.error("Error deleting the Potion:", error);
+            });
+    }
+
+    const deleteKnowledge = (knowledgeId) => {
+        fetch(`http://localhost:8010/api/Knowledge/${knowledgeId}/`, {
+            method: 'DELETE',
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Network response was not ok");
+                }
+                // Refresh the character data after deleting the magic item.
+                // This can be optimized by only removing the equipment from the state
+                // but for simplicity, we are fetching the character details again.
+                return fetch(`http://localhost:8010/api/Character/${id}/`);
+            })
+            .then(response => response.json())
+            .then(data => {
+                setCharacter(data);
+            })
+            .catch(error => {
+                console.error("Error deleting the Magic Item:", error);
+            });
+    }
 
     useEffect(() => {
 
@@ -33,13 +177,6 @@ function PersonnageDetail() {
         <div>
             <h1>Personnages:</h1>
             <div className="card">
-                {/* Statistics Modal usage */}
-                <StatisticsModal isOpen={isModalOpen} onRequestClose={() => setIsModalOpen(false)}
-                                 statistics={character.statistics || {}} onSave={(stats) => {
-                    console.log(character.statistics);
-                    setIsModalOpen(false);
-                }}/>
-
                 <h2 className="card-header">{character.first_name} {character.last_name}</h2>
                 <div className="card-body">
                     <p className="card-text">Level: {character.level}</p>
@@ -55,8 +192,21 @@ function PersonnageDetail() {
 
                     {character.statistics && character.statistics.map((stat, id) => (
                         <div className="card" key={id}>
-                            <div className="card-header">
-                                Caractéristiques
+                            {/* Statistics Modal usage */}
+                            <StatisticsModal isOpen={isModalOpen} onRequestClose={() => setIsModalOpen(false)}
+                                             statistics={character.statistics || {}} onSave={(stats) => {
+                                console.log(stats);
+                                setIsModalOpen(false);
+                            }}/>
+                            <div className="card-header d-flex justify-content-between align-items-center">
+                                <div className="text-center flex-grow-1">
+                                    Statistique
+                                </div>
+                                <div>
+                                    <button className="character_statistics_btn btn btn-primary btn-sm"
+                                            onClick={() => setIsModalOpen(true)}>Modifier
+                                    </button>
+                                </div>
                             </div>
                             <div className="card-body">
                                 <p className="card-text">
@@ -101,16 +251,22 @@ function PersonnageDetail() {
 
                     <hr/>
                     <p className="card-text">Equipments:</p>
+                    {/* Ajoutez un bouton pour ouvrir le modal d'équipement */}
+                    <button className="character_add_btn btn btn-primary btn-sm"
+                            onClick={() => setIsEquipmentModalOpen(true)}>Ajouter un équipement
+                    </button>
+                    <EquipmentModal
+                        isOpen={isEquipmentModalOpen}
+                        onRequestClose={() => setIsEquipmentModalOpen(false)}
+                        onSave={(equipmentData) => {
+                            console.log(equipmentData);
+                            setIsEquipmentModalOpen(false);
+                        }}
+                    />
                     <div className="row">
                         {character.equipment_set && character.equipment_set.map((item, id) => (
                             <div className="col-sm-4" key={id}>
                                 <div className="card">
-                                    {/* Statistics Modal usage */}
-                                    <StatisticsModal isOpen={isModalOpen} onRequestClose={() => setIsModalOpen(false)}
-                                                     statistics={character.statistics || {}} onSave={(stats) => {
-                                        console.log(stats);
-                                        setIsModalOpen(false);
-                                    }}/>
 
                                     <div className="card-header">
                                         {item.name}
@@ -120,6 +276,11 @@ function PersonnageDetail() {
                                         <p className="card-text"
                                            dangerouslySetInnerHTML={{__html: item.description}}></p>
                                     </div>
+                                    <div className="card-footer">
+                                        <button className="character_del_btn btn btn-primary btn-sm"
+                                                onClick={() => deleteEquipment(item.id)}>Supprimer
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         ))}
@@ -127,17 +288,21 @@ function PersonnageDetail() {
 
                     <hr/>
                     <p className="card-text">Objets Magiques:</p>
+                    <button className="character_add_btn btn btn-primary btn-sm"
+                            onClick={() => setIsMagicItemModalOpen(true)}>Ajouter un Objet magique
+                    </button>
+                    {/* MagicItem Modal usage */}
+                    <MagicItemModal
+                        isOpen={isMagicItemModalOpen}
+                        onRequestClose={() => setIsMagicItemModalOpen(false)}
+                        onSave={(magicitemData) => {
+                            console.log(magicitemData);
+                            setIsMagicItemModalOpen(false);
+                        }}/>
                     <div className="row">
                         {character.magic_items && character.magic_items.map((item, id) => (
                             <div className="col-sm-4" key={id}>
                                 <div className="card">
-                                    {/* Statistics Modal usage */}
-                                    <StatisticsModal isOpen={isModalOpen} onRequestClose={() => setIsModalOpen(false)}
-                                                     statistics={character.statistics || {}} onSave={(stats) => {
-                                        console.log(stats);
-                                        setIsModalOpen(false);
-                                    }}/>
-
                                     <div className="card-header">
                                         {item.name}
                                     </div>
@@ -145,6 +310,12 @@ function PersonnageDetail() {
                                         <p className="card-text">Quantity: {item.quantity}</p>
                                         <p className="card-text"
                                            dangerouslySetInnerHTML={{__html: item.description}}></p>
+                                    </div>
+                                    <div className="card-footer">
+
+                                        <button className="character_del_btn btn btn-primary btn-sm"
+                                                onClick={() => deleteMagicItem(item.id)}>Supprimer
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -153,17 +324,20 @@ function PersonnageDetail() {
 
                     <hr/>
                     <p className="card-text">Objets divers :</p>
+                    <button className="character_add_btn btn btn-primary btn-sm"
+                            onClick={() => setIsMiscellaneousItemModalOpen(true)}>Ajouter un Objet Divers
+                    </button>
+                    <MiscellaneousItemModal
+                        isOpen={isMiscellaneousItemModalOpen}
+                        onRequestClose={() => setIsMiscellaneousItemModalOpen(false)}
+                        onSave={(miscellaneousItemData) => {
+                            setIsMiscellaneousItemModalOpen(false);
+                        }}
+                    />
                     <div className="row">
                         {character.miscellaneous_items && character.miscellaneous_items.map((item, id) => (
                             <div className="col-sm-4" key={id}>
                                 <div className="card">
-                                    {/* Statistics Modal usage */}
-                                    <StatisticsModal isOpen={isModalOpen} onRequestClose={() => setIsModalOpen(false)}
-                                                     statistics={character.statistics || {}} onSave={(stats) => {
-                                        console.log(stats);
-                                        setIsModalOpen(false);
-                                    }}/>
-
                                     <div className="card-header">
                                         {item.name}
                                     </div>
@@ -171,6 +345,12 @@ function PersonnageDetail() {
                                         <p className="card-text">Quantity: {item.quantity}</p>
                                         <p className="card-text"
                                            dangerouslySetInnerHTML={{__html: item.description}}></p>
+                                    </div>
+                                    <div className="card-footer">
+
+                                        <button className="character_del_btn btn btn-primary btn-sm"
+                                                onClick={() => deleteMiscellaneousItem(item.id)}>Supprimer
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -179,17 +359,20 @@ function PersonnageDetail() {
 
                     <hr/>
                     <p className="card-text">Nourritures et Boissons:</p>
+                    <button className="character_add_btn btn btn-primary btn-sm"
+                            onClick={() => setIsFoodDrinkModalOpen(true)}>Ajouter une ration
+                    </button>
+                    <FoodDrinkModal
+                        isOpen={isFoodDrinkModalOpen}
+                        onRequestClose={() => setIsFoodDrinkModalOpen(false)}
+                        onSave={(miscellaneousItemData) => {
+                            setIsFoodDrinkModalOpen(false);
+                        }}
+                    />
                     <div className="row">
                         {character.food_drinks && character.food_drinks.map((item, id) => (
                             <div className="col-sm-4" key={id}>
                                 <div className="card">
-                                    {/* Statistics Modal usage */}
-                                    <StatisticsModal isOpen={isModalOpen} onRequestClose={() => setIsModalOpen(false)}
-                                                     statistics={character.statistics || {}} onSave={(stats) => {
-                                        console.log(stats);
-                                        setIsModalOpen(false);
-                                    }}/>
-
                                     <div className="card-header">
                                         {item.name}
                                     </div>
@@ -197,6 +380,12 @@ function PersonnageDetail() {
                                         <p className="card-text">Quantity: {item.quantity}</p>
                                         <p className="card-text"
                                            dangerouslySetInnerHTML={{__html: item.description}}></p>
+                                    </div>
+                                    <div className="card-footer">
+
+                                        <button className="character_del_btn btn btn-primary btn-sm"
+                                                onClick={() => deleteFoodDrink(item.id)}>Supprimer
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -205,17 +394,20 @@ function PersonnageDetail() {
 
                     <hr/>
                     <p className="card-text">Potions et Poisons:</p>
+                    <button className="character_add_btn btn btn-primary btn-sm"
+                            onClick={() => setIsHealingPotionModalOpen(true)}>Ajouter une potion ou un poison
+                    </button>
+                    <HealingPotionModal
+                        isOpen={isHealingPotionModalOpen}
+                        onRequestClose={() => setIsHealingPotionModalOpen(false)}
+                        onSave={(miscellaneousItemData) => {
+                            setIsHealingPotionModalOpen(false);
+                        }}
+                    />
                     <div className="row">
                         {character.healing_potions && character.healing_potions.map((item, id) => (
                             <div className="col-sm-4" key={id}>
                                 <div className="card">
-                                    {/* Statistics Modal usage */}
-                                    <StatisticsModal isOpen={isModalOpen} onRequestClose={() => setIsModalOpen(false)}
-                                                     statistics={character.statistics || {}} onSave={(stats) => {
-                                        console.log(stats);
-                                        setIsModalOpen(false);
-                                    }}/>
-
                                     <div className="card-header">
                                         {item.name}
                                     </div>
@@ -223,6 +415,12 @@ function PersonnageDetail() {
                                         <p className="card-text">Quantity: {item.quantity}</p>
                                         <p className="card-text"
                                            dangerouslySetInnerHTML={{__html: item.description}}></p>
+                                    </div>
+                                    <div className="card-footer">
+
+                                        <button className="character_del_btn btn btn-primary btn-sm"
+                                                onClick={() => deleteHealingPotion(item.id)}>Supprimer
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -259,16 +457,22 @@ function PersonnageDetail() {
 
                     <hr/>
                     <p className="card-text">Connaissance:</p>
+                    <button className="character_add_btn btn btn-primary btn-sm"
+                            onClick={() => setIsKnowledgeModalOpen(true)}>Ajouter un Savoir
+                    </button>
+                    <KnowledgeModal
+                        isOpen={isKnowledgeModalOpen}
+                        onRequestClose={() => setIsKnowledgeModalOpen(false)}
+                        onSave={(miscellaneousItemData) => {
+                            setIsKnowledgeModalOpen(false);
+                        }}
+                    />
                     <div className="row">
                         {character.knowledge && character.knowledge.map((knowledge, id) => (
                             <div className="col-sm-4" key={id}>
                                 <div className="card">
                                     {/* Statistics Modal usage */}
-                                    <StatisticsModal isOpen={isModalOpen} onRequestClose={() => setIsModalOpen(false)}
-                                                     statistics={character.statistics || {}} onSave={(stats) => {
-                                        console.log(stats);
-                                        setIsModalOpen(false);
-                                    }}/>
+
 
                                     <div className="card-header">
                                         {knowledge.name}
@@ -350,19 +554,20 @@ function PersonnageDetail() {
                                             </p>
                                         }
                                     </div>
+                                    <div className="card-footer">
+
+                                        <button className="character_del_btn btn btn-primary btn-sm"
+                                                onClick={() => deleteKnowledge(knowledge.id)}>Supprimer
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         ))}
                     </div>
 
 
-                    <button className="btn btn-secondary" onClick={() => setIsModalOpen(true)}>modif stat</button>
-                    <Link to={`/CharacterForm/${character.id}`} className="btn btn-primary">Modifier
-                    </Link>
                 </div>
             </div>
-
-            <Link to="/CharacterForm/new" className="btn btn-primary">Créer un nouveau personnage</Link>
         </div>
 
     );

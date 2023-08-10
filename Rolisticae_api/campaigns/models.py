@@ -1,4 +1,5 @@
 # Importation des modules nécessaires
+from ckeditor.fields import RichTextField
 from django.db import models  # Pour les modèles
 from blog.models import Category_Blog  # Importation du modèle Category_Blog
 from calendrier.models import Calendar  # Importation du modèle Calendar
@@ -9,7 +10,7 @@ from galerie.models import Category_Galerie  # Importation du modèle Category_G
 class Campaign(models.Model):
     name = models.CharField(max_length=255)  # Nom de la campagne
     image = models.ImageField(upload_to='images/campaigns/')  # Image de la campagne
-    description = models.TextField()  # Description de la campagne
+    description = RichTextField()  # Description de la campagne
     blog_category = models.ForeignKey(Category_Blog, null=True, blank=True, on_delete=models.SET_NULL)  # Catégorie de blog associée
     calendar = models.ForeignKey(Calendar, null=True, blank=True, on_delete=models.SET_NULL)  # Calendrier associé
     documents_category = models.ForeignKey(Category_FileManager, null=True, blank=True, on_delete=models.SET_NULL)  # Catégorie de documents associée

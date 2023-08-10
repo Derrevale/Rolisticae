@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Modal from 'react-modal';
+import { Modal, Button } from 'react-bootstrap';
 import '../../styles/Modals/StatisticsModal.css';
 import {useParams} from "react-router-dom";
 
@@ -32,7 +32,6 @@ function StatisticsModal({ isOpen, onRequestClose, statistics, onSave }) {
 
     try {
       // Utilisation de l'ID des statistiques pour l'endpoint de l'API
-      console.log(statistics[0].id);
       const response = await fetch(`http://localhost:8010/api/Statistics/${statistics[0].id}/`, {
         method: 'PATCH',
         headers: {
@@ -56,39 +55,38 @@ function StatisticsModal({ isOpen, onRequestClose, statistics, onSave }) {
     }
 };
 
-
   return (
-    <Modal
-      isOpen={isOpen}
-      onRequestClose={onRequestClose}
-    >
-      <label>
-        Force:
-        <input type="number" value={strength} onChange={e => setStrength(e.target.value)} />
-      </label>
-      <label>
-        Dextérité:
-        <input type="number" value={dexterity} onChange={e => setDexterity(e.target.value)} />
-      </label>
-      <label>
-        Constitution:
-        <input type="number" value={constitution} onChange={e => setConstitution(e.target.value)} />
-      </label>
-      <label>
-        Perception:
-        <input type="number" value={perception} onChange={e => setPerception(e.target.value)} />
-      </label>
-      <label>
-        Charisme:
-        <input type="number" value={charisma} onChange={e => setCharisma(e.target.value)} />
-      </label>
-      <label>
-        Intelligence:
-        <input type="number" value={intelligence} onChange={e => setIntelligence(e.target.value)} />
-      </label>
-
-      <button onClick={onRequestClose}>Fermer</button>
-      <button onClick={handleSubmit}>Sauvegarder</button>
+    <Modal show={isOpen} onHide={onRequestClose}>
+      <Modal.Body>
+        <label>
+          Force:
+          <input type="number" value={strength} onChange={e => setStrength(e.target.value)} />
+        </label>
+        <label>
+          Dextérité:
+          <input type="number" value={dexterity} onChange={e => setDexterity(e.target.value)} />
+        </label>
+        <label>
+          Constitution:
+          <input type="number" value={constitution} onChange={e => setConstitution(e.target.value)} />
+        </label>
+        <label>
+          Perception:
+          <input type="number" value={perception} onChange={e => setPerception(e.target.value)} />
+        </label>
+        <label>
+          Charisme:
+          <input type="number" value={charisma} onChange={e => setCharisma(e.target.value)} />
+        </label>
+        <label>
+          Intelligence:
+          <input type="number" value={intelligence} onChange={e => setIntelligence(e.target.value)} />
+        </label>
+      </Modal.Body>
+      <Modal.Footer>
+        <Button variant="secondary" onClick={onRequestClose}>Fermer</Button>
+        <Button variant="primary" onClick={handleSubmit}>Sauvegarder</Button>
+      </Modal.Footer>
     </Modal>
   );
 }

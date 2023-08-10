@@ -55,9 +55,7 @@ class StatisticsSerializer(serializers.ModelSerializer):
 class KnowledgeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Knowledge
-        fields = ['name', 'description', 'strength_bonus', 'strength_malus', 'dexterity_bonus', 'dexterity_malus',
-                  'constitution_bonus', 'constitution_malus', 'perception_bonus', 'perception_malus', 'charisma_bonus',
-                  'charisma_malus', 'intelligence_bonus', 'intelligence_malus']
+        fields = '__all__'
         ref_name = 'KnowledgeSerializerCharacter'
 
 
