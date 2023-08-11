@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { TextField, Button, Container, Typography } from '@mui/material';
-import { styled } from '@mui/system';
+import React, {useState, useEffect} from 'react';
+import {TextField, Button, Container, Typography} from '@mui/material';
+import {styled} from '@mui/system';
+import {useNavigate} from 'react-router-dom';
 
 // Styling for the container
-const PaperContainer = styled(Container)(({ theme }) => ({
+const PaperContainer = styled(Container)(({theme}) => ({
     marginTop: theme.spacing(8),
     display: 'flex',
     flexDirection: 'column',
@@ -11,17 +12,19 @@ const PaperContainer = styled(Container)(({ theme }) => ({
 }));
 
 // Styling for the form
-const Form = styled('form')(({ theme }) => ({
+const Form = styled('form')(({theme}) => ({
     width: '100%',
     marginTop: theme.spacing(1),
 }));
 
 // Styling for the submit button
-const SubmitButton = styled(Button)(({ theme }) => ({
+const SubmitButton = styled(Button)(({theme}) => ({
     margin: theme.spacing(3, 0, 2),
 }));
 
 function UserForm() {
+    const navigate = useNavigate();
+
     // State variables for user information
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
@@ -35,13 +38,34 @@ function UserForm() {
                 "Authorization": `Bearer ${localStorage.getItem('access')}`
             },
         })
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                console.log(response)
+                throw new Error('Not authorized');
+            }
+            console.log(response)
+            return response.json();
+        })
         .then(data => {
-            setUsername(data[0].username);
-            setEmail(data[0].email);
-            setUserInfo(data);  // Save the user data for later use
+            if (data && Array.isArray(data) && data.length > 0) {
+                setUsername(data[0].username);
+                setEmail(data[0].email);
+                setUserInfo(data);
+                console.log(data)
+            }
+        })
+        .catch(error => {
+            if (error.message === 'Not authorized') {
+                navigate('/login');
+            }
+            console.error("Error fetching user data:", error);
         });
     }, []);
+
+    if (!localStorage.getItem('access')) {
+        navigate('/login');
+        return null;
+    }
 
     // Handle form submission
     const handleSubmit = async event => {

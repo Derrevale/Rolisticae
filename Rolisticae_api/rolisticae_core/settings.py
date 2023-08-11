@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'appointment',
     'campaigns',
     'colorfield',
+    'character',
 
     # 3rd party
     'ckeditor',

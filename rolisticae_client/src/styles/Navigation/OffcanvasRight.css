@@ -1,0 +1,26 @@
+.offcanvas-sp {
+  margin-bottom: 10px;
+}
+
+.sp-menu-item a {
+  color: #333;
+  text-decoration: none;
+}
+
+.sp-menu-item a:hover {
+  color: #007bff;
+}
+
+.center-align {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa-facebook {
+  margin-right: 5px;
+}
+.offcanvas-logo {
+  width: 100%; /* Ajustez la largeur comme vous le souhaitez */
+  height: auto; /* Pour maintenir les proportions de l'image */
+}

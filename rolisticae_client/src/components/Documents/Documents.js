@@ -1,3 +1,4 @@
+// Importation des modules nécessaires
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import TreeView from '@mui/lab/TreeView';
@@ -6,9 +7,12 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import "../../styles/Documents/Document.css";
 
+// Définition du composant Documents
 const Documents = () => {
+    // Définition de l'état des données
     const [data, setData] = useState([]);
 
+    // Fonction pour construire la hiérarchie des documents
     const buildHierarchy = (items) => {
         const itemMap = new Map();
         items.forEach((item) => itemMap.set(item.id, {...item, children: []}));
@@ -26,6 +30,7 @@ const Documents = () => {
         return result;
     };
 
+    // Utilisation de l'effet pour récupérer les données
     useEffect(() => {
         const fetchData = async () => {
             const result = await axios('http://localhost:8000/api/FileManager Categorie/');
@@ -35,6 +40,7 @@ const Documents = () => {
         fetchData();
     }, []);
 
+    // Fonction pour rendre l'arbre des documents
     const renderTree = (nodes, isChild = false) =>
         nodes.map((node) => (
             <TreeItem
@@ -63,6 +69,7 @@ const Documents = () => {
             </TreeItem>
         ));
 
+    // Rendu du composant
     return (
         <div className="test" style={{margin: '2%', padding: '1%',width:'75%'}}>
             <TreeView defaultCollapseIcon={<ExpandMoreIcon/>} defaultExpandIcon={<ChevronRightIcon/>}>
@@ -72,5 +79,5 @@ const Documents = () => {
     );
 };
 
+// Exportation du composant Documents
 export default Documents;
-
