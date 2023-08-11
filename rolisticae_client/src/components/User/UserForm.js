@@ -29,7 +29,7 @@ function UserForm() {
 
     // Fetch user information on component mount
     useEffect(() => {
-        fetch("http://localhost:8010/api/User/", {
+        fetch("http://localhost:8000/api/User/", {
             headers: {
                 "Content-Type": "application/json",
                 "Authorization": `Bearer ${localStorage.getItem('access')}`
@@ -54,7 +54,7 @@ function UserForm() {
         }
 
         // Send a PUT request to update the user information
-        const response = await fetch(`http://localhost:8010/api/User/${userInfo[0].id}/`, {
+        const response = await fetch(`http://localhost:8000/api/User/${userInfo[0].id}/`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",

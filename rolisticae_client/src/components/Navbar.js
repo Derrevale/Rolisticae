@@ -57,7 +57,7 @@ function Navbar() {
 
     useEffect(() => {
         axios
-            .get('http://localhost:8010/api/EventManager Calendrier /')
+            .get('http://localhost:8000/api/EventManager Calendrier /')
             .then((response) => setCategories(response.data))
             .catch((error) => console.log(error));
     }, []);

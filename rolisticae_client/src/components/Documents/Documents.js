@@ -28,7 +28,7 @@ const Documents = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const result = await axios('http://localhost:8010/api/FileManager Categorie/');
+            const result = await axios('http://localhost:8000/api/FileManager Categorie/');
             const hierarchy = buildHierarchy(result.data);
             setData(hierarchy);
         };

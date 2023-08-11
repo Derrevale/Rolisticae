@@ -5,23 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="67ca2271-bc7e-47d6-b2d5-c7285cb20d63" name="Changes" comment="update backend ajour calendrier">
-      <change afterPath="$PROJECT_DIR$/Rolisticae_api/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Documents/FileImports.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Search/SearchResult.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rolisticae_client/src/styles/Documents/Document.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/Rolisticae_core/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/rolisticae_core/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/Rolisticae_core/asgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/rolisticae_core/asgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/Rolisticae_core/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/rolisticae_core/manage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/Rolisticae_core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/rolisticae_core/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/Rolisticae_core/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/rolisticae_core/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/Rolisticae_core/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/rolisticae_core/wsgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/appointment/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/blog/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/campaigns/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/campaigns/migrations/0002_campaign_blog_category_campaign_calendar_and_more.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/users/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rolisticae_client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/Appointments/AppointmentList.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Appointments/AppointmentList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/Blog/Article.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Blog/Article.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/Blog/ArticleList.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Blog/ArticleList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/Documents/Documents.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Documents/Documents.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/Formulaire/EventForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Formulaire/EventForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/Galery/CategoryDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Galery/CategoryDetail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/Galery/CategoryList.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Galery/CategoryList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/Search/SearchResult.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Search/SearchResult.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/User/LoginForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/User/LoginForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/User/Signup/SignupForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/User/Signup/SignupForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/User/UserForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/User/UserForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/User/UserProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/User/UserProfile.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,23 +57,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/vaderr/PycharmProjects/Rolisticae/rolisticae_search/docker/docker-compose.yml",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "configurable.group.language",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/vaderr/PycharmProjects/Rolisticae/rolisticae_search/docker/docker-compose.yml&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.language&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="ReactDesignerToolWindowState">
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.rcb.reactComponents" value="false" />
+        <entry key="com.haulmont.rcb.reactInspector" value="false" />
+      </map>
+    </option>
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\vaderr\PycharmProjects\Rolisticae\Rolisticae_api" />
@@ -88,7 +94,7 @@
       <recent name="C:\Users\vaderr\Documents\TFE\Rolisticae Project" />
     </key>
   </component>
-  <component name="RunManager" selected="Django Server.Rolisticae API">
+  <component name="RunManager" selected="npm.Rolisticae_Client">
     <configuration name="Rolisticae API" type="Python.DjangoServer" factoryName="Django server">
       <module name="Rolisticae" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -97,17 +103,16 @@
         <env name="PYTHONUNBUFFERED" value="1" />
         <env name="DJANGO_SETTINGS_MODULE" value="rolisticae_core.settings" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\vaderr\Documents\TFE\TFE Projet\React-Django-intra\venv\Scripts\python.exe" />
-      <option name="SDK_NAME" value="Python 3.11 (React-Django-intra)" />
+      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="launchJavascriptDebuger" value="false" />
       <option name="port" value="8010" />
       <option name="host" value="127.0.0.1" />
       <option name="additionalOptions" value="" />
-      <option name="browserUrl" value="http://127.0.0.1:8010/admin/" />
+      <option name="browserUrl" value="http://127.0.0.1:8000/admin/" />
       <option name="runTestServer" value="false" />
       <option name="runNoReload" value="false" />
       <option name="useCustomRunCommand" value="false" />

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 async function refreshToken() {
     const refresh = localStorage.getItem('refresh');
 
-    const response = await fetch("http://localhost:8010/api/token/refresh/", {
+    const response = await fetch("http://localhost:8000/api/token/refresh/", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -19,7 +19,7 @@ async function refreshToken() {
 async function getUserInfo() {
     const token = localStorage.getItem('access');  // Get the token from local storage
 
-    const response = await fetch("http://localhost:8010/api/User/", {
+    const response = await fetch("http://localhost:8000/api/User/", {
         method: "GET",
         headers: {
             "Content-Type": "application/json",

@@ -10,7 +10,7 @@ const CategoryList = () => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await axios.get('http://localhost:8010/api/Galerie Categorie/');
+        const response = await axios.get('http://localhost:8000/api/Galerie Categorie/');
         setCategories(response.data);
       } catch (error) {
         console.error('Erreur lors de la récupération des catégories:', error);

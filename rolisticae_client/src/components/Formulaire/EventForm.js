@@ -21,7 +21,7 @@ const EventForm = () => {
         event.preventDefault();
 
         axios
-            .post('http://localhost:8010/api/event/', {
+            .post('http://localhost:8000/api/event/', {
                 title,
                 Debut: debut,
                 Fin: fin,

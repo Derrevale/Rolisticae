@@ -29,7 +29,7 @@ function SignupForm() {
     const handleSubmit = async event => {
         event.preventDefault();
 
-        const response = await fetch("http://localhost:8010/api/register/", {
+        const response = await fetch("http://localhost:8000/api/register/", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

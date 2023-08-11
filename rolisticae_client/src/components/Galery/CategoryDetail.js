@@ -13,7 +13,7 @@ const CategoryDetail = () => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await axios.get('http://localhost:8010/api/Galerie Categorie/');
+        const response = await axios.get('http://localhost:8000/api/Galerie Categorie/');
         setCategories(response.data);
         const currentCategory = response.data.find((cat) => cat.id === parseInt(categoryId));
         setCategory(currentCategory);
@@ -24,7 +24,7 @@ const CategoryDetail = () => {
 
     const fetchImages = async () => {
       try {
-        const response = await axios.get('http://localhost:8010/api/Galerie Image/');
+        const response = await axios.get('http://localhost:8000/api/Galerie Image/');
         setImages(response.data);
       } catch (error) {
         console.error('Erreur lors de la récupération des images:', error);

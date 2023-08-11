@@ -6,13 +6,13 @@ function AppointmentList() {
     const [appointments, setAppointments] = useState([]);
 
     useEffect(() => {
-        axios.get("http://localhost:8010/api/Appointment Date/")
+        axios.get("http://localhost:8000/api/Appointment Date/")
             .then((response) => setAppointments(response.data))
             .catch((error) => console.log(error));
     }, []);
 
     function vote(dateId) {
-        axios.post('http://localhost:8010/api/Appointment Votes/', { appointment_date: dateId })
+        axios.post('http://localhost:8000/api/Appointment Votes/', { appointment_date: dateId })
             .then(response => console.log(response.data))
             .catch(error => console.error(error));
     }

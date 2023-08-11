@@ -7,7 +7,7 @@ function Article({match}) {
     const params = useParams();
 
     useEffect(() => {
-        fetch(`http://localhost:8010/api/Blog Article/${params.id}/`)
+        fetch(`http://localhost:8000/api/Blog Article/${params.id}/`)
             .then((response) => response.json())
             .then((data) => setArticle(data))
             .catch((error) => console.log(error));

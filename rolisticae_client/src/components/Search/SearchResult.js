@@ -9,7 +9,7 @@ function SearchResult(props) {
         const searchQuery = urlParams.get("q");
 
         const fetchData = async () => {
-            const response = await axios.get(`http://localhost:8010/api/search/?q=${searchQuery}`);
+            const response = await axios.get(`http://localhost:8000/api/search/?q=${searchQuery}`);
             setResults(response.data);
             console.log(response.data)
         };
