@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67ca2271-bc7e-47d6-b2d5-c7285cb20d63" name="Changes" comment="bug fix">
-      <change afterPath="$PROJECT_DIR$/Rolisticae_api/blog/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Rolisticae_api/blog/migrations/0002_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/character/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/character/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/character/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/character/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/users/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/users/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/users/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/Formulaire/EventForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Formulaire/EventForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/Formulaire/LoginForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Formulaire/LoginForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/Formulaire/UserForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Formulaire/UserForm.js" afterDir="false" />
-    </list>
+    <list default="true" id="67ca2271-bc7e-47d6-b2d5-c7285cb20d63" name="Changes" comment="bug fix" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -175,7 +164,7 @@
       <workItem from="1690974701503" duration="26433000" />
       <workItem from="1691391672261" duration="20684000" />
       <workItem from="1691561869902" duration="19616000" />
-      <workItem from="1691734139292" duration="10548000" />
+      <workItem from="1691734139292" duration="10755000" />
     </task>
     <task id="LOCAL-00001" summary="update README.md">
       <created>1674211406086</created>
@@ -416,7 +405,15 @@
       <option name="project" value="LOCAL" />
       <updated>1691591753027</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="bug fix">
+      <option name="closed" value="true" />
+      <created>1691745688029</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1691745688029</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
