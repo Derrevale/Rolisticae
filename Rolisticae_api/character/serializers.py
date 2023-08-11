@@ -67,7 +67,7 @@ class RaceSerializer(serializers.ModelSerializer):
 
 
 class CharacterSerializer(serializers.ModelSerializer):
-    equipment_set = EquipmentSerializer(many=True)
+    equipment_set = EquipmentSerializer(many=True , read_only=True)
     magic_items = MagicItemSerializer(many=True, read_only=True)
     miscellaneous_items = MiscellaneousItemSerializer(many=True, read_only=True)
     food_drinks = FoodDrinkSerializer(many=True, read_only=True)

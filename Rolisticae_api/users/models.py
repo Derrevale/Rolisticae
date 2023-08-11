@@ -10,7 +10,12 @@ class User(AbstractUser):
     first_name = models.CharField(max_length=100)
     # Champ last_name pour le nom de l'utilisateur
     last_name = models.CharField(max_length=100)
-
+    GRADE_CHOICES = [
+        ('USER', 'User'),
+        ('ADMIN', 'Admin'),
+        # Vous pouvez ajouter d'autres grades si nécessaire
+    ]
+    grade = models.CharField(max_length=10, choices=GRADE_CHOICES, default='USER')
 
     # Définition du champ utilisé comme identifiant pour l'authentification
     USERNAME_FIELD = 'email'

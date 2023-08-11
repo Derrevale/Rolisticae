@@ -151,23 +151,66 @@ class Statistics(models.Model):
         race = self.character.race
         knowledge = self.character.knowledge.all()
 
-        self.strength_bonus = race.strength_bonus + sum(k.strength_bonus for k in knowledge)
-        self.strength_malus = race.strength_malus + sum(k.strength_malus for k in knowledge)
+        if race is None and knowledge is None:
+            self.strength_bonus = 0
+            self.strength_malus = 0
+            self.constitution_bonus = 0
+            self.constitution_malus = 0
+            self.dexterity_bonus = 0
+            self.dexterity_malus = 0
+            self.perception_bonus = 0
+            self.perception_malus = 0
+            self.charisma_bonus = 0
+            self.charisma_malus = 0
+            self.intelligence_bonus = 0
+            self.intelligence_malus = 0
 
-        self.constitution_bonus = race.constitution_bonus + sum(k.constitution_bonus for k in knowledge)
-        self.constitution_malus = race.constitution_malus + sum(k.constitution_malus for k in knowledge)
+        if race is None and knowledge is not None:
+            self.strength_bonus = sum(k.strength_bonus for k in knowledge)
+            self.strength_malus = sum(k.strength_malus for k in knowledge)
+            self.constitution_bonus = sum(k.constitution_bonus for k in knowledge)
+            self.constitution_malus = sum(k.constitution_malus for k in knowledge)
+            self.dexterity_bonus = sum(k.dexterity_bonus for k in knowledge)
+            self.dexterity_malus = sum(k.dexterity_malus for k in knowledge)
+            self.perception_bonus = sum(k.perception_bonus for k in knowledge)
+            self.perception_malus = sum(k.perception_malus for k in knowledge)
+            self.charisma_bonus = sum(k.charisma_bonus for k in knowledge)
+            self.charisma_malus = sum(k.charisma_malus for k in knowledge)
+            self.intelligence_bonus = sum(k.intelligence_bonus for k in knowledge)
+            self.intelligence_malus = sum(k.intelligence_malus for k in knowledge)
 
-        self.dexterity_bonus = race.dexterity_bonus + sum(k.dexterity_bonus for k in knowledge)
-        self.dexterity_malus = race.dexterity_malus + sum(k.dexterity_malus for k in knowledge)
+        if race is not None and knowledge is None:
+            self.strength_bonus = race.strength_bonus
+            self.strength_malus = race.strength_malus
+            self.constitution_bonus = race.constitution_bonus
+            self.constitution_malus = race.constitution_malus
+            self.dexterity_bonus = race.dexterity_bonus
+            self.dexterity_malus = race.dexterity_malus
+            self.perception_bonus = race.perception_bonus
+            self.perception_malus = race.perception_malus
+            self.charisma_bonus = race.charisma_bonus
+            self.charisma_malus = race.charisma_malus
+            self.intelligence_bonus = race.intelligence_bonus
+            self.intelligence_malus = race.intelligence_malus
 
-        self.perception_bonus = race.perception_bonus + sum(k.perception_bonus for k in knowledge)
-        self.perception_malus = race.perception_malus + sum(k.perception_malus for k in knowledge)
+        if race is not None and knowledge is not None:
+            self.strength_bonus = race.strength_bonus + sum(k.strength_bonus for k in knowledge)
+            self.strength_malus = race.strength_malus + sum(k.strength_malus for k in knowledge)
 
-        self.charisma_bonus = race.charisma_bonus + sum(k.charisma_bonus for k in knowledge)
-        self.charisma_malus = race.charisma_malus + sum(k.charisma_malus for k in knowledge)
+            self.constitution_bonus = race.constitution_bonus + sum(k.constitution_bonus for k in knowledge)
+            self.constitution_malus = race.constitution_malus + sum(k.constitution_malus for k in knowledge)
 
-        self.intelligence_bonus = race.intelligence_bonus + sum(k.intelligence_bonus for k in knowledge)
-        self.intelligence_malus = race.intelligence_malus + sum(k.intelligence_malus for k in knowledge)
+            self.dexterity_bonus = race.dexterity_bonus + sum(k.dexterity_bonus for k in knowledge)
+            self.dexterity_malus = race.dexterity_malus + sum(k.dexterity_malus for k in knowledge)
+
+            self.perception_bonus = race.perception_bonus + sum(k.perception_bonus for k in knowledge)
+            self.perception_malus = race.perception_malus + sum(k.perception_malus for k in knowledge)
+
+            self.charisma_bonus = race.charisma_bonus + sum(k.charisma_bonus for k in knowledge)
+            self.charisma_malus = race.charisma_malus + sum(k.charisma_malus for k in knowledge)
+
+            self.intelligence_bonus = race.intelligence_bonus + sum(k.intelligence_bonus for k in knowledge)
+            self.intelligence_malus = race.intelligence_malus + sum(k.intelligence_malus for k in knowledge)
 
     def save(self, *args, **kwargs):
         self.calculate_bonus()
@@ -180,8 +223,6 @@ class Statistics(models.Model):
             if statistics:
                 statistics.calculate_bonus()
                 statistics.save()
-
-
 
 
 # Signal to update bonus/malus when a Character object is saved

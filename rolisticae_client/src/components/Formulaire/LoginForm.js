@@ -1,21 +1,21 @@
-import React, { useState } from 'react';
-import { TextField, Button, Container, Typography, Snackbar, Alert } from '@mui/material';
-import { styled } from '@mui/system';
-import { useNavigate } from 'react-router-dom';
+import React, {useState} from 'react';
+import {TextField, Button, Container, Typography, Snackbar, Alert} from '@mui/material';
+import {styled} from '@mui/system';
+import {useNavigate} from 'react-router-dom';
 
-const PaperContainer = styled(Container)(({ theme }) => ({
+const PaperContainer = styled(Container)(({theme}) => ({
     marginTop: theme.spacing(8),
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
 }));
 
-const Form = styled('form')(({ theme }) => ({
+const Form = styled('form')(({theme}) => ({
     width: '100%',
     marginTop: theme.spacing(1),
 }));
 
-const SubmitButton = styled(Button)(({ theme }) => ({
+const SubmitButton = styled(Button)(({theme}) => ({
     margin: theme.spacing(3, 0, 2),
 }));
 
@@ -47,10 +47,33 @@ function LoginForm() {
             // Store the tokens in the local storage
             localStorage.setItem('access', data.access);
             localStorage.setItem('refresh', data.refresh);
-            setMessage(`Bienvenue ${email}`);
-            setSeverity("success");
-            setOpen(true);
-            navigate('/');
+
+            // Fetch the user details to get is_staff
+            fetch("http://localhost:8010/api/User/", {
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": `Bearer ${data.access}`
+                }
+            })
+                .then(userResponse => {
+                    if (!userResponse.ok) {
+                        throw new Error('Failed to fetch user details');
+                    }
+                    return userResponse.json();
+                })
+                .then(userData => {
+                    localStorage.setItem('is_staff', userData[0].is_staff);
+                    setMessage(`Bienvenue ${email}`);
+                    setSeverity("success");
+                    setOpen(true);
+                    navigate('/');
+                })
+                .catch(error => {
+                    console.error("Error fetching user details:", error);
+                    setMessage("Une erreur s'est produite lors de la récupération des détails de l'utilisateur");
+                    setSeverity("error");
+                    setOpen(true);
+                });
         } else {
             setMessage("Email ou mot de passe incorrect");
             setSeverity("error");
@@ -107,7 +130,7 @@ function LoginForm() {
                 </SubmitButton>
             </Form>
             <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
-                <Alert onClose={handleClose} severity={severity} sx={{ width: '100%' }}>
+                <Alert onClose={handleClose} severity={severity} sx={{width: '100%'}}>
                     {message}
                 </Alert>
             </Snackbar>
