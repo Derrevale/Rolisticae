@@ -14,16 +14,25 @@ from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 import documents.views
 from blog.views import ArticlesViewset
 from blog.views import CategorysViewset
+
 from calendrier.views import CalendarysViewset
 from calendrier.views import EventViewset
+
 from documents.views import CategoryDocumentViewSet
 from documents.views import DocumentViewSet
+
 from galerie.views import Category_Galerie_ListView, Category_Galerie_DetailView, Image_Galerie_ListView, \
     Image_Galerie_DetailView, Category_Galerie_ViewSet, \
     Image_Galerie_ViewSet
+
 from appointment.views import AppointmentViewSet, VoteViewSet
+
 from users.views import UserViewSet, RegisterView, LoginView
 
+from character.views import CharacterViewSet, RaceViewSet, EquipmentViewSet, KnowledgeViewSet, StatisticsViewSet, \
+    HistoryViewSet, HealingPotionViewSet, FoodDrinkViewSet, MiscellaneousItemViewSet, MagicItemViewSet
+
+from campaigns.views import CampaignViewSet
 # Configuration de la vue de la documentation de l'API
 schema_view = get_schema_view(
     openapi.Info(
@@ -55,15 +64,35 @@ router = DefaultRouter()
 # Enregistrement des vues dans le routeur
 router.register('Blog Categorie', CategorysViewset)
 router.register('Blog Article', ArticlesViewset)
+
 router.register('EventManager Calendrier ', CalendarysViewset)
 router.register('EventManager Event', EventViewset)
+
 router.register('FileManager Categorie', CategoryDocumentViewSet)
 router.register('FileManager File', DocumentViewSet)
+
 router.register('Galerie Categorie', Category_Galerie_ViewSet)
 router.register('Galerie Image', Image_Galerie_ViewSet)
+
 router.register('Appointment Date', AppointmentViewSet)
 router.register('Appointment Vote', VoteViewSet)
+
 router.register('User', UserViewSet, basename='user')
+
+router.register('Character', CharacterViewSet)
+router.register('Equipment', EquipmentViewSet)
+router.register('Race', RaceViewSet)
+router.register('Knowledge', KnowledgeViewSet)
+router.register('Statistics', StatisticsViewSet)
+router.register('History', HistoryViewSet)
+router.register('HealingPotion', HealingPotionViewSet)
+router.register('FoodDrink', FoodDrinkViewSet)
+router.register('MiscellaneousItem', MiscellaneousItemViewSet)
+router.register('MagicItem', MagicItemViewSet)
+
+
+router.register('Campaign', CampaignViewSet)
+
 
 # Configuration des URL
 urlpatterns = [

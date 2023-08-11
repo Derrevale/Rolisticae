@@ -1,5 +1,5 @@
-import '../styles/Navbar.css';
-import '../styles/bootstrap.min.css';
+import '../../styles/Navigation/Navbar.css';
+import '../../styles/bootstrap.min.css';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faUser, faUserCircle} from '@fortawesome/free-solid-svg-icons';
 import {
@@ -7,6 +7,7 @@ import {
     faCalendar,
     faFile,
     faBook,
+    faDice,
     faIdBadge,
     faImages,
     faSearch,
@@ -14,9 +15,9 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import {useState, useEffect} from 'react';
 import axios from 'axios';
-import {useNavigate} from 'react-router-dom';
+import {useNavigate, Link} from 'react-router-dom';
 
-function Navbar() {
+function Navbar({handleShow}) {
     const [showDropdown, setShowDropdown] = useState(false);
     const [showUserDropdown, setShowUserDropdown] = useState(false);
     const [categories, setCategories] = useState([]);
@@ -30,7 +31,7 @@ function Navbar() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        window.location.href = `/search?q=${searchQuery}`;
+        navigate(`/search?q=${searchQuery}`);
     };
     const toggleDropdown = () => {
         setShowDropdown(!showDropdown);
@@ -70,7 +71,7 @@ function Navbar() {
                         <div className="header_logo col-auto">
                             <div className="header_column">
                                 <div className="logo">
-                                    <a href="/">
+                                    <Link to="/">
                                         <img className="logo-image  ls-is-cached lazyloaded"
                                              data-srcset="https://i.ibb.co/sKSbDBT/Rolisticae-2-removebg-preview.png 1x"
                                              data-src="https://i.ibb.co/sKSbDBT/Rolisticae-2-removebg-preview.png"
@@ -78,7 +79,7 @@ function Navbar() {
                                              data-size="auto"
                                              srcSet="https://i.ibb.co/sKSbDBT/Rolisticae-2-removebg-preview.png 1x"
                                              src="src/components/Blog/ArticleList"></img>
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -88,23 +89,24 @@ function Navbar() {
                                 <nav className="sp-megamenu-wrapper d-flex" role="navigation">
                                     <ul className="sp-megamenu-parent menu-animation-fade-up d-none d-lg-block">
                                         <li className="sp-menu-item">
-                                            <a href="/">
+                                            <Link to="/">
                                                 <FontAwesomeIcon icon={faHome}
                                                                  className="fa-facebook"></FontAwesomeIcon> Home
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li className="sp-menu-item">
-                                            <a onClick={toggleDropdown}>
+                                            <Link to='#' onClick={toggleDropdown}>
                                                 <FontAwesomeIcon icon={faCalendar}
                                                                  className="fa-facebook"></FontAwesomeIcon>{' '}
                                                 Planning
-                                            </a>
+                                            </Link>
                                             {showDropdown && (
                                                 <div className="dropdown">
                                                     <ul>
                                                         {categories.map((category, index) => (
                                                             <li key={index}>
-                                                                <a href={`/calendrier/${category.id}`}>{category.name}</a>
+                                                                <Link
+                                                                    to={`/calendrier/${category.id}`}>{category.name}</Link>
                                                             </li>
                                                         ))}
                                                     </ul>
@@ -112,28 +114,30 @@ function Navbar() {
                                             )}
                                         </li>
                                         <li className="sp-menu-item">
-                                            <a href="/Documents">
+                                            <Link to="/Documents">
                                                 <FontAwesomeIcon icon={faFile}
                                                                  className="fa-facebook"></FontAwesomeIcon> Documents
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li className="sp-menu-item">
-                                            <a href="/">
-                                                <FontAwesomeIcon icon={faBook}
-                                                                 className="fa-facebook"></FontAwesomeIcon> Règles
-                                            </a>
+                                            <Link to="/campagne">
+                                                <FontAwesomeIcon icon={faDice}
+                                                                 className="fa-facebook"></FontAwesomeIcon> Campagnes
+                                            </Link>
                                         </li>
+                                        {isLoggedIn && (
+                                            <li className="sp-menu-item">
+                                                <Link to="/personnage">
+                                                    <FontAwesomeIcon icon={faIdBadge}
+                                                                     className="fa-facebook"></FontAwesomeIcon> Personnage
+                                                </Link>
+                                            </li>
+                                        )}
                                         <li className="sp-menu-item">
-                                            <a href="">
-                                                <FontAwesomeIcon icon={faIdBadge}
-                                                                 className="fa-facebook"></FontAwesomeIcon> Personnage
-                                            </a>
-                                        </li>
-                                        <li className="sp-menu-item">
-                                            <a href="/Galerie">
+                                            <Link to="/Galerie">
                                                 <FontAwesomeIcon icon={faImages}
                                                                  className="fa-facebook"></FontAwesomeIcon> Illustration
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li className="sp-menu-item">
                                             <form className="center-align" onSubmit={handleSubmit}>
@@ -147,27 +151,19 @@ function Navbar() {
                                                 />
                                             </form>
                                         </li>
-                                        <li className="sp-menu-item d-lg-none">
-                                            <button
-                                                className="btn btn-link text-white"
-                                                type="button"
-                                                data-bs-toggle="offcanvas"
-                                                data-bs-target="#offcanvasExample"
-                                                aria-controls="offcanvasExample"
-                                            >
-                                                <FontAwesomeIcon icon={faBars} className="fa-bars" size="xl"/>
-                                            </button>
-                                        </li>
+
                                         <li className="sp-menu-item">
                                             <a onClick={handleUserIconClick}>
                                                 <FontAwesomeIcon icon={isLoggedIn ? faUserCircle : faUser}
                                                                  className="fa-facebook"/>
                                             </a>
+
                                             {showUserDropdown && (
                                                 <div className="dropdown">
                                                     <ul>
                                                         <li>
-                                                            <a onClick={handleProfileClick}>Mon profil utilisateur</a>
+                                                            <a onClick={handleProfileClick}>Mon profil
+                                                                utilisateur</a>
                                                         </li>
                                                         <li>
                                                             <a onClick={handleLogoutClick}>Déconnexion</a>
@@ -177,33 +173,23 @@ function Navbar() {
                                             )}
                                         </li>
                                     </ul>
+                                    <ul className="sp-megamenu-parent menu-animation-fade-up">
+                                        <li className="sp-menu-item burger-icon">
+                                            <button
+                                                className="btn btn-link text-white  btn-burger"
+                                                type="button"
+                                                data-bs-toggle="offcanvas"
+                                                data-bs-target="#offcanvasExample"
+                                                aria-controls="offcanvasExample"
+                                                onClick={handleShow}
+                                            >
+                                                <FontAwesomeIcon icon={faBars} className="fa-bars" size="xl"/>
+                                            </button>
+                                        </li>
+                                    </ul>
                                 </nav>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div
-                className="offcanvas offcanvas-start"
-                tabIndex="-1"
-                id="offcanvasExample"
-                aria-labelledby="offcanvasExampleLabel"
-            >
-                <div className="offcanvas-header">
-                    <h5 className="offcanvas-title" id="offcanvasExampleLabel">
-                        Off-canvas
-                    </h5>
-                    <button
-                        type="button"
-                        className="btn-close text-reset"
-                        data-bs-dismiss="offcanvas"
-                        aria-label="Close"
-                    ></button>
-                </div>
-                <div className="offcanvas-body">
-                    <div>
-                        <p>Contenu off-canvas...</p>
-                        {/* Vous pouvez ajouter ici le contenu de votre off-canvas */}
                     </div>
                 </div>
             </div>

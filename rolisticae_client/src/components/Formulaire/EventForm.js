@@ -1,27 +1,51 @@
-import React, {useState} from 'react';
+// Importation des modules nécessaires
+import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import '../../styles/Formulaire/EventForm.css';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
+import {Redirect, useNavigate} from 'react-router-dom';
 
+// Définition du composant EventForm
 const EventForm = () => {
+    // Définition des états
     const [title, setTitle] = useState('');
     const [debut, setDebut] = useState('');
     const [fin, setFin] = useState('');
     const [location, setLocation] = useState('');
     const [description, setDescription] = useState('');
     const [category, setCategory] = useState('');
-    const [formCompleted, setFormCompleted] = useState(false);
+    const [calendars, setCalendars] = useState([]);
     const [recurrency, setRecurrence] = useState(false);
     const [frequency, setFrequency] = useState('3');
     const [count, setCount] = useState('1');
     const [interval, setInterval] = useState('1');
 
+    // Check for access and is_staff
+    const navigate = useNavigate();
+    const accessToken = localStorage.getItem('access');
+    const isStaff = localStorage.getItem('is_staff') === 'true';
+
+    if (!accessToken || !isStaff) {
+        navigate('/'); // Redirect to a not-authorized page or any other page of your choice
+    }
+
+    useEffect(() => {
+        axios.get('http://localhost:8010/api/EventManager Calendrier /')
+            .then(response => {
+                setCalendars(response.data);
+            })
+            .catch(error => {
+                console.error("Error fetching calendars:", error);
+            });
+    }, []);
+
+    // Gestion de la soumission du formulaire
     const handleSubmit = (event) => {
         event.preventDefault();
 
         axios
-            .post('http://localhost:8010/api/event/', {
+            .post('http://localhost:8010/api/EventManager Event/', {
                 title,
                 Debut: debut,
                 Fin: fin,
@@ -33,36 +57,15 @@ const EventForm = () => {
                 count,
                 interval,
             })
-            .then((response) => {
+            .then(response => {
                 console.log(response);
             })
-            .catch((error) => {
+            .catch(error => {
                 console.log(error);
             });
     };
 
-    const handleInputChange = (e) => {
-        setTitle(e.target.title);
-        setDebut(e.target.debut);
-        setFin(e.target.fin);
-        setLocation(e.target.location);
-        setDescription(e.target.description);
-        setCategory(e.target.category);
-
-        const completed =
-            e.target.title &&
-            e.target.debut &&
-            e.target.fin &&
-            e.target.location &&
-            e.target.description &&
-            e.target.category;
-        setFormCompleted(completed);
-    };
-
-    const handleRecurrenceChange = (e) => {
-        setRecurrence(e.target.checked);
-    };
-
+    // Rendu du composant
     return (
         <form className="event-form" onSubmit={handleSubmit}>
             <div className="form-row">
@@ -118,7 +121,7 @@ const EventForm = () => {
                 <ReactQuill
                     className="form-input"
                     value={description}
-                    onChange={(value) => setDescription(value)}
+                    onChange={setDescription}
                 />
             </label>
             <br/>
@@ -133,9 +136,11 @@ const EventForm = () => {
                             title="Sélectionnez le calendrier de l'événement"
                         >
                             <option value="">Sélectionnez un calendrier</option>
-                            <option value="1">CBP</option>
-                            <option value="2">CFS</option>
-                            <option value="3">SCH</option>
+                            {calendars.map(calendar => (
+                                <option key={calendar.id} value={calendar.id}>
+                                    {calendar.name}
+                                </option>
+                            ))}
                         </select>
                     </label>
                 </div>
@@ -161,16 +166,15 @@ const EventForm = () => {
                                 className="form-select"
                                 value={frequency}
                                 onChange={(e) => setFrequency(e.target.value)}
-                                title="Sélectionnez le calendrier de l'événement"
+                                title="Sélectionnez la fréquence de l'événement"
                             >
-                                <option value="">Sélectionnez un calendrier</option>
-                                <option value="3">Quotidient</option>
+                                <option value="">Sélectionnez une fréquence</option>
+                                <option value="3">Quotidien</option>
                                 <option value="2">Hebdomadaire</option>
                                 <option value="1">Mensuel</option>
                                 <option value="0">Annuel</option>
                             </select>
                         </label>
-
                     </div>
                     <div className="form-col">
                         <label className="form-label">

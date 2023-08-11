@@ -1,0 +1,76 @@
+/* =======================
+   Statistics Modal Styles
+   ======================= */
+
+/* Modal container */
+.modal {
+    /* Use fixed positioning to make the modal appear on top of other content */
+    position: fixed;
+    /* Position the modal in the center of the viewport */
+    top: 50%;
+    left: 50%;
+    /* Adjust the modal's position to its own dimensions (center alignment) */
+    transform: translate(-50%, -50%);
+    /* Set modal dimensions */
+    width: 80%;
+    max-width: 500px;
+    /* Use flexbox to align modal content in the center */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Styling */
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    /* Add a drop shadow for visual effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    /* Initial state is hidden (will be displayed using React state) */
+    opacity: 0;
+    visibility: hidden;
+    /* Animation properties */
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+/* Modal shown state */
+.modal.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Modal overlay (background) */
+.modal-overlay {
+    /* Use fixed positioning to cover the entire viewport */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Semi-transparent black background */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Initial state is hidden (will be displayed using React state) */
+    opacity: 0;
+    visibility: hidden;
+    /* Animation properties */
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+/* Modal overlay shown state */
+.modal-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Button styles for the modal */
+.modal button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal button:hover {
+    background-color: #0056b3;
+}

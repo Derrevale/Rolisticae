@@ -4,25 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67ca2271-bc7e-47d6-b2d5-c7285cb20d63" name="Changes" comment="update backend ajour calendrier">
-      <change afterPath="$PROJECT_DIR$/Rolisticae_api/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Documents/FileImports.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Search/SearchResult.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rolisticae_client/src/styles/Documents/Document.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/Rolisticae_core/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/rolisticae_core/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/Rolisticae_core/asgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/rolisticae_core/asgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/Rolisticae_core/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/rolisticae_core/manage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/Rolisticae_core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/rolisticae_core/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/Rolisticae_core/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/rolisticae_core/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/Rolisticae_core/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/rolisticae_core/wsgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/appointment/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/blog/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/campaigns/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/campaigns/migrations/0002_campaign_blog_category_campaign_calendar_and_more.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rolisticae_api/users/migrations/0001_initial.py" beforeDir="false" />
-    </list>
+    <list default="true" id="67ca2271-bc7e-47d6-b2d5-c7285cb20d63" name="Changes" comment="bug fix" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,19 +16,23 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Python Script" />
         <option value="JavaScript File" />
         <option value="CSS File" />
-        <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="Git.Rebase.Settings">
+    <option name="NEW_BASE" value="Version_3.0" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="Version_3.0" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -59,33 +45,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/vaderr/PycharmProjects/Rolisticae/rolisticae_search/docker/docker-compose.yml",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "configurable.group.language",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/vaderr/PycharmProjects/Rolisticae/rolisticae_client/src/components&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.django.DjangoModulesConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\vaderr\PycharmProjects\Rolisticae\rolisticae_client\src\components" />
       <recent name="C:\Users\vaderr\PycharmProjects\Rolisticae\Rolisticae_api" />
       <recent name="C:\Users\vaderr\PycharmProjects\Rolisticae\rolisticae_client\src\styles" />
       <recent name="C:\Users\vaderr\PycharmProjects\Rolisticae\rolisticae_client\src\components\Documents" />
-      <recent name="C:\Users\vaderr\PycharmProjects\Rolisticae\rolisticae_client\src\components" />
       <recent name="C:\Users\vaderr\Documents\TFE\Rolisticae Project\rolisticae_client\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\vaderr\Documents\TFE\Rolisticae Project" />
+      <recent name="C:\Users\vaderr\PycharmProjects\Rolisticae\rolisticae_client\src\components\Formulaire" />
+      <recent name="C:\Users\vaderr\PycharmProjects\Rolisticae\rolisticae_client\src\styles\Navigation" />
+      <recent name="C:\Users\vaderr\PycharmProjects\Rolisticae\rolisticae_client\src\styles\Blog" />
+      <recent name="C:\Users\vaderr\PycharmProjects\Rolisticae\rolisticae_client\src\styles\Appointment" />
+      <recent name="C:\Users\vaderr\PycharmProjects\Rolisticae\rolisticae_client\src\components\Navigation" />
     </key>
   </component>
   <component name="RunManager" selected="Django Server.Rolisticae API">
@@ -97,10 +87,9 @@
         <env name="PYTHONUNBUFFERED" value="1" />
         <env name="DJANGO_SETTINGS_MODULE" value="rolisticae_core.settings" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\vaderr\Documents\TFE\TFE Projet\React-Django-intra\venv\Scripts\python.exe" />
-      <option name="SDK_NAME" value="Python 3.11 (React-Django-intra)" />
+      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="launchJavascriptDebuger" value="false" />
@@ -162,7 +151,20 @@
       <workItem from="1678778160972" duration="4379000" />
       <workItem from="1689168354827" duration="324000" />
       <workItem from="1689168703819" duration="2254000" />
-      <workItem from="1689228245956" duration="5428000" />
+      <workItem from="1689228245956" duration="7752000" />
+      <workItem from="1689576559266" duration="992000" />
+      <workItem from="1689767741610" duration="7256000" />
+      <workItem from="1690193212146" duration="1623000" />
+      <workItem from="1690196843761" duration="498000" />
+      <workItem from="1690197677758" duration="3652000" />
+      <workItem from="1690352280670" duration="26519000" />
+      <workItem from="1690784618841" duration="1014000" />
+      <workItem from="1690787057519" duration="232000" />
+      <workItem from="1690787353464" duration="12585000" />
+      <workItem from="1690974701503" duration="26433000" />
+      <workItem from="1691391672261" duration="20684000" />
+      <workItem from="1691561869902" duration="19616000" />
+      <workItem from="1691734139292" duration="10755000" />
     </task>
     <task id="LOCAL-00001" summary="update README.md">
       <created>1674211406086</created>
@@ -227,11 +229,206 @@
       <option name="project" value="LOCAL" />
       <updated>1678779050054</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="update">
+      <option name="closed" value="true" />
+      <created>1689257060339</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1689257060339</updated>
+    </task>
+    <task id="LOCAL-00011" summary="update">
+      <option name="closed" value="true" />
+      <created>1689257085235</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1689257085235</updated>
+    </task>
+    <task id="LOCAL-00012" summary="update">
+      <option name="closed" value="true" />
+      <created>1689257095577</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1689257095577</updated>
+    </task>
+    <task id="LOCAL-00013" summary="update">
+      <option name="closed" value="true" />
+      <created>1689257115135</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1689257115135</updated>
+    </task>
+    <task id="LOCAL-00014" summary="update connection user&#10;login + formulaire d'inscription">
+      <option name="closed" value="true" />
+      <created>1690359396536</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1690359396536</updated>
+    </task>
+    <task id="LOCAL-00015" summary="update connection user">
+      <option name="closed" value="true" />
+      <created>1690538696873</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1690538696873</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Correction et ajout de commentaire">
+      <option name="closed" value="true" />
+      <created>1690542801445</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1690542801446</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Correction et ajout de commentaire">
+      <option name="closed" value="true" />
+      <created>1690547029615</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1690547029615</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Correction et ajout de commentaire">
+      <option name="closed" value="true" />
+      <created>1690547284013</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1690547284013</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Correction et ajout de commentaire -&gt; react">
+      <option name="closed" value="true" />
+      <created>1690550564607</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1690550564607</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Correction et ajout de commentaire -&gt; react">
+      <option name="closed" value="true" />
+      <created>1690552603855</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1690552603855</updated>
+    </task>
+    <task id="LOCAL-00021" summary="ajout de la création de fiche de personnage">
+      <option name="closed" value="true" />
+      <created>1690808015269</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1690808015269</updated>
+    </task>
+    <task id="LOCAL-00022" summary="correction création de personnage + calcul de statistique">
+      <option name="closed" value="true" />
+      <created>1690985175693</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1690985175694</updated>
+    </task>
+    <task id="LOCAL-00023" summary="correction bouton de login">
+      <option name="closed" value="true" />
+      <created>1691129560316</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1691129560325</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Ajout de l'offcanvas">
+      <option name="closed" value="true" />
+      <created>1691133380021</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1691133380021</updated>
+    </task>
+    <task id="LOCAL-00025" summary="correction visuel Offcanvas">
+      <option name="closed" value="true" />
+      <created>1691134105607</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1691134105607</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Fin gestion Offcanvas">
+      <option name="closed" value="true" />
+      <created>1691135484766</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1691135484766</updated>
+    </task>
+    <task id="LOCAL-00027" summary="gestion character + debut création character">
+      <option name="closed" value="true" />
+      <created>1691410591565</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1691410591565</updated>
+    </task>
+    <task id="LOCAL-00028" summary="gestion character + debut création character">
+      <option name="closed" value="true" />
+      <created>1691565179547</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1691565179547</updated>
+    </task>
+    <task id="LOCAL-00029" summary="gestion character + debut création character">
+      <option name="closed" value="true" />
+      <created>1691566114952</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1691566114952</updated>
+    </task>
+    <task id="LOCAL-00030" summary="import react modal">
+      <option name="closed" value="true" />
+      <created>1691566189111</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1691566189111</updated>
+    </task>
+    <task id="LOCAL-00031" summary="bug fix">
+      <option name="closed" value="true" />
+      <created>1691591753027</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1691591753027</updated>
+    </task>
+    <task id="LOCAL-00032" summary="bug fix">
+      <option name="closed" value="true" />
+      <created>1691745688029</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1691745688029</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update README.md" />
@@ -241,6 +438,54 @@
     <MESSAGE value="update frontend" />
     <MESSAGE value="update frontend gestion Image + html-react-parse" />
     <MESSAGE value="update backend ajour calendrier" />
-    <option name="LAST_COMMIT_MESSAGE" value="update backend ajour calendrier" />
+    <MESSAGE value="update" />
+    <MESSAGE value="update connection user&#10;login + formulaire d'inscription" />
+    <MESSAGE value="update connection user" />
+    <MESSAGE value="Correction et ajout de commentaire" />
+    <MESSAGE value="Correction et ajout de commentaire -&gt; react" />
+    <MESSAGE value="ajout de la création de fiche de personnage" />
+    <MESSAGE value="correction création de personnage + calcul de statistique" />
+    <MESSAGE value="correction bouton de login" />
+    <MESSAGE value="Ajout de l'offcanvas" />
+    <MESSAGE value="correction visuel Offcanvas" />
+    <MESSAGE value="Fin gestion Offcanvas" />
+    <MESSAGE value="gestion character + debut création character" />
+    <MESSAGE value="import react modal" />
+    <MESSAGE value="bug fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug fix" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Rolisticae_api/blog/models.py</url>
+          <line>1</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Rolisticae_api/character/serializers.py</url>
+          <line>64</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Rolisticae_api/rolisticae_core/urls.py</url>
+          <line>1</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Rolisticae_api/users/serializers.py</url>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Rolisticae_api/character/models.py</url>
+          <line>150</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/rolisticae_client/src/components/Navigation/OffcanvasRight.js</url>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

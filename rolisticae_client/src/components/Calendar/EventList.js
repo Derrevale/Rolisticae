@@ -1,17 +1,28 @@
+// Importation des modules nécessaires
 import {RRule, rrulestr} from 'rrule';
 import moment from "moment";
 import 'moment-timezone';
+
+// URL de l'API pour récupérer les événements
 const API_URL = "http://localhost:8010/api/EventManager Event/";
 
+// Fonction asynchrone pour récupérer les événements
 const getEvents = async (category) => {
     try {
+        // Faire une requête à l'API pour récupérer les données
         const response = await fetch(API_URL);
+        // Convertir la réponse en JSON
         const data = await response.json();
+        // Initialiser un tableau vide pour stocker les événements
         const events = [];
 
+        // Parcourir chaque événement dans les données
         data.forEach((event) => {
-            if (event.category === category) { // filter events with matching category
+            // Si la catégorie de l'événement correspond à la catégorie demandée
+            if (event.category === category) {
+                // Si l'événement n'est pas récurrent
                 if (!event.recurrency) {
+                    // Ajouter l'événement au tableau des événements
                     events.push({
                         id: event.id,
                         title: event.title,
@@ -23,11 +34,12 @@ const getEvents = async (category) => {
                         category: event.category,
                     });
                 } else {
+                    // Si l'événement est récurrent, créer une règle de récurrence
                     const rule = event.rrule.replace(/DTSTART=\d{8}T\d{6}/, match => `DTSTART=${moment.utc(match.slice(8), "YYYYMMDDTHHmmss").format("YYYYMMDDTHHmmss")}Z`);
-                    console.log(rule)
                     const ruleObj = rrulestr(rule);
-                    console.log(ruleObj);
+                    // Obtenir toutes les occurrences de l'événement
                     const allOccurrences = ruleObj.all((date, i) => i < event.count);
+                    // Pour chaque occurrence, ajouter un événement au tableau des événements
                     allOccurrences.forEach((occurrence) => {
                         events.push({
                             id: event.id,
@@ -40,16 +52,17 @@ const getEvents = async (category) => {
                             category: event.category,
                         });
                     });
-
                 }
             }
         });
+        // Retourner le tableau des événements
         return events;
     } catch (error) {
+        // En cas d'erreur, afficher l'erreur et retourner un tableau vide
         console.error(error);
         return [];
     }
 };
 
-
+// Exporter la fonction getEvents
 export default getEvents;
