@@ -38,7 +38,7 @@ import PersonnagesList from "./Characters/PersonnagesList";
 import Campaigns from "./Campagnes/Campaigns";
 import PersonnageDetail from "./Characters/PersonnageDetail";
 
-// Définition du composant App
+import CreateCharacterStep1 from "./Formulaire/CreateCharacterStep1";
 
 Modal.setAppElement('#root'); // Configuration pour react-modal
 
@@ -77,6 +77,7 @@ function App() {
                 <Route path="/personnage/:id" element={<PersonnageDetail/> /* Route pour une catégorie spécifique de la galerie */}/>
                 <Route path="/characterform" element={<CharacterForm/> /* Route pour le profil utilisateur */}/>
                 <Route path="/campagne" element={<Campaigns/> /* Route pour le profil utilisateur */}/>
+                <Route path="/createcharacterstep1" element={<CreateCharacterStep1/> /* Route pour le profil utilisateur */}/>
 
             </Route>
         )
