@@ -6,7 +6,7 @@ import TreeItem from '@mui/lab/TreeItem';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import "../../styles/Documents/Document.css";
-
+import config from "../config";
 // Définition du composant Documents
 const Documents = () => {
     // Définition de l'état des données
@@ -33,7 +33,7 @@ const Documents = () => {
     // Utilisation de l'effet pour récupérer les données
     useEffect(() => {
         const fetchData = async () => {
-            const result = await axios('http://localhost:8000/api/FileManager Categorie/');
+            const result = await axios(`${config.API_ENDPOINT}/FileManager Categorie/`);
             const hierarchy = buildHierarchy(result.data);
             setData(hierarchy);
         };
@@ -56,7 +56,7 @@ const Documents = () => {
                             nodeId={file.name}
                             label={
                                 <a
-                                    href={`http://localhost:8010${file.fileUrl}`}
+                                    href={`${config.SEARCH_ENDPOINT}${file.fileUrl}`}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >

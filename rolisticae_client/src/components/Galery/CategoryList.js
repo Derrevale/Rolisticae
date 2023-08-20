@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { Grid, Card, CardActionArea, CardMedia, CardContent, Typography } from '@mui/material';
 import '../../styles/Galerie/CategoryList.css';
+import config from "../config";
 
 const CategoryList = () => {
   const [categories, setCategories] = useState([]);
@@ -10,7 +11,7 @@ const CategoryList = () => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/api/Galerie Categorie/');
+        const response = await axios.get(`${config.API_ENDPOINT}/Galerie Categorie/`);
         setCategories(response.data);
       } catch (error) {
         console.error('Erreur lors de la récupération des catégories:', error);

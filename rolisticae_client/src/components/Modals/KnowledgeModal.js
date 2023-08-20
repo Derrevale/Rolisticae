@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 import { useParams } from "react-router-dom";
+import config from "../config";
 
 function KnowledgeModal({ isOpen, onRequestClose, onSave }) {
     const { id } = useParams();  // Get the character ID from the URL parameters
@@ -36,7 +37,7 @@ function KnowledgeModal({ isOpen, onRequestClose, onSave }) {
         };
 
         try {
-            const response = await fetch(`http://localhost:8010/api/Knowledge/`, {
+            const response = await fetch(`${config.API_ENDPOINT}/Knowledge/`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

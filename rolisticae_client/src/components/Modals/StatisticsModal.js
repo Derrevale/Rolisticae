@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Modal, Button } from 'react-bootstrap';
 import '../../styles/Modals/StatisticsModal.css';
 import {useParams} from "react-router-dom";
+import config from "../config";
 
 function StatisticsModal({ isOpen, onRequestClose, statistics, onSave }) {
   const {id} = useParams();
@@ -32,7 +33,7 @@ function StatisticsModal({ isOpen, onRequestClose, statistics, onSave }) {
 
     try {
       // Utilisation de l'ID des statistiques pour l'endpoint de l'API
-      const response = await fetch(`http://localhost:8010/api/Statistics/${statistics[0].id}/`, {
+      const response = await fetch(`${config.API_ENDPOINT}/Statistics/${statistics[0].id}/`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',

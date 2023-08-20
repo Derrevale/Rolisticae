@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-
+import config from '../config';
 function CreateCharacter() {
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
@@ -13,8 +13,8 @@ function CreateCharacter() {
 
     useEffect(() => {
         // Remplacez ces URLs par les URLs de vos points de terminaison API
-        const racesApiUrl = 'http://localhost:8010/api/Race/';
-        const campaignsApiUrl = 'http://localhost:8010/api/Campaign/';
+        const racesApiUrl = `${config.API_ENDPOINT}/Race/`;
+        const campaignsApiUrl = `${config.API_ENDPOINT}/Campaign/`;
 
         // Récupérez les races
         fetch(racesApiUrl)

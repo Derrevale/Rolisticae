@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {TextField, Button, Container, Typography, Snackbar, Alert} from '@mui/material';
 import {styled} from '@mui/system';
 import {useNavigate} from 'react-router-dom';
+import config from "../config";
 
 const PaperContainer = styled(Container)(({theme}) => ({
     marginTop: theme.spacing(8),
@@ -30,7 +31,7 @@ function LoginForm() {
     const handleSubmit = async event => {
         event.preventDefault();
 
-        const response = await fetch("http://localhost:8000/api/token/", {
+        const response = await fetch(`${config.API_ENDPOINT}/token/`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -49,7 +50,7 @@ function LoginForm() {
             localStorage.setItem('refresh', data.refresh);
 
             // Fetch the user details to get is_staff
-            fetch("http://localhost:8010/api/User/", {
+            fetch(`${config.API_ENDPOINT}/User/`, {
                 headers: {
                     "Content-Type": "application/json",
                     "Authorization": `Bearer ${data.access}`

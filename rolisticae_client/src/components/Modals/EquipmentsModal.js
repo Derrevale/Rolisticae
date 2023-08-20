@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {Modal, Button} from 'react-bootstrap';
 import {useParams} from "react-router-dom";
-
+import config from "../config";
 function EquipmentsModal({isOpen, onRequestClose, onSave}) {
     const {id} = useParams();
 
@@ -19,7 +19,7 @@ function EquipmentsModal({isOpen, onRequestClose, onSave}) {
         };
 
         try {
-            const response = await fetch(`http://localhost:8010/api/Equipment/`, {
+            const response = await fetch(`${config.API_ENDPOINT}/Equipment/`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

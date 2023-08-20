@@ -4,22 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67ca2271-bc7e-47d6-b2d5-c7285cb20d63" name="Changes" comment="update backend ajour calendrier">
+    <list default="true" id="67ca2271-bc7e-47d6-b2d5-c7285cb20d63" name="Changes" comment="changement adresse">
+      <change afterPath="$PROJECT_DIR$/rolisticae_client/src/components/config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rolisticae_client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rolisticae_api/rolisticae_core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Rolisticae_api/rolisticae_core/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/Appointments/AppointmentList.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Appointments/AppointmentList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/Blog/Article.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Blog/Article.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/Blog/ArticleList.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Blog/ArticleList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/Calendar/EventList.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Calendar/EventList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/Characters/PersonnageDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Characters/PersonnageDetail.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/Documents/Documents.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Documents/Documents.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/Formulaire/CharacterForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Formulaire/CharacterForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/Formulaire/CreateCharacterStep1.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Formulaire/CreateCharacterStep1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/Formulaire/CreateCharacterStep2.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/Formulaire/EventForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Formulaire/EventForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/Formulaire/LoginForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Formulaire/LoginForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/Formulaire/UserForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Formulaire/UserForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/Galery/CategoryDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Galery/CategoryDetail.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/Galery/CategoryList.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Galery/CategoryList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Navbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/Search/SearchResult.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Search/SearchResult.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/User/LoginForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/User/LoginForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/User/Signup/SignupForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/User/Signup/SignupForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/User/UserForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/User/UserForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/User/UserProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/User/UserProfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/Modals/EquipmentsModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Modals/EquipmentsModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/Modals/FoodDrinkModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Modals/FoodDrinkModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/Modals/HealingPotionModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Modals/HealingPotionModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/Modals/KnowledgeModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/Modals/KnowledgeModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rolisticae_client/src/components/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/rolisticae_client/src/components/api.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,9 +39,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
         <option value="Python Script" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -94,7 +101,7 @@
       <recent name="C:\Users\vaderr\Documents\TFE\Rolisticae Project" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.Rolisticae_Client">
+  <component name="RunManager" selected="Django Server.Rolisticae API">
     <configuration name="Rolisticae API" type="Python.DjangoServer" factoryName="Django server">
       <module name="Rolisticae" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -109,7 +116,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="launchJavascriptDebuger" value="false" />
-      <option name="port" value="8010" />
+      <option name="port" value="8000" />
       <option name="host" value="127.0.0.1" />
       <option name="additionalOptions" value="" />
       <option name="browserUrl" value="http://127.0.0.1:8000/admin/" />
@@ -168,6 +175,7 @@
       <workItem from="1689168354827" duration="324000" />
       <workItem from="1689168703819" duration="2254000" />
       <workItem from="1689228245956" duration="5428000" />
+      <workItem from="1692508738473" duration="3456000" />
     </task>
     <task id="LOCAL-00001" summary="update README.md">
       <created>1674211406086</created>
@@ -232,7 +240,15 @@
       <option name="project" value="LOCAL" />
       <updated>1678779050054</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="changement adresse">
+      <option name="closed" value="true" />
+      <created>1691769446231</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1691769446231</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,6 +262,7 @@
     <MESSAGE value="update frontend" />
     <MESSAGE value="update frontend gestion Image + html-react-parse" />
     <MESSAGE value="update backend ajour calendrier" />
-    <option name="LAST_COMMIT_MESSAGE" value="update backend ajour calendrier" />
+    <MESSAGE value="changement adresse" />
+    <option name="LAST_COMMIT_MESSAGE" value="changement adresse" />
   </component>
 </project>

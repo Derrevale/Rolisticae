@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from "react";
-import '../../styles/ArticleList.css';
-
+import '../../styles/Blog/ArticleList.css';
+import config from '../config';
 function ArticleList() {
     const [articles, setArticles] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:8000/api/Blog Article/")
+        fetch(`${config.API_ENDPOINT}/Blog Article/`)
             .then((response) => response.json())
             .then((data) => setArticles(data))
             .catch((error) => console.log(error));

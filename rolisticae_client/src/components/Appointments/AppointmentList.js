@@ -1,18 +1,19 @@
 import React, {useState, useEffect} from "react";
 import axios from 'axios';
-import '../../styles/AppointmentList.css';
+import '../../styles/Appointment/AppointmentList.css';
+import config from "../config";
 
 function AppointmentList() {
     const [appointments, setAppointments] = useState([]);
 
     useEffect(() => {
-        axios.get("http://localhost:8000/api/Appointment Date/")
+        axios.get(`${config.API_ENDPOINT}/Appointment Date/`)
             .then((response) => setAppointments(response.data))
             .catch((error) => console.log(error));
     }, []);
 
     function vote(dateId) {
-        axios.post('http://localhost:8000/api/Appointment Votes/', { appointment_date: dateId })
+        axios.post(`${config.API_ENDPOINT}/Appointment Votes/`, { appointment_date: dateId })
             .then(response => console.log(response.data))
             .catch(error => console.error(error));
     }

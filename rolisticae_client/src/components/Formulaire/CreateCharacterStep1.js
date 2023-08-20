@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {Form, Button, Col, Row, Container} from 'react-bootstrap';
+import config from "../config";
 
 const CreateCharacterStep1 = () => {
     const [firstName, setFirstName] = useState('');
@@ -32,7 +33,7 @@ const CreateCharacterStep1 = () => {
     // Simuler une récupération des données de l'API (à remplacer par une vraie requête AJAX)
     useEffect(() => {
         // Récupération des campagnes
-        fetch('http://localhost:8010/api/Campaign/', {
+        fetch(`${config.API_ENDPOINT}/Campaign/`, {
             method: 'GET',
             headers: {
                 'accept': 'application/json',
@@ -46,7 +47,7 @@ const CreateCharacterStep1 = () => {
             });
 
         // Récupération des races
-        fetch('http://localhost:8010/api/Race/', {
+        fetch(`${config.API_ENDPOINT}/Race/`, {
             method: 'GET',
             headers: {
                 'accept': 'application/json',

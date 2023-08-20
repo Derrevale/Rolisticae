@@ -9,6 +9,7 @@ import HealingPotionModal from "../Modals/HealingPotionModal";
 import FoodDrinkModal from "../Modals/FoodDrinkModal";
 import KnowledgeModal from "../Modals/KnowledgeModal";
 
+import config from "../config";
 function PersonnageDetail() {
     console.log("Rendering PersonnageDetail");
     const [character, setCharacter] = useState({});
@@ -24,7 +25,7 @@ function PersonnageDetail() {
 
 
     const deleteEquipment = (equipmentId) => {
-        fetch(`http://localhost:8010/api/Equipment/${equipmentId}/`, {
+        fetch(`${config.API_ENDPOINT}/Equipment/${equipmentId}/`, {
             method: 'DELETE',
         })
             .then(response => {
@@ -34,7 +35,7 @@ function PersonnageDetail() {
                 // Refresh the character data after deleting the equipment.
                 // This can be optimized by only removing the equipment from the state
                 // but for simplicity, we are fetching the character details again.
-                return fetch(`http://localhost:8010/api/Character/${id}/`);
+                return fetch(`${config.API_ENDPOINT}/Character/${id}/`);
             })
             .then(response => response.json())
             .then(data => {
@@ -46,7 +47,7 @@ function PersonnageDetail() {
     }
 
     const deleteMagicItem = (magicItemId) => {
-        fetch(`http://localhost:8010/api/MagicItem/${magicItemId}/`, {
+        fetch(`${config.API_ENDPOINT}/MagicItem/${magicItemId}/`, {
             method: 'DELETE',
         })
             .then(response => {
@@ -56,7 +57,7 @@ function PersonnageDetail() {
                 // Refresh the character data after deleting the magic item.
                 // This can be optimized by only removing the equipment from the state
                 // but for simplicity, we are fetching the character details again.
-                return fetch(`http://localhost:8010/api/Character/${id}/`);
+                return fetch(`${config.API_ENDPOINT}/Character/${id}/`);
             })
             .then(response => response.json())
             .then(data => {
@@ -68,7 +69,7 @@ function PersonnageDetail() {
     }
 
     const deleteMiscellaneousItem = (miscellaneousItemId) => {
-        fetch(`http://localhost:8010/api/MiscellaneousItem/${miscellaneousItemId}/`, {
+        fetch(`${config.API_ENDPOINT}/MiscellaneousItem/${miscellaneousItemId}/`, {
             method: 'DELETE',
         })
             .then(response => {
@@ -78,7 +79,7 @@ function PersonnageDetail() {
                 // Refresh the character data after deleting the magic item.
                 // This can be optimized by only removing the equipment from the state
                 // but for simplicity, we are fetching the character details again.
-                return fetch(`http://localhost:8010/api/Character/${id}/`);
+                return fetch(`${config.API_ENDPOINT}/Character/${id}/`);
             })
             .then(response => response.json())
             .then(data => {
@@ -90,7 +91,7 @@ function PersonnageDetail() {
     }
 
     const deleteFoodDrink = (foodDrinkId) => {
-        fetch(`http://localhost:8010/api/FoodDrink/${foodDrinkId}/`, {
+        fetch(`${config.API_ENDPOINT}/FoodDrink/${foodDrinkId}/`, {
             method: 'DELETE',
         })
             .then(response => {
@@ -100,7 +101,7 @@ function PersonnageDetail() {
                 // Refresh the character data after deleting the magic item.
                 // This can be optimized by only removing the equipment from the state
                 // but for simplicity, we are fetching the character details again.
-                return fetch(`http://localhost:8010/api/Character/${id}/`);
+                return fetch(`${config.API_ENDPOINT}/Character/${id}/`);
             })
             .then(response => response.json())
             .then(data => {
@@ -112,7 +113,7 @@ function PersonnageDetail() {
     }
 
     const deleteHealingPotion = (healingPotionId) => {
-        fetch(`http://localhost:8010/api/HealingPotion/${healingPotionId}/`, {
+        fetch(`${config.API_ENDPOINT}/HealingPotion/${healingPotionId}/`, {
             method: 'DELETE',
         })
             .then(response => {
@@ -122,7 +123,7 @@ function PersonnageDetail() {
                 // Refresh the character data after deleting the magic item.
                 // This can be optimized by only removing the equipment from the state
                 // but for simplicity, we are fetching the character details again.
-                return fetch(`http://localhost:8010/api/Character/${id}/`);
+                return fetch(`${config.API_ENDPOINT}/Character/${id}/`);
             })
             .then(response => response.json())
             .then(data => {
@@ -134,7 +135,7 @@ function PersonnageDetail() {
     }
 
     const deleteKnowledge = (knowledgeId) => {
-        fetch(`http://localhost:8010/api/Knowledge/${knowledgeId}/`, {
+        fetch(`${config.API_ENDPOINT}/Knowledge/${knowledgeId}/`, {
             method: 'DELETE',
         })
             .then(response => {
@@ -144,7 +145,7 @@ function PersonnageDetail() {
                 // Refresh the character data after deleting the magic item.
                 // This can be optimized by only removing the equipment from the state
                 // but for simplicity, we are fetching the character details again.
-                return fetch(`http://localhost:8010/api/Character/${id}/`);
+                return fetch(`${config.API_ENDPOINT}/Character/${id}/`);
             })
             .then(response => response.json())
             .then(data => {
@@ -158,7 +159,7 @@ function PersonnageDetail() {
     useEffect(() => {
 
         // Directly fetch the character details from the API
-        fetch(`http://localhost:8010/api/Character/${id}/`)
+        fetch(`${config.API_ENDPOINT}/Character/${id}/`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error("Network response was not ok");

@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {TextField, Button, Container, Typography} from '@mui/material';
 import {styled} from '@mui/system';
 import {useNavigate} from 'react-router-dom';
+import config from "../config";
 
 // Styling for the container
 const PaperContainer = styled(Container)(({theme}) => ({
@@ -32,7 +33,7 @@ function UserForm() {
 
     // Fetch user information on component mount
     useEffect(() => {
-        fetch("http://localhost:8000/api/User/", {
+        fetch(`${config.API_ENDPOINT}/User/`, {
             headers: {
                 "Content-Type": "application/json",
                 "Authorization": `Bearer ${localStorage.getItem('access')}`
@@ -78,7 +79,7 @@ function UserForm() {
         }
 
         // Send a PUT request to update the user information
-        const response = await fetch(`http://localhost:8000/api/User/${userInfo[0].id}/`, {
+        const response = await fetch(`${config.API_ENDPOINT}/User/${userInfo[0].id}/`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",

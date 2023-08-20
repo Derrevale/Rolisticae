@@ -3,6 +3,7 @@ import axios from 'axios';
 import '../../styles/Formulaire/EventForm.css';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
+import config from "../config";
 
 const EventForm = () => {
     const [title, setTitle] = useState('');
@@ -21,7 +22,7 @@ const EventForm = () => {
         event.preventDefault();
 
         axios
-            .post('http://localhost:8000/api/event/', {
+            .post(`${config.API_ENDPOINT}/event/`, {
                 title,
                 Debut: debut,
                 Fin: fin,

@@ -2,15 +2,13 @@
 import {RRule, rrulestr} from 'rrule';
 import moment from "moment";
 import 'moment-timezone';
-
-// URL de l'API pour récupérer les événements
-const API_URL = "http://localhost:8010/api/EventManager Event/";
+import config from "../config";
 
 // Fonction asynchrone pour récupérer les événements
 const getEvents = async (category) => {
     try {
         // Faire une requête à l'API pour récupérer les données
-        const response = await fetch(API_URL);
+        const response = await fetch(`${config.API_ENDPOINT}/EventManager Event/`);
         // Convertir la réponse en JSON
         const data = await response.json();
         // Initialiser un tableau vide pour stocker les événements

@@ -1,11 +1,11 @@
 
 import React from 'react';
 import axios from "axios";
-
+import config from "./config";
 async function refreshToken() {
     const refresh = localStorage.getItem('refresh');
 
-    const response = await fetch("http://localhost:8010/api/token/refresh/", {
+    const response = await fetch(`${config.API_ENDPOINT}/token/refresh/`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -20,7 +20,7 @@ async function refreshToken() {
 async function getUserInfo() {
     const token = localStorage.getItem('access');  // Get the token from local storage
 
-    const response = await fetch("http://localhost:8010/api/User/", {
+    const response = await fetch(`${config.API_ENDPOINT}/User/`, {
         method: "GET",
         headers: {
             "Content-Type": "application/json",
@@ -48,7 +48,7 @@ async function getUserInfo() {
 export { refreshToken, getUserInfo };
 
 export async function fetchCampaigns() {
-    const response = await fetch('http://localhost:8010/api/Campaign/', {
+    const response = await fetch(`${config.API_ENDPOINT}/Campaign/`, {
         headers: {
             'accept': 'application/json',
             'X-CSRFToken': '5IuVqPFT992G2aBtywHsJ7POMCwsNPqPgpgIGI7BBDlcVSFKdcYaTGJwuo4RISyf'
@@ -59,7 +59,7 @@ export async function fetchCampaigns() {
 }
 export const getCharacterDetail = async (id) => {
     try {
-        const response = await axios.get(`http://localhost:8010/api/Character/${id}/`);
+        const response = await axios.get(`${config.API_ENDPOINT}/Character/${id}/`);
         console.log(response);
         return response.data;
     } catch (error) {

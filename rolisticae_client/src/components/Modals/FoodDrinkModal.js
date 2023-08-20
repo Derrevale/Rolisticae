@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {Modal, Button} from 'react-bootstrap';
 import {useParams} from "react-router-dom";
+import config from "../config";
 
 function MiscellaneousItemModal({isOpen, onRequestClose, onSave}) {
     const {id} = useParams();
@@ -19,7 +20,7 @@ function MiscellaneousItemModal({isOpen, onRequestClose, onSave}) {
         };
 
         try {
-            const response = await fetch(`http://localhost:8010/api/FoodDrink/`, {
+            const response = await fetch(`${config.API_ENDPOINT}/FoodDrink/`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
