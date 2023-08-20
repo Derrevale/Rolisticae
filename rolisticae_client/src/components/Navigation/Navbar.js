@@ -1,6 +1,8 @@
 import '../../styles/Navigation/Navbar.css';
 import '../../styles/bootstrap.min.css';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {Dropdown} from 'react-bootstrap';
+
 import {faUser, faUserCircle} from '@fortawesome/free-solid-svg-icons';
 import {
     faHome,
@@ -96,23 +98,21 @@ function Navbar({handleShow}) {
                                             </Link>
                                         </li>
                                         <li className="sp-menu-item">
-                                            <Link to='#' onClick={toggleDropdown}>
-                                                <FontAwesomeIcon icon={faCalendar}
-                                                                 className="fa-facebook"></FontAwesomeIcon>{' '}
-                                                Planning
-                                            </Link>
-                                            {showDropdown && (
-                                                <div className="dropdown">
-                                                    <ul>
-                                                        {categories.map((category, index) => (
-                                                            <li key={index}>
-                                                                <Link
-                                                                    to={`/calendrier/${category.id}`}>{category.name}</Link>
-                                                            </li>
-                                                        ))}
-                                                    </ul>
-                                                </div>
-                                            )}
+                                            <Dropdown className="fixed-position">
+                                                <Dropdown.Toggle variant="link" id="dropdown-basic" >
+                                                    <FontAwesomeIcon icon={faCalendar}
+                                                                     className="fa-facebook"/> Planning
+                                                </Dropdown.Toggle>
+
+                                                <Dropdown.Menu className="fixed-dropdown">
+                                                    {categories.map((category, index) => (
+                                                        <Dropdown.Item key={index} href={`/calendrier/${category.id}`}>
+                                                            {category.name} <FontAwesomeIcon icon={faCalendar}
+                                                                                             className="fa-facebook"/>
+                                                        </Dropdown.Item>
+                                                    ))}
+                                                </Dropdown.Menu>
+                                            </Dropdown>
                                         </li>
                                         <li className="sp-menu-item">
                                             <Link to="/Documents">
