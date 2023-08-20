@@ -1,97 +1,134 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import { useParams, Link } from 'react-router-dom';
-import { Grid, Card, CardActionArea, CardMedia, CardContent, Typography, ImageList, ImageListItem } from '@mui/material';
+import {useParams} from 'react-router-dom';
+import {
+    Grid,
+    Card,
+    CardActionArea,
+    CardMedia,
+    CardContent,
+    Typography,
+    Modal,
+    IconButton,
+    Box
+} from '@mui/material';
+import {NavigateBefore, NavigateNext} from '@mui/icons-material';
 import '../../styles/Galerie/CategoryList.css';
 import config from "../config";
 
 const CategoryDetail = () => {
-  const { categoryId } = useParams();
-  const [category, setCategory] = useState(null);
-  const [categories, setCategories] = useState([]);
-  const [images, setImages] = useState([]);
+    const {categoryId} = useParams();
+    const [category, setCategory] = useState(null);
+    const [categories, setCategories] = useState([]);
+    const [images, setImages] = useState([]);
+    const [open, setOpen] = useState(false);
+    const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
-  useEffect(() => {
-    const fetchCategories = async () => {
-      try {
-        const response = await axios.get(`${config.API_ENDPOINT}/Galerie Categorie/`);
-        setCategories(response.data);
-        const currentCategory = response.data.find((cat) => cat.id === parseInt(categoryId));
-        setCategory(currentCategory);
-      } catch (error) {
-        console.error('Erreur lors de la récupération des catégories:', error);
-      }
+    useEffect(() => {
+        const fetchCategories = async () => {
+            try {
+                const response = await axios.get(`${config.API_ENDPOINT}/Galerie Categorie/`);
+                setCategories(response.data);
+                const currentCategory = response.data.find((cat) => cat.id === parseInt(categoryId));
+                setCategory(currentCategory);
+            } catch (error) {
+                console.error('Erreur lors de la récupération des catégories:', error);
+            }
+        };
+
+        const fetchImages = async () => {
+            try {
+                const response = await axios.get(`${config.API_ENDPOINT}/Galerie Image/`);
+                setImages(response.data);
+            } catch (error) {
+                console.error('Erreur lors de la récupération des images:', error);
+            }
+        };
+
+        fetchCategories();
+        fetchImages();
+    }, [categoryId]);
+
+    const handleOpen = (imageId) => {
+        const index = category.images.findIndex(id => id === imageId);
+        setSelectedImageIndex(index);
+        setOpen(true);
     };
 
-    const fetchImages = async () => {
-      try {
-        const response = await axios.get(`${config.API_ENDPOINT}/Galerie Image/`);
-        setImages(response.data);
-      } catch (error) {
-        console.error('Erreur lors de la récupération des images:', error);
-      }
+    const handleClose = () => {
+        setOpen(false);
     };
 
-    fetchCategories();
-    fetchImages();
-  }, [categoryId]);
+    const handlePrev = () => {
+        setSelectedImageIndex(prev => (prev - 1 + category.images.length) % category.images.length);
+    };
 
-  const getSubcategories = () => {
-    if (!category) return [];
-    return categories.filter((cat) => cat.parent_category === category.id);
-  };
+    const handleNext = () => {
+        setSelectedImageIndex(prev => (prev + 1) % category.images.length);
+    };
 
-  if (!category) {
-    return <div>Loading...</div>;
-  }
+    return (
+        <div>
+            <Typography variant="h4" component="h2" gutterBottom>
+                {category?.name}
+            </Typography>
 
-  return (
-    <div>
-      <Typography variant="h4" component="h2" gutterBottom>
-        {category.name}
-      </Typography>
-      <Grid container spacing={4}>
-        {getSubcategories().map((subcategory) => (
-          <Grid item key={subcategory.id} xs={12} sm={6} md={4}>
-            <Link to={`/galerie/${subcategory.id}`} style={{ textDecoration: 'none' }}>
-              <Card>
-                <CardActionArea>
-                  {subcategory.image && (
-                    <CardMedia
-                      component="img"
-                      alt={subcategory.name}
-                      height="140"
-                      image={subcategory.image}
-                    />
-                  )}
-                  <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                      {subcategory.name}
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-              </Card>
-            </Link>
-          </Grid>
-        ))}
-      </Grid>
-      <Typography variant="h5" component="h3" gutterBottom>
-        Images
-      </Typography>
-      <ImageList cols={3} gap={8}>
-        {category.images.map((imageId) => {
-          const image = images.find((img) => img.id === imageId);
-          return (
-            image && (
-              <ImageListItem key={image.id}>
-                <img src={image.image} alt={image.id} loading="lazy" />
-              </ImageListItem>
-            )
-          );
-        })}
-      </ImageList>
-    </div>
-  );
+            <Typography variant="h5" component="h3" gutterBottom>
+                Images
+            </Typography>
+            <Grid container spacing={4}>
+                {category?.images.sort((a, b) => a - b).map((imageId) => {
+                    const image = images.find((img) => img.id === imageId);
+                    return (
+                        image && (
+                            <Grid item key={image.id} xs={12} sm={6} md={4}>
+                                <Card>
+                                    <CardActionArea onClick={() => handleOpen(image.id)}>
+                                        <CardMedia
+                                            component="img"
+                                            alt={image.name}
+                                            height="140"
+                                            image={image.image}
+                                        />
+                                    </CardActionArea>
+                                </Card>
+                            </Grid>
+                        )
+                    );
+                })}
+            </Grid>
+
+            {category && (
+                <Modal
+                    open={open}
+                    onClose={handleClose}
+                    aria-labelledby="modal-modal-title"
+                    aria-describedby="modal-modal-description"
+                >
+                    <Box sx={{
+                        position: 'absolute',
+                        top: '50%',
+                        left: '50%',
+                        transform: 'translate(-50%, -50%)',
+                        bgcolor: 'background.paper',
+                        boxShadow: 24,
+                        p: 4,
+                        display: 'flex',
+                        alignItems: 'center'
+                    }}>
+                        <IconButton onClick={handlePrev}>
+                            <NavigateBefore/>
+                        </IconButton>
+                        <img src={images.find(img => img.id === category.images[selectedImageIndex]).image}
+                             alt="Gallery" style={{maxHeight: '80vh', maxWidth: '80vw'}}/>
+                        <IconButton onClick={handleNext}>
+                            <NavigateNext/>
+                        </IconButton>
+                    </Box>
+                </Modal>
+            )}
+        </div>
+    );
 };
 
 export default CategoryDetail;

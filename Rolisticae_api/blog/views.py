@@ -13,5 +13,5 @@ class CategorysViewset(viewsets.ModelViewSet):
 # Vue pour les articles de blog
 class ArticlesViewset(viewsets.ModelViewSet):
     serializer_class = ArticleSerializer  # Utilisation du sérialiseur ArticleSerializer
-    queryset = Article_Blog.objects.all()  # Tous les articles de blog sont récupérés
+    queryset = Article_Blog.objects.all().order_by('-publication_time')  # Tous les articles de blog sont récupérés
     tags = ['Blog - Article']  # Tags pour la vue

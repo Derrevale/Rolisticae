@@ -58,6 +58,12 @@ function OffcanvasRight({show, handleClose}) {
                                                      className="fa-facebook"></FontAwesomeIcon> Personnage
                                 </a>
                             </div>
+                            <div className="sp-menu-item offcanvas-sp">
+                                <a href="/createcharacterstep1 ">
+                                    <FontAwesomeIcon icon={faIdBadge}
+                                                     className="fa-facebook"></FontAwesomeIcon> Création de personnage
+                                </a>
+                            </div>
                         </>
                     ) : (
                         <div className="sp-menu-item offcanvas-sp">

@@ -35,6 +35,7 @@
     "react-modal": "^3.16.1",
     "react-overlays": "^5.2.1",
     "react-quill": "^2.0.0",
+    "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.8.1",
     "react-scripts": "^5.0.1",
     "rrule": "^2.7.2",
