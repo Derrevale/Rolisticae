@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { TextField, Button, Container, Typography } from '@mui/material';
 import { styled } from '@mui/system';
+import config from "../../config";
 
 const PaperContainer = styled(Container)(({ theme }) => ({
     marginTop: theme.spacing(8),
@@ -29,7 +30,7 @@ function SignupForm() {
     const handleSubmit = async event => {
         event.preventDefault();
 
-        const response = await fetch("http://localhost:8000/api/register/", {
+        const response = await fetch(`${config.API_ENDPOINT}/register/`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

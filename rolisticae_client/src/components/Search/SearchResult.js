@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
+import config from "../config";
 
 function SearchResult(props) {
     const [results, setResults] = useState([]);
@@ -9,7 +10,7 @@ function SearchResult(props) {
         const searchQuery = urlParams.get("q");
 
         const fetchData = async () => {
-            const response = await axios.get(`http://localhost:8000/api/search/?q=${searchQuery}`);
+            const response = await axios.get(`${config.API_ENDPOINT}/search/?q=${searchQuery}`);
             setResults(response.data);
             console.log(response.data)
         };
@@ -25,7 +26,7 @@ function SearchResult(props) {
                 <ul>
                     {results.map((result, index) => (
                         <li key={index}>
-                            <a href={`http://localhost:8010/${result.fileUrl}`} download>{result.name}</a>
+                            <a href={`${config.SEARCH_ENDPOINT}/${result.fileUrl}`} download>{result.name}</a>
                         </li>
                     ))}
                 </ul>

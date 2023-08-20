@@ -16,6 +16,7 @@ import {
 import {useState, useEffect} from 'react';
 import axios from 'axios';
 import {useNavigate, Link} from 'react-router-dom';
+import config from "../config";
 
 function Navbar({handleShow}) {
     const [showDropdown, setShowDropdown] = useState(false);
@@ -58,7 +59,7 @@ function Navbar({handleShow}) {
 
     useEffect(() => {
         axios
-            .get('http://localhost:8000/api/EventManager Calendrier /')
+            .get(`${config.API_ENDPOINT}/EventManager Calendrier /`)
             .then((response) => setCategories(response.data))
             .catch((error) => console.log(error));
     }, []);
